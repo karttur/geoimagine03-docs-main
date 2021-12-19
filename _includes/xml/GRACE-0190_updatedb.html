@@ -1,0 +1,27 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<updatedb>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "2002" startmonth='4' startday='23' endyear = "2016" endmonth='12' endday='31' timestep='M'></period>
+
+<process processid ='updatedbAncillary' dsversion = '1.3'>
+<parameters></parameters>
+<dstpath volume = "travel" hdrfiletype='tif'></dstpath>
+<dstcomp>
+<grace-ave source = "NASA-GRACE" product = "cmwater" folder = "cmwater" band = "grace-ave" prefix = "grace-ave" suffix = "RL05-f"
+cellnull='32767' celltype='Float32' measure='R' dataunit='cm' scalfac='1' offsetadd='0'>
+</grace-ave>
+</dstcomp>
+</process>
+
+</updatedb>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

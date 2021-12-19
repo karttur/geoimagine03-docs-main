@@ -1,0 +1,73 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<manageprocess>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "2002" startmonth='04' endyear = "2017" endmonth='01' timestep='MS'></period>
+
+<!-- mendanciltimeseries (TimeSeries) -->
+<process processid ='mendancillarytimeseries'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters></parameters>
+
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<grace-jpl source = "NASA-GRACE" product = "jpl-cmwater" folder = "cmwater" band = "grace-jpl" prefix = "grace-jpl" suffix = "RL05">
+</grace-jpl>
+</srccomp>
+
+<dstcomp>
+<grace-jpl band = "grace-jpl" prefix = "grace-jpl" suffix = "RL05-filled">
+</grace-jpl>
+</dstcomp>
+</process>
+
+<!-- mendanciltimeseries (TimeSeries) -->
+<process processid ='mendancillarytimeseries'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters></parameters>
+
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<grace-gfz source = "NASA-GRACE" product = "gfz-cmwater" folder = "cmwater" band = "grace-gfz" prefix = "grace-gfz" suffix = "RL05">
+</grace-gfz>
+</srccomp>
+
+<dstcomp>
+<grace-gfz band = "grace-gfz" prefix = "grace-gfz" suffix = "RL05-filled">
+</grace-gfz>
+</dstcomp>
+</process>
+
+<!-- mendanciltimeseries (TimeSeries) -->
+<process processid ='mendancillarytimeseries'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters></parameters>
+
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<grace-csr source = "NASA-GRACE" product = "csr-cmwater" folder = "cmwater" band = "grace-csr" prefix = "grace-csr" suffix = "RL05">
+</grace-csr>
+</srccomp>
+
+<dstcomp>
+<grace-csr band = "grace-csr" prefix = "grace-csr" suffix = "RL05-filled">
+</grace-csr>
+</dstcomp>
+</process>
+
+</manageprocess>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

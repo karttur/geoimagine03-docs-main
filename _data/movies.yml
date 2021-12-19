@@ -1,0 +1,48 @@
+soil-moisture-avg_SPL3SMP_global_2015121-2018345_005:
+    file: soil-moisture-avg_SPL3SMP_global_2015121-2018345_005.mp4
+    author: Thomas Gumbricht
+    caption: SMAP estimated soil moisture 2015 to 2018 (16 day composites)
+    credit: null
+    source: null
+    width: 800
+    height: 336
+soil-moisture-avg_SPL3SMP_global_2015-2018@16D_005:
+    file: soil-moisture-avg_SPL3SMP_global_2015-2018@16D_005.mp4
+    author: Thomas Gumbricht
+    caption: Force-filled seasonal (16 day interval) soil moisture from SMAP (average 2015 to 2018)
+    credit: null
+    source: null
+    width: 800
+    height: 336
+TWIpercent_MCD43A4_h20v10_2001009-2017361_v006-tg01:
+    file: TWIpercent_MCD43A4_h20v10_2001009-2017361_v006-tg01.mp4
+    author: Thomas Gumbricht
+    caption: Force-filled 16 day interval soil moisture from MODIS TWI tile h20v10
+    credit: null
+    source: null
+    width: 800
+    height: 800
+TWIpercent_MCD43A4_h21v08_2001009-2017361_v006-tg01:
+    file: TWIpercent_MCD43A4_h21v08_2001009-2017361_v006-tg01.mp4
+    author: Thomas Gumbricht
+    caption: Force-filled 16 day interval soil moisture from MODIS TWI tile h21v08
+    credit: null
+    source: null
+    width: 800
+    height: 800
+rainfall_3b43_trmm_199801-201807_v7-f:
+    file: rainfall_3b43_trmm_199801-201807_v7-f.mp4
+    author: Thomas Gumbricht
+    caption: Monthly rainfall estimated from TRMM and other sources
+    credit: null
+    source: null
+    width: 800
+    height: 222
+trmm-fao-vwb_3b43_trmm_199801-201807_v7-f-m:
+    file: trmm-fao-vwb_3b43_trmm_199801-201807_v7-f-m.mp4
+    author: Thomas Gumbricht
+    caption: Monthly Vertical Water Balance estimated from TRMM rainfall and reference evapotranspiration.
+    credit: null
+    source: null
+    width: 800
+    height: 222

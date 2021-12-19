@@ -1,0 +1,31 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<searchdatapool>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = '2001' endyear = '2017' timestep='16D'></period>
+<process processid ='twipercentmodisSingleTile' dsversion = '1.3'>
+<parameters constant='4300' divisor='430' power='1.067' powfac='0.0086' scalcefac='2' dstmax='200' dstmin='0' htile='20' vtile='10'></parameters>
+<srcpath volume = "Karttur3tb"></srcpath>
+<dstpath volume = "Karttur3tb"></dstpath>
+<srccomp>
+<TWI source = "MCD43A4v006" product = "MCD43A4" folder = "TWI" band = "TWI" prefix = "TWI" suffix = "v006-tg01">
+</TWI>
+</srccomp>
+<dstcomp>
+<TWIpercent source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent" band = "TWIpercent" prefix = "TWIpercent" suffix = "v006-tg01"
+celltype = 'Byte' cellnull='255' scalefac ='2' offsetadd = '0' dataunit='vol*100/vol' measure='R'
+>
+</TWIpercent>
+</dstcomp>
+</process>
+</searchdatapool>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

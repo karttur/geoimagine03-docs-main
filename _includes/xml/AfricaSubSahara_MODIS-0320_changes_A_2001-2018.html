@@ -1,0 +1,35 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2001" endyear = "2016" timestep='timespan-A'></period>
+
+<!-- Extract cells with significant trends -->
+<process processid = 'signiftrendsmodis' version = '1.3'>
+<update>True</update>
+
+<parameters basename='twipercent' threshold = '1.96'></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<mk-z-TWIpercent id = 'significance' source = "MCD43A4v006" product = "MCD43A4" folder = 'TWIpercent-fill-assim-a-trend' band = "mk-z-TWIpercent" prefix = "mk-z-TWIpercent" suffix = "v006-tg01-asf05-a">
+</mk-z-TWIpercent>
+
+<ts-mdsl-TWIpercent id = 'slope' source = "MCD43A4v006" product = "MCD43A4" folder = 'TWIpercent-fill-assim-a-trend' band = "ts-mdsl-TWIpercent" prefix = "ts-mdsl-TWIpercent" suffix = "v006-tg01-asf05-a">
+</ts-mdsl-TWIpercent>
+
+<ts-ic-TWIpercent id = 'intercept' source = "MCD43A4v006" product = "MCD43A4" folder = 'TWIpercent-fill-assim-a-trend' band = "ts-ic-TWIpercent" prefix = "ts-ic-TWIpercent" suffix = "v006-tg01-asf05-a">
+</ts-ic-TWIpercent>
+</srccomp>
+</process>
+
+</africasubsahara>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

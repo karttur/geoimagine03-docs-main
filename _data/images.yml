@@ -1,0 +1,1634 @@
+ts-mdsl-rntwi_RNTWI_id_2001-2016_AS:
+    file: ts-mdsl-rntwi_RNTWI_id_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated median change in rain normalised soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ols-sl-twi-percent_MCD43A4_bwpans_2001-2016_A:
+    file: ols-sl-twi-percent_MCD43A4_bwpans_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated change in rain normalised soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ts-mdsl-rntwi_RNTWI_bwpans_2001-2016_AS:
+    file: ts-mdsl-rntwi_RNTWI_bwpans_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated median change in rain normalised soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+bio-photo:
+    file: bio-photo.jpg
+    author: Thomas Gumbricht
+    caption: bio-photo
+    credit: null
+    source: null
+tropsoilwetnessmap:
+    file: tropsoilwetnessmap.jpg
+    author: Thomas Gumbricht
+    caption: Soil wetness
+    credit: null
+    source: null
+ols-ic-rntwi_RNTWI_bwpans_2001-2016_AS:
+    file: ols-ic-rntwi_RNTWI_bwpans_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated rain normalized soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ols-r2-rntwi_RNTWI_bwpans_2001-2016_AS:
+    file: ols-r2-rntwi_RNTWI_bwpans_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated correlation (r2) for change in rain normalized soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ols-rmse-twi-percent_MCD43A4_id_2001-2016_A:
+    file: ols-rmse-twi-percent_MCD43A4_id_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square model Random Mean Square Error for change in soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ts-losl-twi-percent_MCD43A4_id_2001-2016_A:
+    file: ts-losl-twi-percent_MCD43A4_id_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen lower confidence boundary (95%) for estimated change in soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ts-losl-trmm-3b43v7-precip_3B43_trmm_2001-2016_A:
+    file: ts-losl-trmm-3b43v7-precip_3B43_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen lower confidence boundary (95%) for estimated change in rainfall 2001-2016, global tropics
+    credit: null
+    source: null
+ts-upsl-rntwi_RNTWI_id_2001-2016_AS:
+    file: ts-upsl-rntwi_RNTWI_id_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen upper confidence boundary (95%) for estimated change in rain normalised soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+avg-rntwi_RNTWI_id_2001-2016_AS:
+    file: avg-rntwi_RNTWI_id_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Average rain normalized soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+rntwi-delta_RNTWI_id_2001-2016_mk-z-ts-model:
+    file: rntwi-delta_RNTWI_id_2001-2016_mk-z-ts-model.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated change (absolute) in rain normalised soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+troplandformmap:
+    file: troplandformmap.jpg
+    author: Thomas Gumbricht
+    caption: Landforms
+    credit: null
+    source: null
+ts-ic-twi-percent_MCD43A4_bwpans_2001-2016_A:
+    file: ts-ic-twi-percent_MCD43A4_bwpans_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+twi-percent-delta_MCD43A4_id_2001-2016_mk-z-ts-model:
+    file: twi-percent-delta_MCD43A4_id_2001-2016_mk-z-ts-model.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated change (absolut) in soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ts-upsl-twi-percent_MCD43A4_id_2001-2016_A:
+    file: ts-upsl-twi-percent_MCD43A4_id_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen upper confidence boundary (95%) for estimated change in soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+twi-percent-delta_MCD43A4_oka_2001-2016_mk-z-ts-model:
+    file: twi-percent-delta_MCD43A4_oka_2001-2016_mk-z-ts-model.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated change (absolut) in soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+twi-percent-delta_MCD43A4_bwpans_2001-2016_mk-z-ts-model@p005:
+    file: twi-percent-delta_MCD43A4_bwpans_2001-2016_mk-z-ts-model@p005.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated change (absolut) in soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ts-losl-twi-percent_MCD43A4_oka_2001-2016_A:
+    file: ts-losl-twi-percent_MCD43A4_oka_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen lower confidence boundary (95%) for estimated change in soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ols-ic-rntwi_RNTWI_oka_2001-2016_AS:
+    file: ols-ic-rntwi_RNTWI_oka_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated rain normalized soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ts-mdsl-twi-percent_MCD43A4_bwpans_2001-2016_A:
+    file: ts-mdsl-twi-percent_MCD43A4_bwpans_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated median change in soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+mk-z-twi-percent_MCD43A4_java_2001-2016_A:
+    file: mk-z-twi-percent_MCD43A4_java_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Mann-Kendall Z-test for changes in soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+std-trmm-fao-diff-vwb_vwb_trmm_2001-2016_A:
+    file: std-trmm-fao-diff-vwb_vwb_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Standard deviation for vertical water balance 2001-2016, global tropics
+    credit: null
+    source: null
+ts-ic-rntwi_RNTWI_bwpans_2001-2016_AS:
+    file: ts-ic-rntwi_RNTWI_bwpans_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated rain normalised soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ts-ic-rntwi_RNTWI_oka_2001-2016_AS:
+    file: ts-ic-rntwi_RNTWI_oka_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated rain normalised soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+avg-trmm-fao-surplus-vwb_vwb_trmm_2001-2016_A:
+    file: avg-trmm-fao-surplus-vwb_vwb_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Average surplus in vertical water balance (rainfall surplus) 2001-2016, global tropics
+    credit: null
+    source: null
+ts-upsl-twi-percent_MCD43A4_oka_2001-2016_A:
+    file: ts-upsl-twi-percent_MCD43A4_oka_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen upper confidence boundary (95%) for estimated change in soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+rainfall-delta_3B43_trmm_2001-2016_mk-z-ts-model:
+    file: rainfall-delta_3B43_trmm_2001-2016_mk-z-ts-model.jpg
+    author: Thomas Gumbricht
+    caption: Change in rainfall 2001-2016, global tropics
+    credit: null
+    source: null
+std-twi-percent_MCD43A4_bwpans_2001-2016_A:
+    file: std-twi-percent_MCD43A4_bwpans_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Standard deviation for soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+std-twi-percent_MCD43A4_id_2001-2016_A:
+    file: std-twi-percent_MCD43A4_id_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Standard deviation for soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ts-upsl-trmm-3b43v7-precip_3B43_trmm_2001-2016_A:
+    file: ts-upsl-trmm-3b43v7-precip_3B43_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen upper confidence boundary (95%) for estimated change in rainfall 2001-2016, global tropics
+    credit: null
+    source: null
+ols-ic-twi-percent_MCD43A4_bwpans_2001-2016_A:
+    file: ols-ic-twi-percent_MCD43A4_bwpans_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ols-sl-rntwi_RNTWI_bwpans_2001-2016_AS:
+    file: ols-sl-rntwi_RNTWI_bwpans_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated change (slope) in rain normalised soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+avg-rntwi_RNTWI_oka_2001-2016_AS:
+    file: avg-rntwi_RNTWI_oka_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Average rain normalized soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+twi-percent-delta_MCD43A4_bwpans_2001-2016_mk-z-ts-model:
+    file: twi-percent-delta_MCD43A4_bwpans_2001-2016_mk-z-ts-model.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated change (absolut) in soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+mk-z-twi-percent_MCD43A4_bwpans_2001-2016_A:
+    file: mk-z-twi-percent_MCD43A4_bwpans_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Mann-Kendall Z-test for changes in soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ols-r2-rntwi_RNTWI_id_2001-2016_AS:
+    file: ols-r2-rntwi_RNTWI_id_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated correlation (r2) for change in rain normalized soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ols-rmse-rntwi_RNTWI_java_2001-2016_AS:
+    file: ols-rmse-rntwi_RNTWI_java_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square model Random Mean Square Error for change in rain normalised soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ts-mdsl-twi-percent_MCD43A4_id_2001-2016_A:
+    file: ts-mdsl-twi-percent_MCD43A4_id_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated median change in soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ts-mdsl-rntwi_RNTWI_java_2001-2016_AS:
+    file: ts-mdsl-rntwi_RNTWI_java_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated median change in rain normalised soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ts-losl-rntwi_RNTWI_bwpans_2001-2016_AS:
+    file: ts-losl-rntwi_RNTWI_bwpans_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen lower confidence boundary (95%) for estimated change in rain normalised soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ols-r2-twi-percent_MCD43A4_bwpans_2001-2016_A:
+    file: ols-r2-twi-percent_MCD43A4_bwpans_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated correlation (r2) for change in soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ols-sl-rntwi_RNTWI_id_2001-2016_AS:
+    file: ols-sl-rntwi_RNTWI_id_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated change (slope) in rain normalised soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ts-losl-twi-percent_MCD43A4_java_2001-2016_A:
+    file: ts-losl-twi-percent_MCD43A4_java_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen lower confidence boundary (95%) for estimated change in soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+rntwi-delta_RNTWI_bwpans_2001-2016_mk-z-ts-model:
+    file: rntwi-delta_RNTWI_bwpans_2001-2016_mk-z-ts-model.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated change (absolute) in rain normalised soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ols-r2-trmm-3b43v7-precip_3B43_trmm_2001-2016_A:
+    file: ols-r2-trmm-3b43v7-precip_3B43_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated correlation (r2) for change in rainfall 2001-2016, global tropics
+    credit: null
+    source: null
+avg-twi-percent_MCD43A4_oka_2001-2016_A:
+    file: avg-twi-percent_MCD43A4_oka_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Average soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+std-rntwi_RNTWI_java_2001-2016_AS:
+    file: std-rntwi_RNTWI_java_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Starndard deviation rain normalized soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+mk-z-trmm-3b43v7-precip_3B43_trmm_2001-2016_A:
+    file: mk-z-trmm-3b43v7-precip_3B43_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Mann-Kendall Z-test for changes in rainfall 2001-2016, global tropics
+    credit: null
+    source: null
+avg-twi-percent_MCD43A4_id_2001-2016_A:
+    file: avg-twi-percent_MCD43A4_id_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Average soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ts-mdsl-rntwi_RNTWI_oka_2001-2016_AS:
+    file: ts-mdsl-rntwi_RNTWI_oka_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated median change in rain normalised soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+avg-trmm-3b43v7-precip_3B43_trmm_2001-2016_A:
+    file: avg-trmm-3b43v7-precip_3B43_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Average rainfall 2001-2016, global tropics
+    credit: null
+    source: null
+ols-ic-rntwi_RNTWI_id_2001-2016_AS:
+    file: ols-ic-rntwi_RNTWI_id_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated rain normalized soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ols-rmse-rntwi_RNTWI_bwpans_2001-2016_AS:
+    file: ols-rmse-rntwi_RNTWI_bwpans_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square model Random Mean Square Error for change in rain normalised soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+avg-twi-percent_MCD43A4_java_2001-2016_A:
+    file: avg-twi-percent_MCD43A4_java_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Average soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+avg-rntwi_RNTWI_java_2001-2016_AS:
+    file: avg-rntwi_RNTWI_java_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Average rain normalized soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+twi-percent-delta_MCD43A4_java_2001-2016_mk-z-ts-model:
+    file: twi-percent-delta_MCD43A4_java_2001-2016_mk-z-ts-model.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated change (absolut) in soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ts-upsl-rntwi_RNTWI_oka_2001-2016_AS:
+    file: ts-upsl-rntwi_RNTWI_oka_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen upper confidence boundary (95%) for estimated change in rain normalised soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ts-losl-rntwi_RNTWI_java_2001-2016_AS:
+    file: ts-losl-rntwi_RNTWI_java_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen lower confidence boundary (95%) for estimated change in rain normalised soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ols-r2-rntwi_RNTWI_oka_2001-2016_AS:
+    file: ols-r2-rntwi_RNTWI_oka_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated correlation (r2) for change in rain normalized soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ts-mdsl-trmm-3b43v7-precip_3B43_trmm_2001-2016_A:
+    file: ts-mdsl-trmm-3b43v7-precip_3B43_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated median change in rainfall 2001-2016, global tropics
+    credit: null
+    source: null
+ols-rmse-twi-percent_MCD43A4_oka_2001-2016_A:
+    file: ols-rmse-twi-percent_MCD43A4_oka_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square model Random Mean Square Error for change in soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+mk-z-rntwi_RNTWI_bwpans_2001-2016_AS:
+    file: mk-z-rntwi_RNTWI_bwpans_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Mann-Kendall Z-test for changes in rain normalised soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ts-mdsl-twi-percent_MCD43A4_oka_2001-2016_A:
+    file: ts-mdsl-twi-percent_MCD43A4_oka_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated median change in soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ts-ic-rntwi_RNTWI_java_2001-2016_AS:
+    file: ts-ic-rntwi_RNTWI_java_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated rain normalised soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ols-ic-twi-percent_MCD43A4_oka_2001-2016_A:
+    file: ols-ic-twi-percent_MCD43A4_oka_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+std-trmm-3b43v7-precip_3B43_trmm_2001-2016_A:
+    file: std-trmm-3b43v7-precip_3B43_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Standard deviation for rainfall 2001-2016, global tropics
+    credit: null
+    source: null
+ts-mdsl-twi-percent_MCD43A4_java_2001-2016_A:
+    file: ts-mdsl-twi-percent_MCD43A4_java_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated median change in soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ols-r2-twi-percent_MCD43A4_id_2001-2016_A:
+    file: ols-r2-twi-percent_MCD43A4_id_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated correlation (r2) for change in soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+avg-trmm-fao-diff-vwb_vwb_trmm_2001-2016_A:
+    file: avg-trmm-fao-diff-vwb_vwb_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Average vertical water balance 2001-2016, global tropics
+    credit: null
+    source: null
+std-rntwi_RNTWI_oka_2001-2016_AS:
+    file: std-rntwi_RNTWI_oka_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Starndard deviation rain normalized soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ols-sl-trmm-3b43v7-precip_3B43_trmm_2001-2016_A:
+    file: ols-sl-trmm-3b43v7-precip_3B43_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated change in rainfall 2001-2016, global tropics
+    credit: null
+    source: null
+ols-sl-twi-percent_MCD43A4_oka_2001-2016_A:
+    file: ols-sl-twi-percent_MCD43A4_oka_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated change in rain normalised soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ts-upsl-rntwi_RNTWI_java_2001-2016_AS:
+    file: ts-upsl-rntwi_RNTWI_java_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen upper confidence boundary (95%) for estimated change in rain normalised soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ts-losl-rntwi_RNTWI_id_2001-2016_AS:
+    file: ts-losl-rntwi_RNTWI_id_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen lower confidence boundary (95%) for estimated change in rain normalised soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ts-upsl-twi-percent_MCD43A4_bwpans_2001-2016_A:
+    file: ts-upsl-twi-percent_MCD43A4_bwpans_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen upper confidence boundary (95%) for estimated change in soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ols-sl-twi-percent_MCD43A4_java_2001-2016_A:
+    file: ols-sl-twi-percent_MCD43A4_java_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated change in rain normalised soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+twi-percent-delta_MCD43A4_oka_2001-2016_mk-z-ts-model@p005:
+    file: twi-percent-delta_MCD43A4_oka_2001-2016_mk-z-ts-model@p005.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated change (absolut) in soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ts-losl-twi-percent_MCD43A4_bwpans_2001-2016_A:
+    file: ts-losl-twi-percent_MCD43A4_bwpans_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen lower confidence boundary (95%) for estimated change in soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+std-rntwi_RNTWI_id_2001-2016_AS:
+    file: std-rntwi_RNTWI_id_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Starndard deviation rain normalized soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ols-sl-rntwi_RNTWI_java_2001-2016_AS:
+    file: ols-sl-rntwi_RNTWI_java_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated change (slope) in rain normalised soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+troprunoffmap:
+    file: troprunoffmap.jpg
+    author: Thomas Gumbricht
+    caption: Runoff
+    credit: null
+    source: null
+mk-z-twi-percent_MCD43A4_id_2001-2016_A:
+    file: mk-z-twi-percent_MCD43A4_id_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Mann-Kendall Z-test for changes in soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ols-rmse-twi-percent_MCD43A4_bwpans_2001-2016_A:
+    file: ols-rmse-twi-percent_MCD43A4_bwpans_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square model Random Mean Square Error for change in soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+std-rntwi_RNTWI_bwpans_2001-2016_AS:
+    file: std-rntwi_RNTWI_bwpans_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Starndard deviation rain normalized soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ols-rmse-rntwi_RNTWI_oka_2001-2016_AS:
+    file: ols-rmse-rntwi_RNTWI_oka_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square model Random Mean Square Error for change in rain normalised soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ols-sl-twi-percent_MCD43A4_id_2001-2016_A:
+    file: ols-sl-twi-percent_MCD43A4_id_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated change in rain normalised soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ols-ic-twi-percent_MCD43A4_java_2001-2016_A:
+    file: ols-ic-twi-percent_MCD43A4_java_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ols-rmse-twi-percent_MCD43A4_java_2001-2016_A:
+    file: ols-rmse-twi-percent_MCD43A4_java_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square model Random Mean Square Error for change in soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+std-twi-percent_MCD43A4_oka_2001-2016_A:
+    file: std-twi-percent_MCD43A4_oka_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Standard deviation for soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ts-ic-twi-percent_MCD43A4_java_2001-2016_A:
+    file: ts-ic-twi-percent_MCD43A4_java_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+rainfall-delta_3B43_trmm_2001-2016_mk-z-ts-model@p005:
+    file: rainfall-delta_3B43_trmm_2001-2016_mk-z-ts-model@p005.jpg
+    author: Thomas Gumbricht
+    caption: Change in rainfall 2001-2016, global tropics
+    credit: null
+    source: null
+rntwi-delta_RNTWI_oka_2001-2016_mk-z-ts-model:
+    file: rntwi-delta_RNTWI_oka_2001-2016_mk-z-ts-model.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated change (absolute) in rain normalised soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+avg-twi-percent_MCD43A4_bwpans_2001-2016_A:
+    file: avg-twi-percent_MCD43A4_bwpans_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Average soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ols-r2-twi-percent_MCD43A4_oka_2001-2016_A:
+    file: ols-r2-twi-percent_MCD43A4_oka_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated correlation (r2) for change in soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ols-rmse-rntwi_RNTWI_id_2001-2016_AS:
+    file: ols-rmse-rntwi_RNTWI_id_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square model Random Mean Square Error for change in rain normalised soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ols-rmse-trmm-3b43v7-precip_3B43_trmm_2001-2016_A:
+    file: ols-rmse-trmm-3b43v7-precip_3B43_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square model Random Mean Square Error for change in rainfall 2001-2016, global tropics
+    credit: null
+    source: null
+ols-r2-rntwi_RNTWI_java_2001-2016_AS:
+    file: ols-r2-rntwi_RNTWI_java_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated correlation (r2) for change in rain normalized soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ols-r2-twi-percent_MCD43A4_java_2001-2016_A:
+    file: ols-r2-twi-percent_MCD43A4_java_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated correlation (r2) for change in soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+mk-z-rntwi_RNTWI_id_2001-2016_AS:
+    file: mk-z-rntwi_RNTWI_id_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Mann-Kendall Z-test for changes in rain normalised soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ts-upsl-twi-percent_MCD43A4_java_2001-2016_A:
+    file: ts-upsl-twi-percent_MCD43A4_java_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen upper confidence boundary (95%) for estimated change in soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ols-ic-rntwi_RNTWI_java_2001-2016_AS:
+    file: ols-ic-rntwi_RNTWI_java_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated rain normalized soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+mk-z-rntwi_RNTWI_java_2001-2016_AS:
+    file: mk-z-rntwi_RNTWI_java_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Mann-Kendall Z-test for changes in rain normalised soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ols-sl-rntwi_RNTWI_oka_2001-2016_AS:
+    file: ols-sl-rntwi_RNTWI_oka_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated change (slope) in rain normalised soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+avg-trmm-fao-deficit-vwb_vwb_trmm_2001-2016_A:
+    file: avg-trmm-fao-deficit-vwb_vwb_trmm_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Average deficit in vertical water balance (rainfall deficit) 2001-2016, global tropics
+    credit: null
+    source: null
+rntwi-delta_RNTWI_java_2001-2016_mk-z-ts-model:
+    file: rntwi-delta_RNTWI_java_2001-2016_mk-z-ts-model.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated change (absolute) in rain normalised soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+mk-z-rntwi_RNTWI_oka_2001-2016_AS:
+    file: mk-z-rntwi_RNTWI_oka_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Mann-Kendall Z-test for changes in rain normalised soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+std-twi-percent_MCD43A4_java_2001-2016_A:
+    file: std-twi-percent_MCD43A4_java_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Standard deviation for soil moisture 2001-2016, Java, Indonesia
+    credit: null
+    source: null
+ts-ic-rntwi_RNTWI_id_2001-2016_AS:
+    file: ts-ic-rntwi_RNTWI_id_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated rain normalised soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ts-losl-rntwi_RNTWI_oka_2001-2016_AS:
+    file: ts-losl-rntwi_RNTWI_oka_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen lower confidence boundary (95%) for estimated change in rain normalised soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+ols-ic-twi-percent_MCD43A4_id_2001-2016_A:
+    file: ols-ic-twi-percent_MCD43A4_id_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Ordinary least square estimated soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+mk-z-twi-percent_MCD43A4_oka_2001-2016_A:
+    file: mk-z-twi-percent_MCD43A4_oka_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Mann-Kendall Z-test for changes in soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+avg-rntwi_RNTWI_bwpans_2001-2016_AS:
+    file: avg-rntwi_RNTWI_bwpans_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Average rain normalized soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ts-ic-twi-percent_MCD43A4_id_2001-2016_A:
+    file: ts-ic-twi-percent_MCD43A4_id_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated soil moisture 2001-2016, Indonesia
+    credit: null
+    source: null
+ts-upsl-rntwi_RNTWI_bwpans_2001-2016_AS:
+    file: ts-upsl-rntwi_RNTWI_bwpans_2001-2016_AS.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen upper confidence boundary (95%) for estimated change in rain normalised soil moisture 2001-2016, Kalahari, Botswana
+    credit: null
+    source: null
+ts-ic-twi-percent_MCD43A4_oka_2001-2016_A:
+    file: ts-ic-twi-percent_MCD43A4_oka_2001-2016_A.jpg
+    author: Thomas Gumbricht
+    caption: Theil-Sen estimated soil moisture 2001-2016, Okavango, Botswana
+    credit: null
+    source: null
+tropwetlandmap:
+    file: tropwetlandmap.jpg
+    author: Thomas Gumbricht
+    caption: Wetlands
+    credit: null
+    source: null
+avg-grace-ave_cmwater_global_2003-2016_RL05-f-A:
+    file: avg-grace-ave_cmwater_global_2003-2016_RL05-f-A.jpg
+    author: Thomas Gumbricht
+    caption: Average GRACE water equivalent thickness 2003-2016
+    credit: null
+    source: null
+ols-sl-grace-ave_cmwater_global_2003-2016_RL05-f-A:
+    file: ols-sl-grace-ave_cmwater_global_2003-2016_RL05-f-A.jpg
+    author: Thomas Gumbricht
+    caption:
+    credit: null
+    source: null
+ts-mdsl-grace-ave_cmwater_global_2003-2016_RL05-f-A:
+    file: ts-mdsl-grace-ave_cmwater_global_2003-2016_RL05-f-A.jpg
+    author: Thomas Gumbricht
+    caption:
+    credit: null
+    source: null
+ts-losl-grace-ave_cmwater_global_2003-2016_RL05-f-A:
+    file: ts-losl-grace-ave_cmwater_global_2003-2016_RL05-f-A.jpg
+    author: Thomas Gumbricht
+    caption:
+    credit: null
+    source: null
+ts-hisl-grace-ave_cmwater_global_2003-2016_RL05-f-A:
+    file: ts-hisl-grace-ave_cmwater_global_2003-2016_RL05-f-A.jpg
+    author: Thomas Gumbricht
+    caption:
+    credit: null
+    source: null
+soil-moisture-avg_SPL3SMP_global_2016009_005:
+    file: soil-moisture-avg_SPL3SMP_global_2016009_005.jpg
+    source: soil-moisture-avg_SPL3SMP_global_2016009_005.jpg
+    author: Thomas Gumbricht
+    caption: Average soil moisture (vol/vol) for days 1 to 16 in 2016.
+    credit: null
+    source: null
+soil-moisture-avg_SPL3SMP_global_2015-2018@D001_005:
+    file: soil-moisture-avg_SPL3SMP_global_2015-2018@D001_005.jpg
+    source: soil-moisture-avg_SPL3SMP_global_2015-2018@D001_005.jpg
+    author: Thomas Gumbricht
+    caption: Average soil moisture (vol/vol) for day of year 1 to 16 2015 to 2018. Estimates in arctic regions are derived from interpolation of unfrozen (summer) conditions.
+    credit: null
+    source: null
+soil-moisture-am_SPL3SMP_global_20160122_005:
+    file: soil-moisture-am_SPL3SMP_global_20160122_005.jpg
+    source: soil-moisture-am_SPL3SMP_global_20160122_005.jpg
+    author: Thomas Gumbricht
+    caption:
+    credit: null
+    source: null
+soil-moisture-pm_SPL3SMP_global_20160122_005:
+    file: soil-moisture-pm_SPL3SMP_global_20160122_005.jpg
+    source: soil-moisture-pm_SPL3SMP_global_20160122_005.jpg
+    author: Thomas Gumbricht
+    caption:
+    credit: null
+    source: null
+soil-moisture-avg_SPL3SMP_global_20160122_005:
+    file: soil-moisture-avg_SPL3SMP_global_20160122_005.jpg
+    source: soil-moisture-avg_SPL3SMP_global_20160122_005.jpg
+    author: Thomas Gumbricht
+    caption:
+    credit: null
+    source: null
+TWIpercent_MCD43A4_h20v10_2005249_v006-tg01:
+    file: TWIpercent_MCD43A4_h20v10_2005249_v006-tg01.jpg
+    source: TWIpercent_MCD43A4_h20v10_2005249_v006-tg01.jpg
+    author: Thomas Gumbricht
+    caption: Force filled MODIS TWI for 16D period 2005249 and tile h20v10
+    credit: null
+    source: null
+plot_climate-soi-pdo_1998-2017:
+    file: plot_climate-soi-pdo_1998-2017.jpg
+    source: plot_climate-soi-pdo_1998-2017.jpg
+    author: Thomas Gumbricht
+    caption: Time series plot of climate indexes using pandas dataframe built in plot function
+    credit: null
+    source: null
+plot_climate-nao-soi-pdo_1998-2017:
+    file: plot_climate-nao-soi-pdo_1998-2017.jpg
+    source: plot_climate-nao-soi-pdo_1998-2017.jpg
+    author: Thomas Gumbricht
+    caption: Time series plot of climate indexes with user defined colors and styles
+    credit: null
+    source: null
+plot_climate-tendency1yr-nao-soi-pdo_1998-2017:
+    file: plot_climate-tendency1yr-nao-soi-pdo_1998-2017.jpg
+    source: plot_climate-tendency1yr-nao-soi-pdo_1998-2017.jpg
+    author: Thomas Gumbricht
+    caption: Time series plot of climate indexes including smoothing tendency
+    credit: null
+    source: null
+plot_climate-tendency2yr-nao-soi-pdo_1998-2017:
+    file: plot_climate-tendency2yr-nao-soi-pdo_1998-2017.jpg
+    source: plot_climate-tendency2yr-nao-soi-pdo_1998-2017.jpg
+    author: Thomas Gumbricht
+    caption: Time series plot of climate indexes including smoothing tendency
+    credit: null
+    source: null
+plot_climate-naive1yr-nao-soi-pdo_1998-2017:
+    file: plot_climate-naive1yr-nao-soi-pdo_1998-2017.jpg
+    source: plot_climate-naive1yr-nao-soi-pdo_1998-2017.jpg
+    author: Thomas Gumbricht
+    caption: Time series plot of climate indexes including smoothing tendency
+    credit: null
+    source: null
+plot_climate-naive2yr-nao-soi-pdo_1998-2017:
+    file: plot_climate-naive2yr-nao-soi-pdo_1998-2017.jpg
+    source: plot_climate-naive2yr-nao-soi-pdo_1998-2017.jpg
+    author: Thomas Gumbricht
+    caption: Time series plot of climate indexes including smoothing tendency
+    credit: null
+    source: null
+
+plot_climate-spline-nao-soi-pdo_1998-2017:
+    file: plot_climate-spline-nao-soi-pdo_1998-2017.jpg
+    source: plot_climate-spline-nao-soi-pdo_1998-2017.jpg
+    author: Thomas Gumbricht
+    caption: Time series plot of climate indexes including smoothing tendency and trend analysis
+    credit: null
+    source: null
+
+acf_climate_nao-soi-pdo:
+    file: acf_climate_nao-soi-pdo.jpg
+    source: acf_climate_nao-soi-pdo.jpg
+    author: Thomas Gumbricht
+    caption: Autocorrelation of climate index time series data
+    credit: null
+    source: null
+
+pacf_climate_nao-soi-pdo:
+    file: pacf_climate_nao-soi-pdo.jpg
+    source: pacf_climate_nao-soi-pdo.jpg
+    author: Thomas Gumbricht
+    caption: Partial autocorrelation of climate index time series data
+    credit: null
+    source: null
+
+decompose-naive-pdo:
+    file: decompose-naive-pdo.jpg
+    source: decompose-naive-pdo.jpg
+    author: Thomas Gumbricht
+    caption: Decomposed time sereis of atmospheric CO2 from Mauna Loa (additive model)
+    credit: null
+    source: null
+
+decompose-spline-pdo:
+    file: decompose-spline-pdo.jpg
+    source: decompose-spline-pdo.jpg
+    author: Thomas Gumbricht
+    caption: Decomposed time sereis of atmospheric CO2 from Mauna Loa (additive model)
+    credit: null
+    source: null
+
+decompose-naive-maunaloa_co2_additive:
+    file: decompose-naive-maunaloa_co2_additive.jpg
+    source: decompose-naive-maunaloa_co2_additive.jpg
+    author: Thomas Gumbricht
+    caption: Decomposed time sereis of atmospheric CO2 from Mauna Loa (additive model)
+    credit: null
+    source: null
+
+decompose-naive-maunaloa_co2_multiplicative:
+    file: decompose-naive-maunaloa_co2_multiplicative.jpg
+    source: decompose-naive-maunaloa_co2_multiplicative.jpg
+    author: Thomas Gumbricht
+    caption: Decomposed time sereis of atmospheric CO2 from Mauna Loa (mulitplicative model)
+    credit: null
+    source: null
+
+crosscorr_soi-okavango_clim-TRMM:
+    file: crosscorr_soi-okavango_clim-TRMM.jpg
+    source: crosscorr_soi-okavango_clim-TRMM.jpg
+    author: Thomas Gumbricht
+    caption: Cross correlation between the Southern Oscillation Index (SOI) and local rainfall at Okavango (Botswana).
+    credit: null
+    source: null
+
+crosscorr_soi-okavango+lakevic_clim-TRMM:
+    file: crosscorr_soi-okavango+lakevic_clim-TRMM.jpg
+    source: crosscorr_soi-okavango+lakevic_clim-TRMM.jpg
+    author: Thomas Gumbricht
+    caption: Cross correlation between the Southern Oscillation Index (SOI) and local rainfall at Okavango (Botswana).
+    credit: null
+    source: null
+
+crosscorr_pdo-okavango_clim-TRMM:
+    file: crosscorr_pdo-okavango_clim-TRMM.jpg
+    source: crosscorr_pdo-okavango_clim-TRMM.jpg
+    author: Thomas Gumbricht
+    caption: Cross correlation between the Southern Oscillation Index (SOI) and local rainfall at Okavango (Botswana).
+    credit: null
+    source: null
+
+crosscorr-lagadj_pdo-okavango_clim-TRMM:
+    file: crosscorr-lagadj_pdo-okavango_clim-TRMM.jpg
+    source: crosscorr-lagadj_pdo-okavango_clim-TRMM.jpg
+    author: Thomas Gumbricht
+    caption: Cross correlation between the Southern Oscillation Index (SOI) and local rainfall at Okavango (Botswana).
+    credit: null
+    source: null
+
+crosscorr-abs_pdo-okavango_clim-TRMM:
+    file: crosscorr-abs_pdo-okavango_clim-TRMM.jpg
+    source: crosscorr-abs_pdo-okavango_clim-TRMM.jpg
+    author: Thomas Gumbricht
+    caption: Cross correlation between the Southern Oscillation Index (SOI) and local rainfall at Okavango (Botswana).
+    credit: null
+    source: null
+
+crosscorr-abs-lagadjust_pdo-okavango_clim-TRMM:
+    file: crosscorr-abs-lagadjust_pdo-okavango_clim-TRMM.jpg
+    source: crosscorr-abs-lagadjust_pdo-okavango_clim-TRMM.jpg
+    author: Thomas Gumbricht
+    caption: Cross correlation between the Southern Oscillation Index (SOI) and local rainfall at Okavango (Botswana).
+    credit: null
+    source: null
+
+crosscorr_multiindex_oka_observation_clim-TRMM:
+    file: crosscorr_multiindex_oka_observation_clim-TRMM.jpg
+    source: crosscorr_multiindex_oka_observation_clim-TRMM.jpg
+    author: Thomas Gumbricht
+    caption: Cross correlation between the Southern Oscillation Index (SOI) and local rainfall at Okavango (Botswana).
+    credit: null
+    source: null
+
+crosscorr_multiindex_oka_tendency_clim-TRMM:
+    file: crosscorr_multiindex_oka_tendency_clim-TRMM.jpg
+    source: crosscorr_multiindex_oka_tendency_clim-TRMM.jpg
+    author: Thomas Gumbricht
+    caption: Cross correlation between the Southern Oscillation Index (SOI) and local rainfall at Okavango (Botswana).
+    credit: null
+    source: null
+
+crosscorr_multiindex_oka_seasons_clim-TRMM:
+    file: crosscorr_multiindex_oka_seasons_clim-TRMM.jpg
+    source: crosscorr_multiindex_oka_seasons_clim-TRMM.jpg
+    author: Thomas Gumbricht
+    caption: Cross correlation between the Southern Oscillation Index (SOI) and local rainfall at Okavango (Botswana).
+    credit: null
+    source: null
+
+crosscorr_multiindex_oka_residual_clim-TRMM:
+    file: crosscorr_multiindex_oka_residual_clim-TRMM.jpg
+    source: crosscorr_multiindex_oka_residual_clim-TRMM.jpg
+    author: Thomas Gumbricht
+    caption: Cross correlation between the Southern Oscillation Index (SOI) and local rainfall at Okavango (Botswana).
+    credit: null
+    source: null
+
+crosscorr_multiindex_oka+lakevic_tendency_clim-TRMM:
+    file: crosscorr_multiindex_oka+lakevic_tendency_clim-TRMM.jpg
+    source: crosscorr_multiindex_oka+lakevic_tendency_clim-TRMM.jpg
+    author: Thomas Gumbricht
+    caption: Cross correlation between different climate indexes and local rainfall at Okavango (Botswana) and Lake Victoria (Uganda).
+    credit: null
+    source: null
+
+arcticdem_polar-stereographic:
+  file: arcticdem_polar-stereographic.jpg
+  source: arcticdem_polar-stereographic.jpg
+  author: Thomas Gumbricht
+  caption: Arctic Digital Elevation Model (DEM) in polar stereographic projection (orignal download format).
+  credit: null
+  source: null
+
+arcticdem_h18v02:
+  file: arcticdem_h18v02.jpg
+  source: arcticdem_h18v02.jpg
+  author: Thomas Gumbricht
+  caption: Arctic Digital Elevation Model (DEM) projected to MODIS SIN grid h18v02 (central Scandinavia).
+  credit: null
+  source: null
+
+dem_detail_h18v02:
+  file: dem_detail_h18v02.jpg
+  source: dem_detail_h18v02.jpg
+  author: Thomas Gumbricht
+  caption: DEM detail.
+  credit: null
+  source: null
+
+hillshade_detail_h18v02:
+  file: hillshade_detail_h18v02.jpg
+  source: hillshade_detail_h18v02.jpg
+  author: Thomas Gumbricht
+  caption: Hillshade detail.
+  credit: null
+  source: null
+
+slope_detail_h18v02:
+  file: slope_detail_h18v02.jpg
+  source: slope_detail_h18v02.jpg
+  author: Thomas Gumbricht
+  caption: Slope detail.
+  credit: null
+  source: null
+
+aspect_detail_h18v02:
+  file: aspect_detail_h18v02.jpg
+  source: aspect_detail_h18v02.jpg
+  author: Thomas Gumbricht
+  caption: Aspect detail.
+  credit: null
+  source: null
+
+tpi500detail:
+  file: tpi500_detail_h18v02.jpg
+  source: tpi500_detail_h18v02.jpg
+  author: Thomas Gumbricht
+  caption: Terrain Position Index at 500 m spatial resolution.
+  credit: null
+  source: null
+
+tpi1000detail:
+  file: tpi1000_detail_h18v02.jpg
+  source: tpi1000_detail_h18v02.jpg
+  author: Thomas Gumbricht
+  caption: Terrain Position Index at 1000 m spatial resolution.
+  credit: null
+  source: null
+
+tpi1500detail:
+  file: tpi1500_detail_h18v02.jpg
+  source: tpi1500_detail_h18v02.jpg
+  author: Thomas Gumbricht
+  caption: Terrain Position Index at 1500 m spatial resolution.
+  credit: null
+  source: null
+
+tpi2000detail:
+  file: tpi2000_detail_h18v02.jpg
+  source: tpi2000_detail_h18v02.jpg
+  author: Thomas Gumbricht
+  caption: Terrain Position Index at 2000 m spatial resolution.
+  credit: null
+  source: null
+
+landform_scandinavia_rawtpi:
+  file: landform_scandinavia_rawtpi.jpg
+  source: landform_scandinavia_rawtpi.jpg
+  author: Thomas Gumbricht
+  caption: Landform classification from dual scaled raw TPI for the Nordic countries.
+  credit: null
+  source: null
+
+landform_scandinavia_globalstd-tpi:
+  file: landform_scandinavia_globalstd-tpi.jpg
+  source: landform_scandinavia_globalstd-tpi.jpg
+  author: Thomas Gumbricht
+  caption: Landform classification from dual scaled and globally standardized TPI for the Nordic countries.
+  credit: null
+  source: null
+
+landform_scandinavia_relativestd-tpi:
+  file: landform_scandinavia_relativestd-tpi.jpg
+  source: landform_scandinavia_relativestd-tpi.jpg
+  author: Thomas Gumbricht
+  caption: Landform classification from dual scaled and relatively standardized TPI for the Nordic countries.
+  credit: null
+  source: null
+
+landform_scandinavia_standardized-tpi:
+  file: landform_scandinavia_standardized-tpi.jpg
+  source: landform_scandinavia_standardized-tpi.jpg
+  author: Thomas Gumbricht
+  caption: Landform classification from dual scaled and locally standardized TPI for the Nordic countries.
+  credit: null
+  source: null
+
+landform_scandinavia-detail_rawtpi:
+  file: landform_scandinavia-detail_rawtpi.jpg
+  source: landform_scandinavia-detail_rawtpi.jpg
+  author: Thomas Gumbricht
+  caption: Landform classification from dual scaled raw TPI (detail showing tile boundary).
+  credit: null
+  source: null
+
+landform_scandinavia-detail_globalstd-tpi:
+  file: landform_scandinavia-detail_globalstd-tpi.jpg
+  source: landform_scandinavia-detail_globalstd-tpi.jpg
+  author: Thomas Gumbricht
+  caption: Landform classification from dual scaled and globally standardized TPI (detail showing tile boundary).
+  credit: null
+  source: null
+
+landform_scandinavia-detail_relativestd-tpi:
+  file: landform_scandinavia-detail_relativestd-tpi.jpg
+  source: landform_scandinavia-detail_relativestd-tpi.jpg
+  author: Thomas Gumbricht
+  caption: Landform classification from dual scaled and relatively standardized TPI (detail showing tile boundary).
+  credit: null
+  source: null
+
+landform_scandinavia-detail_standardized-tpi:
+  file: landform_scandinavia-detail_standardized-tpi.jpg
+  source: landform_scandinavia-detail_standardized-tpi.jpg
+  author: Thomas Gumbricht
+  caption: Landform classification from dual scaled and locally standardized TPI (detail showing tile boundary).
+  credit: null
+  source: null
+
+eclipse_select_import:
+  file: eclipse_select_import.png
+  source: eclipse_select_import.png
+  author: Thomas Gumbricht
+  caption: Eclipse import window.
+  credit: null
+  source: null
+
+eclipse_import_project_from_file_system_or_archive:
+  file: eclipse_import_projecct_from_file_system_or_archive.png
+  source: eclipse_import_projecct_from_file_system_or_archive.png
+  author: Thomas Gumbricht
+  caption: Eclipse window for Import Project from File System or Archive.
+  credit: null
+  source: null
+
+avg-trmm-3b43v7-precip_3b43_trmm_1998-2017_v7-f-A:
+  file: avg-trmm-3b43v7-precip_3b43_trmm_1998-2017_v7-f-A.jpg
+  source: avg-trmm-3b43v7-precip_3b43_trmm_1998-2017_v7-f-A.jpg
+  author: Thomas Gumbricht
+  caption: rainfall-a-stats_avg-trmm-3b43v7-precip-precipln.
+  credit: null
+  source: null
+
+rainfall-a-stats_avg-trmm-3b43v7-precip-precipln:
+  file: rainfall-a-stats_avg-trmm-3b43v7-precip-precipln.png
+  source: rainfall-a-stats_avg-trmm-3b43v7-precip-precipln.png
+  author: Thomas Gumbricht
+  caption: rainfall-a-stats_avg-trmm-3b43v7-precip-precipln.
+  credit: null
+  source: null
+
+ts-mdsl-trmm-3b43v7-precip_3b43_trmm_1998-2017_v7-f-A:
+  file: ts-mdsl-trmm-3b43v7-precip_3b43_trmm_1998-2017_v7-f-A.jpg
+  source: ts-mdsl-trmm-3b43v7-precip_3b43_trmm_1998-2017_v7-f-A.jpg
+  author: Thomas Gumbricht
+  caption: ts-mdsl-trmm-3b43v7-precip_3b43_trmm_1998-2017_v7-f-A
+  credit: null
+  source: null
+
+rainfall-a-trend_ts-mdsl-trmm-3b43v7-precip-precipdelta:
+  file: rainfall-a-trend_ts-mdsl-trmm-3b43v7-precip-precipdelta.png
+  source: rainfall-a-trend_ts-mdsl-trmm-3b43v7-precip-precipdelta.png
+  author: Thomas Gumbricht
+  caption: rainfall-a-trend_ts-mdsl-trmm-3b43v7-precip-precipdelta
+  credit: null
+  source: null
+
+trmm-3b43v7-precip-delta_3b43_trmm_1998-2017_slope@p-v7-f-A:
+  file: trmm-3b43v7-precip-delta_3b43_trmm_1998-2017_slope@p-v7-f-A.jpg
+  source: trmm-3b43v7-precip-delta_3b43_trmm_1998-2017_slope@p-v7-f-A.jpg
+  author: Thomas Gumbricht
+  caption: rainfall-a-trend_ts-mdsl-trmm-3b43v7-precip-precipdelta
+  credit: null
+  source: null
+
+github-framework_karttur_01_openperspective:
+  file: github-framework_karttur_01_openperspective.png
+  source: github-framework_karttur_01_openperspective.png
+  author: Thomas Gumbricht
+  caption: Open Perspective in Eclipse
+  credit: null
+  source: null
+
+github-framework_karttur_02_select-git-perspective:
+  file: github-framework_karttur_02_select-git-perspective.jpg
+  source: github-framework_karttur_02_select-git-perspective.jpg
+  author: Thomas Gumbricht
+  caption: Select Git view in Eclipse
+  credit: null
+  source: null
+
+github-framework_karttur_03_Git-repo-alternatives:
+  file: github-framework_karttur_03_Git-repo-alternatives.jpg
+  source: github-framework_karttur_03_Git-repo-alternatives.jpg
+  author: Thomas Gumbricht
+  caption: Git repositories alternatives in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_04_Source-Git-repo-keychain:
+  file: github-framework_karttur_04_Source-Git-repo-keychain.png
+  source: github-framework_karttur_04_Source-Git-repo-keychain.png
+  author: Thomas Gumbricht
+  caption: Allow Eclipse to access keychain.
+  credit: null
+  source: null
+
+github-framework_karttur_04_Source-Git-repo:
+  file: github-framework_karttur_04_Source-Git-repo.png
+  source: github-framework_karttur_04_Source-Git-repo.png
+  author: Thomas Gumbricht
+  caption: Select/define Source Git Repository in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_05_Git-branch-select:
+  file: github-framework_karttur_05_Git-branch-select.png
+  source: github-framework_karttur_05_Git-branch-select.png
+  author: Thomas Gumbricht
+  caption: Select repository branch in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_06_Git-local-dst:
+  file: github-framework_karttur_06_Git-local-dst.png
+  source: github-framework_karttur_06_Git-local-dst.png
+  author: Thomas Gumbricht
+  caption: Select Local Destination for GutHub repository clone in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_07_Git-repo-proj-submodules:
+  file: github-framework_karttur_07_Git-repo-proj-submodules.png
+  source: github-framework_karttur_07_Git-repo-proj-submodules.png
+  author: Thomas Gumbricht
+  caption: Added Git Respository with submodules in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_07_Git-repo-proj-workingtree:
+  file: github-framework_karttur_07_Git-repo-proj-workingtree.png
+  source: github-framework_karttur_07_Git-repo-proj-sworkingtree.png
+  author: Thomas Gumbricht
+  caption: Superproject working tree in Eclipse.
+  credit: null
+  source: null
+
+eclipse-python-interpreter-empty:
+  file: eclipse-python-interpreter-empty.png
+  source: eclipse-python-interpreter-empty.png
+  author: Thomas Gumbricht
+  caption: Dialogue window for selecting Python Interpreter in Eclipse.
+  credit: null
+  source: null
+
+eclipse-macos-path-to-pytho-interpreter:
+  file: eclipse-macos-path-to-pytho-interpreter.png
+  source: eclipse-macos-path-to-pytho-interpreter.png
+  author: Thomas Gumbricht
+  caption: Path to virtual python interpreter created in Anaconda.
+  credit: null
+  source: null
+
+eclipse-select-interpreter:
+  file: eclipse-select-interpreter.png
+  source: eclipse-select-interpreter.png
+  author: Thomas Gumbricht
+  caption: Select interpreter in Eclipse.
+  credit: null
+  source: null
+
+eclipse-interpreter-selection-needed:
+  file: eclipse-interpreter-selection-needed.png
+  source: eclipse-interpreter-selection-needed.png
+  author: Thomas Gumbricht
+  caption: Select installation for interpreter in Eclipse.
+  credit: null
+  source: null
+
+Eclipse-prefrences-interpreter-ready-to-install:
+  file: Eclipse-prefrences-interpreter-ready-to-install.png
+  source: Eclipse-prefrences-interpreter-ready-to-install.png
+  author: Thomas Gumbricht
+  caption: Preference window ready to install interpreter in Eclipse.
+  credit: null
+  source: null
+
+Eclipse-menu-perspective-other:
+  file: Eclipse-menu-perspective-other.png
+  source: Eclipse-menu-perspective-other.png
+  author: Thomas Gumbricht
+  caption: Change perspective for the Eclipse GUI.
+  credit: null
+  source: null
+
+Eclipse-empty-pydev-perspective:
+  file: Eclipse-empty-pydev-perspective.png
+  source: Eclipse-empty-pydev-perspective.png
+  author: Thomas Gumbricht
+  caption: Empty PyDev perspective in Eclipse.
+  credit: null
+  source: null
+
+Eclipse-pydev-proj-geoimagine03:
+  file: Eclipse-pydev-proj-geoimagine03.png
+  source: Eclipse-pydev-proj-geoimagine03.png
+  author: Thomas Gumbricht
+  caption: Add new PyDev project in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_08_eclipse-new-proj:
+  file: github-framework_karttur_08_eclipse-new-proj.jpg
+  source: github-framework_karttur_08_eclipse-new-proj.jpg
+  author: Thomas Gumbricht
+  caption: Add new project form main menu in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_09_eclipse-pydev-proj:
+  file: github-framework_karttur_09_eclipse-pydev-proj.jpg
+  source: github-framework_karttur_09_eclipse-pydev-proj.jpg
+  author: Thomas Gumbricht
+  caption: Add PyDev project in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_10_eclipse-pydev-proj2:
+  file: github-framework_karttur_10_eclipse-pydev-proj2.jpg
+  source: github-framework_karttur_10_eclipse-pydev-proj2.jpg
+  author: Thomas Gumbricht
+  caption: Define PyDev project in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_11_eclipse-proj-menu:
+  file: github-framework_karttur_11_eclipse-proj-menu.jpg
+  source: github-framework_karttur_11_eclipse-proj-menu.jpg
+  author: Thomas Gumbricht
+  caption: Pop-out menu from right-click in the Eclipse Package Explorer view.
+  credit: null
+  source: null
+
+github-framework_karttur_12_config-proj-repo:
+  file: github-framework_karttur_12_config-proj-repo.jpg
+  source: github-framework_karttur_12_config-proj-repo.jpg
+  author: Thomas Gumbricht
+  caption: Configure Git Respository view in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_121_package-explorer:
+  file: github-framework_karttur_121_package-explorer.jpg
+  source: github-framework_karttur_121_package-explorer.jpg
+  author: Thomas Gumbricht
+  caption: GitHub linked project in Eclipse Package Explorer.
+  credit: null
+  source: null
+
+
+github-framework_karttur_13_eclipse-proj-menu:
+  file: github-framework_karttur_13_eclipse-proj-menu.jpg
+  source: github-framework_karttur_13_eclipse-proj-menu.jpg
+  author: Thomas Gumbricht
+  caption: Pop-out menu from right-click in the Eclipse Package Explorer view.
+  credit: null
+  source: null
+
+github-framework_karttur_14_git-staging:
+  file: github-framework_karttur_14_git-staging.jpg
+  source: github-framework_karttur_14_git-staging.jpg
+  author: Thomas Gumbricht
+  caption: Git Staging view in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_15_new-other:
+  file: github-framework_karttur_15_new-other.jpg
+  source: github-framework_karttur_15_new-other.jpg
+  author: Thomas Gumbricht
+  caption: Eclipse menu for New and then "other" (PyDev package for instance)
+  credit: null
+  source: null
+
+github-framework_karttur_16_pydev-package:
+  file: github-framework_karttur_16_pydev-package.jpg
+  source: github-framework_karttur_16_pydev-package.jpg
+  author: Thomas Gumbricht
+  caption: Add PyDev package in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_17_pydev-package2:
+  file: github-framework_karttur_17_pydev-package2.jpg
+  source: github-framework_karttur_17_pydev-package2.jpg
+  author: Thomas Gumbricht
+  caption: Define PyDev package in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_0301_Git-repo-alternatives:
+  file: github-framework_karttur_0301_Git-repo-alternatives.jpg
+  source: github-framework_karttur_0301_Git-repo-alternatives.jpg
+  author: Thomas Gumbricht
+  caption: Git repositories view in Eclipe.
+  credit: null
+  source: null
+
+github-framework_karttur_06a_Git-local-dst:
+  file: github-framework_karttur_06a_Git-local-dst.jpg
+  source: github-framework_karttur_06a_Git-local-dst.jpg
+  author: Thomas Gumbricht
+  caption: Select Local Destination for GutHub repository clone in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_0X_eclipse-perspectives:
+  file: github-framework_karttur_0X_eclipse-perspectives.jpg
+  source: github-framework_karttur_0X_eclipse-perspectives.jpg
+  author: Thomas Gumbricht
+  caption: Submodules.
+  credit: null
+  source: null
+
+github-framework_karttur_0X_menu-eclipse-perspectives:
+  file: github-framework_karttur_0X_menu-eclipse-perspectives.jpg
+  source: github-framework_karttur_0X_menu-eclipse-perspectives.jpg
+  author: Thomas Gumbricht
+  caption: Open Other perspictive via the Eclipse main menu.
+  credit: null
+  source: null
+
+github-framework_karttur_0X_menu-eclipse-perspectives2:
+  file: github-framework_karttur_0X_menu-eclipse-perspectives2.jpg
+  source: github-framework_karttur_0X_menu-eclipse-perspectives2.jpg
+  author: Thomas Gumbricht
+  caption: Select PyDev perspective in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_25_update-submodules:
+  file: github-framework_karttur_25_update-submodules.jpg
+  source: github-framework_karttur_25_update-submodules.jpg
+  author: Thomas Gumbricht
+  caption: Update Submodule in Eclipse.
+  credit: null
+  source: null
+
+github-framework_karttur_101_github-repo-top:
+  file: github-framework_karttur_101_github-repo-top.jpg
+  source: github-framework_karttur_101_github-repo-top.jpg
+  author: Thomas Gumbricht
+  caption: Content of Karttur's GeoImagine Framework repository (top level).
+  credit: null
+  source: null
+
+github-framework_karttur_102_github-repo-geoimagine:
+  file: github-framework_karttur_102_github-repo-geoimagine.jpg
+  source: github-framework_karttur_102_github-repo-geoimagine.jpg
+  author: Thomas Gumbricht
+  caption: Submodules belonging to Karttur's GeoImagine Framework repository (first submodules only).
+  credit: null
+  source: null
+
+github-framework_karttur_103_clone-to-desktop:
+  file: github-framework_karttur_103_clone-to-desktop.jpg
+  source: github-framework_karttur_103_clone-to-desktop.jpg
+  author: Thomas Gumbricht
+  caption: Clone repository from GitHub.com
+  credit: null
+  source: null
+
+github-karttur-framework03_clone-to-desktop:
+  file: github-karttur-framework03_clone-to-desktop.png
+  source: github-karttur-framework03_clone-to-desktop.png
+  author: Thomas Gumbricht
+  caption: Clone repository from GitHub.com
+  credit: null
+  source: null
+
+github-framework_karttur_104_clone-repo-desktop:
+  file: github-framework_karttur_104_clone-repo-desktop.jpg
+  source: github-framework_karttur_104_clone-repo-desktop.jpg
+  author: Thomas Gumbricht
+  caption: GitHub Desktop menu system, Clone Repository
+  credit: null
+  source: null
+
+github-framework_karttur_105_clone-a-repo-desktop:
+  file: github-framework_karttur_105_clone-a-repo-desktop.jpg
+  source: github-framework_karttur_105_clone-a-repo-desktop.jpg
+  author: Thomas Gumbricht
+  caption: Clone a Repository, GithHub Desktop
+  credit: null
+  source: null
+
+earthexplorer_01:
+  file: earthexplorer_01.png
+  author: Thomas Gumbricht
+  caption: USGS Earthexplorer ((https://earthexplorer.usgs.gov/)
+  credit: null
+  source: null
+
+earthexplorer_02:
+  file: earthexplorer_02.png
+  author: Thomas Gumbricht
+  caption: Select a geocoding methods in Earthexplorer
+  credit: null
+  source: null
+
+earthexplorer_03:
+  file: earthexplorer_03.png
+  author: Thomas Gumbricht
+  caption: WRS path and row search area in Earthexplorer
+  credit: null
+  source: null
+
+earthexplorer_04:
+  file: earthexplorer_04.png
+  author: Thomas Gumbricht
+  caption: Select date range and season in Earthexplorer
+  credit: null
+  source: null
+
+earthexplorer_04a:
+  file: earthexplorer_04a.png
+  author: Thomas Gumbricht
+  caption: Select maximum cloud cover in Earthexplorer
+  credit: null
+  source: null
+
+earthexplorer_05:
+  file: earthexplorer_05.png
+  author: Thomas Gumbricht
+  caption: Data set button
+  credit: null
+  source: null
+
+earthexplorer_06:
+  file: earthexplorer_06.png
+  author: Thomas Gumbricht
+  caption: Select data set in Earthexplorer, the surface reflectance corrected Landsat data are under Landsat -> Landsat Collection 1 Level-2 (On-demand)
+  credit: null
+  source: null
+
+earthexplorer_06a:
+  file: earthexplorer_06a.png
+  author: Thomas Gumbricht
+  caption: The panchromatic and thermal bands are not processed to surface reflection (becuase it is not applicable), just click OK.
+  credit: null
+  source: null
+
+earthexplorer_07:
+  file: earthexplorer_07.png
+  author: Thomas Gumbricht
+  caption: Additional Criteria button
+  credit: null
+  source: null
+
+earthexplorer_08:
+  file: earthexplorer_08.png
+  author: Thomas Gumbricht
+  caption: Earthexplorer Additional Search Criteria for Landsat 8 data.
+  credit: null
+  source: null
+
+earthexplorer_09:
+  file: earthexplorer_09.png
+  author: Thomas Gumbricht
+  caption: Result button
+  credit: null
+  source: null
+
+earthexplorer_10:
+  file: earthexplorer_10.png
+  author: Thomas Gumbricht
+  caption: Earthexplorer Search Results for Landsat 8 data.
+  credit: null
+  source: null
+
+earthexplorer_11:
+  file: earthexplorer_11.png
+  author: Thomas Gumbricht
+  caption: Exclude Data Set for Results in Earthexplorer.
+  credit: null
+  source: null
+
+earthexplorer_12:
+  file: earthexplorer_12.png
+  author: Thomas Gumbricht
+  caption: Order Landsat scene in Eartexplorer, if the shopping cart symbol is dimmed you are not logged in to USGS EROS.
+  credit: null
+  source: null
+
+earthexplorer_13:
+  file: earthexplorer_13.png
+  author: Thomas Gumbricht
+  caption: Ordered scenes indicaed by green in Eartexplorer.
+  credit: null
+  source: null
+
+earthexplorer_14:
+  file: earthexplorer_14.png
+  author: Thomas Gumbricht
+  caption: Ordered scenes indicaed by green in Eartexplorer.
+  credit: null
+  source: null
+
+earthexplorer_15:
+  file: earthexplorer_15.png
+  author: Thomas Gumbricht
+  caption: Earthexplorer On demand processing message.
+  credit: null
+  source: null
+
+earthexplorer_16:
+  file: earthexplorer_16.png
+  author: Thomas Gumbricht
+  caption: Earthexplorer Submit Product Selections.
+  credit: null
+  source: null
+
+earthexplorer_17:
+  file: earthexplorer_17.png
+  author: Thomas Gumbricht
+  caption: Earthexplorer Submitted order id.
+  credit: null
+  source: null
+
+earthexplorer_18:
+  file: earthexplorer_18.png
+  author: Thomas Gumbricht
+  caption: Earthexplorer online order tracking.
+  credit: null
+  source: null
+
+github-karttur-framework03_karttur:
+  file: github-karttur-framework03_karttur.png
+  author: Thomas Gumbricht
+  caption: GitHub repo for Karttur's GeoImagine Framework, showing the first submodules.
+  credit: null
+  source: null

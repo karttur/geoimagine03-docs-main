@@ -1,0 +1,30 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<translate>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period timestep='staticmonthly'></period>
+
+<!-- GDAl interface for translating dataset spatial extent and resolution-->
+<process processid ='gdal_translateancillary' version = '3.0'>
+<parameters dst_region = 'trmm' xsize = '1440' ysize ='400' resampling ='average'></parameters>
+<srcpath volume = "karttur3tb"></srcpath>
+<dstpath volume = "karttur3tb"></dstpath>
+<srccomp>
+<fao-refet source = "FAO" product = "refet" folder = "refet" band = "fao-refet" prefix = "fao-refet" suffix = "M">
+</fao-refet>
+</srccomp>
+<dstcomp>
+<fao-refet source = "FAO" product = "refet" folder = "refet" band = "fao-refet" prefix = "fao-refet" suffix = "M" scalefac = "1" offsetadd = "0" dataunit = "mm" celltype = 'Int16' cellnull = '-32768' measure = 'R'>
+</fao-refet>
+</dstcomp>
+</process>
+</translate>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,26 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<runprocess>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "2003" startmonth='01' endyear = "2016" endmonth='12' timestep='M'></period>
+
+<!-- extract seasonal signal -->
+<process processid = 'extractseasonancillary' version = '1.3'>
+<parameters trend = 'kernel' kernel='0.012,0.191,0.492,1.0,0.492,0.191,0.012'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<grace-ave source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater" band = "grace-ave" prefix = "grace-ave" suffix = "RL05-f">
+</grace-ave>
+</srccomp>
+</process>
+</runprocess>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

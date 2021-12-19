@@ -1,0 +1,39 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = '2015' startmonth = '04' startday = '23' endyear = '2019' endmonth = '01' endday = '05' timestep='16D'></period>
+
+<!-- Archive -->
+<processx processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='zip'></dstpath>
+<srccomp>
+<soil-moisture-avg-16d source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002-9km">
+</soil-moisture-avg-16d>
+</srccomp>
+</processx>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='zip'></dstpath>
+<srccomp>
+<soil-moisture-avg-16d source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d-fill" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002-modfit-9km">
+</soil-moisture-avg-16d>
+</srccomp>
+</process>
+
+</africasubsahara>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

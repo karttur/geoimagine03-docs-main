@@ -1,0 +1,94 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+
+<?xml version='1.0' encoding='utf-8'?>
+<organize>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-trmm' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = '2000' endyear = '2010' endmonth = '9' endday = '30'  timestep='monthlyday'></period>
+
+<process processid ='organizeancillary' version = '3.0'>
+<parameters importdef='trmm'
+epsg = '4326'
+instid = 'NASA'
+dsname  = '3b43'
+dsversion = "7"
+accessdate = "20181104"
+regionid = 'trmm'
+regioncat = 'global'
+replacestr = 'YYYYMMDD'
+replacetag = 'yyyymmdd'
+dataurl = "https://disc.gsfc.nasa.gov/precipitation/documentation/trmm_README/trmm_3b43_readme.shtml"
+metapath ="NASA/GES-DISC/README.trmm_V7.pdf"
+metaurl="https://disc.gsfc.nasa.gov/precipitation/documentation/trmm_README/trmm_3b43_readme.shtml"
+title = "trmm and Other Data Precipitation Product 3b43"
+label = "trmm and Other Data Precipitation Product 3b43"
+> </parameters>
+<overwrite>N</overwrite>
+<delete>N</delete>
+
+<srcpath volume = "karttur3tb/ANCILIMPORT" hdrfiletype = "HDF" datfiletype = "trmm"></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = "tif" datfiletype = "tif"></dstpath>
+
+<srcraw id="trmm-3b43v7-precip"
+datadir ='trmm'
+datafile = "3b43.YYYYMMDD.7A"
+datalayer = "precipitation"
+accessdate = "20181104"
+theme = "climate"
+subtheme = "precipitation"
+copyright =""
+title = "Monthly Precipitation"
+label = "Monthly Precipitation"
+></srcraw>
+<dstcomp>
+<trmm-3b43v7-precip source = "trmm" product = "3b43" folder = "rainfall-original" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7" scalefac = "1" offsetadd = "0" dataunit = "mm/month" celltype = 'Int16' cellnull = '-32768' measure = 'R' masked='Y'>
+</trmm-3b43v7-precip>
+</dstcomp>
+
+<srcraw id="trmm-3b43v7-relerr"
+datadir ='trmm'
+datafile = "3b43.YYYYMMDD.7A"
+datalayer = "precip-relerr"
+accessdate = "20181104"
+theme = "climate"
+subtheme = "precipitation error"
+copyright =""
+title = "Monthly Precipitation error"
+label = "Monthly Precipitation error"
+></srcraw>
+<dstcomp>
+<trmm-3b43v7-relerr source = "trmm" product = "3b43" folder = "rainfall-original" band = "trmm-3b43v7-relerr" prefix = "rainfall-relerr" suffix = "v7" scalefac = "1" offsetadd = "0" dataunit = "mm/month" celltype = 'Int16' cellnull = '-32768' measure = 'R' masked='Y'>
+</trmm-3b43v7-relerr>
+</dstcomp>
+
+<srcraw id="trmm-3b43v7-gauge-weight"
+datadir ='trmm'
+datafile = "3b43.YYYYMMDD.7A"
+datalayer = "precip-gauge-weight"
+accessdate = "20181104"
+theme = "climate"
+subtheme = "gauge weight"
+copyright =""
+title = "Monthly Precipitation error"
+label = "Monthly Precipitation error"
+></srcraw>
+<dstcomp>
+<trmm-3b43v7-gauge-weight source = "trmm" product = "3b43" folder = "rainfall-original" band = "trmm-3b43v7-gauge-weight" prefix = "rainfall-gauge-weight" suffix = "v7" scalefac = "1" offsetadd = "0" dataunit = "percent" celltype = 'Byte' cellnull = '255' measure = 'R' masked='Y'>
+</trmm-3b43v7-gauge-weight>
+</dstcomp>
+<yyyymmdd type = 'copydatum'>
+<compinattribute>datafile</compinattribute>
+<xcompinattribute>dataset</xcompinattribute>
+<xcompoutattribute>yyyydoy</xcompoutattribute>
+</yyyymmdd>
+</process>
+
+</organize>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,28 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<exportlegend>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+
+<!-- Export legend -->
+
+<!-- NOTE THE ID IS OLNLY USED IN THE SCRIPTING SO IT CAN HAVE (UNIQUE) DUMMY VALUES HERE -->
+<!-- GRACE monthly cmwater-->
+<process processid = 'exportlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='grace'></parameters>
+<dstpath volume='karttur3tb'></dstpath>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-stats-A" band = 'avg-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+</exportlegend>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

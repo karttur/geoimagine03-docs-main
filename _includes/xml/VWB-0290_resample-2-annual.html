@@ -1,0 +1,65 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<runprocess>
+
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-trmm' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "1998" endyear = "2017" timestep='M'></period>
+
+<!-- Resample to annual-->
+<process processid = 'resampletsancillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters method = 'sum' targettimestep = 'A' ></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-fao-vwb source = "trmm-vwb" product = "3b43" folder = "vwb" band = "trmm-fao-vwb" prefix = "trmm-fao-vwb" suffix = "v7-f-m" timestep='M'>
+</trmm-fao-vwb>
+</srccomp>
+<dstcomp>
+<trmm-fao-vwb band = "trmm-fao-vwb" suffix = "auto" dataunit = 'mm/yr' timestep='A'>
+</trmm-fao-vwb>
+</dstcomp>
+</process>
+
+<!-- Resample to annual-->
+<process processid = 'resampletsancillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters method = 'sum' targettimestep = 'A' ></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-fao-vwb-surplus source = "trmm-vwb" product = "3b43" folder = "vwb" band = "trmm-fao-vwb-surplus" prefix = "trmm-fao-vwb-surplus" suffix = "v7-f-m" timestep='M'>
+</trmm-fao-vwb-surplus>
+</srccomp>
+<dstcomp>
+<trmm-fao-vwb-surplus band = "trmm-fao-vwb-surplus" suffix = "auto" dataunit = 'mm/yr' timestep='A'>
+</trmm-fao-vwb-surplus>
+</dstcomp>
+</process>
+
+<!-- Resample to annual-->
+<process processid = 'resampletsancillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters method = 'sum' targettimestep = 'A' ></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-fao-vwb-deficit source = "trmm-vwb" product = "3b43" folder = "vwb" band = "trmm-fao-vwb-deficit" prefix = "trmm-fao-vwb-deficit" suffix = "v7-f-m" timestep='M'>
+</trmm-fao-vwb-deficit>
+</srccomp>
+<dstcomp>
+<trmm-fao-vwb-deficit band = "trmm-fao-vwb-deficit" suffix = "auto" dataunit = 'mm/yr' timestep='A'>
+</trmm-fao-vwb-deficit>
+</dstcomp>
+</process>
+
+</runprocess>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

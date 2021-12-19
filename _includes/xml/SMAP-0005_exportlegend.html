@@ -1,0 +1,44 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<exportlegend>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+
+<!-- Export legend -->
+
+<!-- NOTE THE ID IS OLNLY USED IN THE SCRIPTING SO IT CAN HAVE (UNIQUE) DUMMY VALUES HERE -->
+<!-- GRACE monthly cmwater-->
+<process processid = 'exportlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='smap'></parameters>
+<dstpath volume='/Users/thomasgumbricht'></dstpath>
+<comp id = '1' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-am" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "005"></comp>
+<comp id = '2' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-pm" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "005"></comp>
+<comp id = '3' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005"></comp>
+<comp id = '4' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-min" band = "soil-moisture-min" prefix = "soil-moisture-min" suffix = "005"></comp>
+<comp id = '5' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-max" band = "soil-moisture-max" prefix = "soil-moisture-max" suffix = "005"></comp>
+
+<comp id = '11' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-am-16D" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "005"></comp>
+<comp id = '12' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-pm-16D" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "005"></comp>
+<comp id = '13' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-16D" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005"></comp>
+<comp id = '14' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-min-16D" band = "soil-moisture-min" prefix = "soil-moisture-min" suffix = "005"></comp>
+<comp id = '15' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-max-16D" band = "soil-moisture-max" prefix = "soil-moisture-max" suffix = "005"></comp>
+
+<comp id = '21' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-am-16D-sesn" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "005"></comp>
+<comp id = '22' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-pm-16D-sesn" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "005"></comp>
+<comp id = '23' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-16D-sesn" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005"></comp>
+<comp id = '24' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-min-16D-sesn" band = "soil-moisture-min" prefix = "soil-moisture-min" suffix = "005"></comp>
+<comp id = '25' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-max-16D-sesn" band = "soil-moisture-max" prefix = "soil-moisture-max" suffix = "005"></comp>
+</process>
+
+</exportlegend>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

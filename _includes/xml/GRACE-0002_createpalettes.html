@@ -1,0 +1,34 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<palette>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+<path></path>
+
+
+<!-- addrasterpalette preciplinear-->
+<process processid = 'addrasterpalette'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters palette = 'grace' compid='test'>
+<setcolor id = '0' red = '96' green ='0' blue='0' alpha ='0' label='0' hint='0' ></setcolor>
+<setcolor id = '63' red = '204' green ='74' blue='70' alpha ='0' label='25' hint='NA' ></setcolor>
+<setcolor id = '125' red = '224' green ='224' blue='224' alpha ='0' label='50' hint='50' ></setcolor>
+<setcolor id = '187' red = '60' green ='170' blue='190' alpha ='0' label='75' hint='NA' ></setcolor>
+<setcolor id = '250' red = '4' green ='4' blue='110' alpha ='0' label='100' hint='100' ></setcolor>
+<setcolor id = '253' red = '240' green ='240' blue='132' alpha ='0' label='dry (0)' hint='NA' ></setcolor>
+<setcolor id = '254' red = '32' green ='32' blue='32' alpha ='255' label='frame' hint='frame' ></setcolor>
+<setcolor id = '255' red = '250' green ='250' blue='250' alpha ='255' label='255' hint='no data' ></setcolor>
+</parameters>
+</process>
+
+
+</palette>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

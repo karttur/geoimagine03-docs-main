@@ -1,0 +1,129 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<scaling>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+<!-- Layer cross correlation between VWB and GRACE -->
+
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='1' offsetadd='0'></parameters>
+<comp id = '1' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "obs-lag" prefix = "obs-lag" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "season-lag" prefix = "season-lag" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "tendency-lag" prefix = "tendency-lag" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "residual-lag" prefix = "residual-lag" suffix = "v7-RL05-nadd-a1"></comp>
+
+</process>
+
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='100' offsetadd='100'></parameters>
+<comp id = '1' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "obs-pearson" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "season-pearson" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "tendency-pearson" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "residual-pearson" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+</process>
+
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='100' offsetadd='100'></parameters>
+<comp id = '1' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "obs-pearson-lag0" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1a' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "obs-pearson-lag1" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1b' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "obs-pearson-lag2" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1c' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "obs-pearson-lag3" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1d' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "obs-pearson-lag4" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1e' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "obs-pearson-lag5" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1f' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "obs-pearson-lag6" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+
+<comp id = '2' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "season-pearson-lag0" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2sb' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "season-pearson-lag1" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2b' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "season-pearson-lag2" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2d' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "season-pearson-lag3" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2e' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "season-pearson-lag4" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2f' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "season-pearson-lag5" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2g' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "season-pearson-lag6" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+
+<comp id = '3a' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "tendency-pearson-lag0" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3b' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "tendency-pearson-lag1" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3c' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "tendency-pearson-lag2" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3d' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "tendency-pearson-lag3" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3e' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "tendency-pearson-lag4" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3f' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "tendency-pearson-lag5" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3g' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "tendency-pearson-lag6" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+
+<comp id = '4' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "residual-pearson-lag0" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4a' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "residual-pearson-lag1" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4b' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "residual-pearson-lag2" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4c' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "residual-pearson-lag3" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4d' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "residual-pearson-lag4" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4e' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "residual-pearson-lag5" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4f' source = "vwbgrace"  product = "vwb-xc-grace" folder = "xcorr" band = "residual-pearson-lag6" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+
+</process>
+
+SNULLEBULLE
+
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='1' offsetadd='0'></parameters>
+<comp id = '1' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "obs-lag" prefix = "obs-lag" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "season-lag" prefix = "season-lag" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "tendency-lag" prefix = "tendency-lag" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "residual-lag" prefix = "residual-lag" suffix = "v7-RL05-nadd-a1"></comp>
+</process>
+
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='100' offsetadd='100'></parameters>
+<comp id = '1' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "obs-pearson" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "season-pearson" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "tendency-pearson" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "residual-pearson" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+</process>
+
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='100' offsetadd='100'></parameters>
+<comp id = '1' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "obs-pearson-lag0" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1a' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "obs-pearson-lag1" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1b' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "obs-pearson-lag2" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1d' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "obs-pearson-lag3" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1e' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "obs-pearson-lag4" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1f' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "obs-pearson-lag5" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '1g' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "obs-pearson-lag6" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+
+<comp id = '2' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "season-pearson-lag0" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2sb' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "season-pearson-lag1" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2b' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "season-pearson-lag2" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2d' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "season-pearson-lag3" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2e' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "season-pearson-lag4" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2f' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "season-pearson-lag5" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '2g' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "season-pearson-lag6" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+
+<comp id = '3a' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "tendency-pearson-lag0" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3b' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "tendency-pearson-lag1" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3c' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "tendency-pearson-lag2" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3d' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "tendency-pearson-lag3" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3e' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "tendency-pearson-lag4" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3f' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "tendency-pearson-lag5" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '3g' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "tendency-pearson-lag6" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+
+<comp id = '4' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "residual-pearson-lag0" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4a' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "residual-pearson-lag1" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4b' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "residual-pearson-lag2" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4c' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "residual-pearson-lag3" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4d' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "residual-pearson-lag4" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4e' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "residual-pearson-lag5" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+<comp id = '4f' source = "vwbgrace"  product = "vwbsurplus-xc-grace" folder = "xcorr" band = "residual-pearson-lag6" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></comp>
+
+</process>
+</scaling>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,160 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "1998" endyear = "2017" timestep='timespan-A'></period>
+
+<!-- mosaic VWB statistical tiles to region (karttur-africasubsahara)
+The target resolution is 0.25 deg (same as the original VWB data) -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<avg-trmm-fao-vwb id='avg-trmm-fao-vwb' source = "trmm-vwb" product = "3b43" folder = "vwb-A-stats" band = "avg-trmm-fao-vwb" prefix = "avg-trmm-fao-vwb" suffix = "v7-f-m-A-30km">
+</avg-trmm-fao-vwb>
+<ols-ic-trmm-fao-vwb id='ols-ic-trmm-fao-vwb' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-ic-trmm-fao-vwb" prefix = "ols-ic-trmm-fao-vwb" suffix = "v7-f-m-A-30km">
+</ols-ic-trmm-fao-vwb>
+<ts-ic-trmm-fao-vwb id='ts-ic-trmm-fao-vwb' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-ic-trmm-fao-vwb" prefix = "ts-ic-trmm-fao-vwb" suffix = "v7-f-m-A-30km">
+</ts-ic-trmm-fao-vwb>
+<ols-sl-trmm-fao-vwb id='ols-sl-trmm-fao-vwb' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-sl-trmm-fao-vwb" prefix = "ols-sl-trmm-fao-vwb" suffix = "v7-f-m-A-30km">
+</ols-sl-trmm-fao-vwb>
+<ts-mdsl-trmm-fao-vwb id='ts-mdsl-trmm-fao-vwb' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-mdsl-trmm-fao-vwb" prefix = "ts-mdsl-trmm-fao-vwb" suffix = "v7-f-m-A-30km">
+</ts-mdsl-trmm-fao-vwb>
+<ts-losl-trmm-fao-vwb id='ts-losl-trmm-fao-vwb' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-losl-trmm-fao-vwb" prefix = "ts-losl-trmm-fao-vwb" suffix = "v7-f-m-A-30km">
+</ts-losl-trmm-fao-vwb>
+<ts-hisl-trmm-fao-vwb id='ts-hisl-trmm-fao-vwb' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-hisl-trmm-fao-vwb" prefix = "ts-hisl-trmm-fao-vwb" suffix = "v7-f-m-A-30km">
+</ts-hisl-trmm-fao-vwb>
+<std-trmm-fao-vwb id='std-trmm-fao-vwb' source = "trmm-vwb" product = "3b43" folder = "vwb-A-stats" band = "std-trmm-fao-vwb" prefix = "std-trmm-fao-vwb" suffix = "v7-f-m-A-30km">
+</std-trmm-fao-vwb>
+<ols-rmse-trmm-fao-vwb id='ols-rmse-trmm-fao-vwb' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-rmse-trmm-fao-vwb" prefix = "ols-rmse-trmm-fao-vwb" suffix = "v7-f-m-A-30km">
+</ols-rmse-trmm-fao-vwb>
+<mk-z-trmm-fao-vwb id='mk-z-trmm-fao-vwb' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "mk-z-trmm-fao-vwb" prefix = "mk-z-trmm-fao-vwb" suffix = "v7-f-m-A-30km">
+</mk-z-trmm-fao-vwb>
+<ols-r2-trmm-fao-vwb id='ols-r2-trmm-fao-vwb' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-r2-trmm-fao-vwb" prefix = "ols-r2-trmm-fao-vwb" suffix = "v7-f-m-A-30km">
+</ols-r2-trmm-fao-vwb>
+<trmm-fao-vwb-change id='trmm-fao-vwb-change' source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-change" prefix = "trmm-fao-vwb-change" suffix = "model-v7-f-m-A-30km">
+</trmm-fao-vwb-change>
+<trmm-fao-vwb-delta id='trmm-fao-vwb-delta' source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-delta" prefix = "trmm-fao-vwb-delta" suffix = "slope@p-v7-f-m-A-30km">
+</trmm-fao-vwb-delta>
+</srccomp>
+</process>
+
+<!--  Second process required due to duplicate compid -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb-change id='trmm-fao-vwb-change' source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-change" prefix = "trmm-fao-vwb-change" suffix = "model@p-v7-f-m-A-30km">
+</trmm-fao-vwb-change>
+</srccomp>
+</process>
+
+<!-- surplus-->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<avg-trmm-fao-vwb-surplus id='avg-trmm-fao-vwb-surplus' source = "trmm-vwb" product = "3b43" folder = "vwb-A-stats" band = "avg-trmm-fao-vwb-surplus" prefix = "avg-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-30km">
+</avg-trmm-fao-vwb-surplus>
+<ols-ic-trmm-fao-vwb-surplus id='ols-ic-trmm-fao-vwb-surplus' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-ic-trmm-fao-vwb-surplus" prefix = "ols-ic-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-30km">
+</ols-ic-trmm-fao-vwb-surplus>
+<ts-ic-trmm-fao-vwb-surplus id='ts-ic-trmm-fao-vwb-surplus' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-ic-trmm-fao-vwb-surplus" prefix = "ts-ic-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-30km">
+</ts-ic-trmm-fao-vwb-surplus>
+<ols-sl-trmm-fao-vwb-surplus id='ols-sl-trmm-fao-vwb-surplus' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-sl-trmm-fao-vwb-surplus" prefix = "ols-sl-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-30km">
+</ols-sl-trmm-fao-vwb-surplus>
+<ts-mdsl-trmm-fao-vwb-surplus id='ts-mdsl-trmm-fao-vwb-surplus' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-mdsl-trmm-fao-vwb-surplus" prefix = "ts-mdsl-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-30km">
+</ts-mdsl-trmm-fao-vwb-surplus>
+<ts-losl-trmm-fao-vwb-surplus id='ts-losl-trmm-fao-vwb-surplus' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-losl-trmm-fao-vwb-surplus" prefix = "ts-losl-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-30km">
+</ts-losl-trmm-fao-vwb-surplus>
+<ts-hisl-trmm-fao-vwb-surplus id='ts-hisl-trmm-fao-vwb-surplus' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-hisl-trmm-fao-vwb-surplus" prefix = "ts-hisl-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-30km">
+</ts-hisl-trmm-fao-vwb-surplus>
+<std-trmm-fao-vwb-surplus id='std-trmm-fao-vwb-surplus' source = "trmm-vwb" product = "3b43" folder = "vwb-A-stats" band = "std-trmm-fao-vwb-surplus" prefix = "std-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-30km">
+</std-trmm-fao-vwb-surplus>
+<ols-rmse-trmm-fao-vwb-surplus id='ols-rmse-trmm-fao-vwb-surplus' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-rmse-trmm-fao-vwb-surplus" prefix = "ols-rmse-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-30km">
+</ols-rmse-trmm-fao-vwb-surplus>
+<mk-z-trmm-fao-vwb-surplus id='mk-z-trmm-fao-vwb-surplus' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "mk-z-trmm-fao-vwb-surplus" prefix = "mk-z-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-30km">
+</mk-z-trmm-fao-vwb-surplus>
+<ols-r2-trmm-fao-vwb-surplus id='ols-r2-trmm-fao-vwb-surplus' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-r2-trmm-fao-vwb-surplus" prefix = "ols-r2-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-30km">
+</ols-r2-trmm-fao-vwb-surplus>
+<trmm-fao-vwb-surplus-change id='trmm-fao-vwb-surplus-change' source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-surplus-change" prefix = "trmm-fao-vwb-surplus-change" suffix = "model-v7-f-m-A-30km">
+</trmm-fao-vwb-surplus-change>
+<trmm-fao-vwb-surplus-delta id='trmm-fao-vwb-surplus-delta' source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-surplus-delta" prefix = "trmm-fao-vwb-surplus-delta" suffix = "slope@p-v7-f-m-A-30km">
+</trmm-fao-vwb-surplus-delta>
+</srccomp>
+</process>
+
+<!--  Second process required due to duplicate compid -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb-surplus-change id='trmm-fao-vwb-surplus-change' source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-surplus-change" prefix = "trmm-fao-vwb-surplus-change" suffix = "model@p-v7-f-m-A-30km">
+</trmm-fao-vwb-surplus-change>
+</srccomp>
+</process>
+
+<!-- deficit-->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<avg-trmm-fao-vwb-deficit id='avg-trmm-fao-vwb-deficit' source = "trmm-vwb" product = "3b43" folder = "vwb-A-stats" band = "avg-trmm-fao-vwb-deficit" prefix = "avg-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-30km">
+</avg-trmm-fao-vwb-deficit>
+<ols-ic-trmm-fao-vwb-deficit id='ols-ic-trmm-fao-vwb-deficit' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-ic-trmm-fao-vwb-deficit" prefix = "ols-ic-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-30km">
+</ols-ic-trmm-fao-vwb-deficit>
+<ts-ic-trmm-fao-vwb-deficit id='ts-ic-trmm-fao-vwb-deficit' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-ic-trmm-fao-vwb-deficit" prefix = "ts-ic-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-30km">
+</ts-ic-trmm-fao-vwb-deficit>
+<ols-sl-trmm-fao-vwb-deficit id='ols-sl-trmm-fao-vwb-deficit' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-sl-trmm-fao-vwb-deficit" prefix = "ols-sl-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-30km">
+</ols-sl-trmm-fao-vwb-deficit>
+<ts-mdsl-trmm-fao-vwb-deficit id='ts-mdsl-trmm-fao-vwb-deficit' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-mdsl-trmm-fao-vwb-deficit" prefix = "ts-mdsl-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-30km">
+</ts-mdsl-trmm-fao-vwb-deficit>
+<ts-losl-trmm-fao-vwb-deficit id='ts-losl-trmm-fao-vwb-deficit' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-losl-trmm-fao-vwb-deficit" prefix = "ts-losl-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-30km">
+</ts-losl-trmm-fao-vwb-deficit>
+<ts-hisl-trmm-fao-vwb-deficit id='ts-hisl-trmm-fao-vwb-deficit' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-hisl-trmm-fao-vwb-deficit" prefix = "ts-hisl-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-30km">
+</ts-hisl-trmm-fao-vwb-deficit>
+<std-trmm-fao-vwb-deficit id='std-trmm-fao-vwb-deficit' source = "trmm-vwb" product = "3b43" folder = "vwb-A-stats" band = "std-trmm-fao-vwb-deficit" prefix = "std-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-30km">
+</std-trmm-fao-vwb-deficit>
+<ols-rmse-trmm-fao-vwb-deficit id='ols-rmse-trmm-fao-vwb-deficit' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-rmse-trmm-fao-vwb-deficit" prefix = "ols-rmse-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-30km">
+</ols-rmse-trmm-fao-vwb-deficit>
+<mk-z-trmm-fao-vwb-deficit id='mk-z-trmm-fao-vwb-deficit' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "mk-z-trmm-fao-vwb-deficit" prefix = "mk-z-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-30km">
+</mk-z-trmm-fao-vwb-deficit>
+<ols-r2-trmm-fao-vwb-deficit id='ols-r2-trmm-fao-vwb-deficit' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ols-r2-trmm-fao-vwb-deficit" prefix = "ols-r2-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-30km">
+</ols-r2-trmm-fao-vwb-deficit>
+<trmm-fao-vwb-deficit-change id='trmm-fao-vwb-deficit-change' source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-deficit-change" prefix = "trmm-fao-vwb-deficit-change" suffix = "model-v7-f-m-A-30km">
+</trmm-fao-vwb-deficit-change>
+<trmm-fao-vwb-deficit-delta id='trmm-fao-vwb-deficit-delta' source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-deficit-delta" prefix = "trmm-fao-vwb-deficit-delta" suffix = "slope@p-v7-f-m-A-30km">
+</trmm-fao-vwb-deficit-delta>
+</srccomp>
+</process>
+
+<!--  Second process required due to duplicate compid -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb-deficit-change id='trmm-fao-vwb-deficit-change' source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-deficit-change" prefix = "trmm-fao-vwb-deficit-change" suffix = "model@p-v7-f-m-A-30km">
+</trmm-fao-vwb-deficit-change>
+</srccomp>
+</process>
+</africasubsahara>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,34 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<manageprocess>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-trmm' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = '1998' endyear = '2018' endmonth = '08' endday = '31'  timestep='monthlyday'></period>
+
+<!-- mendanciltimeseries (TimeSeries) -->
+<process processid ='mendancillarytimeseries'>
+<overwrite>Y</overwrite>
+<parameters></parameters>
+<!-- copycomp = '1to1' -->
+<srcpath volume = "karttur3tb" hdrfiletype = "tif" datfiletype = "tif"></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = "tif" datfiletype = "tif"></dstpath>
+<srccomp>
+<trmm-3b43v7-precip source = "trmm" product = "3b43" folder = "rainfall-original" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7" >
+</trmm-3b43v7-precip>
+</srccomp>
+
+<dstcomp>
+<trmm-3b43v7-precip  band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-filled">
+</trmm-3b43v7-precip>
+</dstcomp>
+</process>
+
+</manageprocess>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

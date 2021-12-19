@@ -1,0 +1,59 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include head.html %}
+</head>
+
+<body id="page">
+
+{% include navigation.html %}
+
+<div id="main" role="main">
+  <article class="entry">
+
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <h2>Package: {{ page.packageid }}</h2>
+        <h5>Repository:
+            <a href="https://github.com/karttur/{{ page.githuburl }}" rel="alternate" title="{{ site.title }}">
+            {{ page.githuburl }}</a>
+        </h5>
+        <h5>{% if page.rootprocess %} Rootprocess: <a href="../../rootproc-{{ page.packageid }}" rel="alternate" title="{{ site.title }}"> {{ page.rootprocess }}</a>{% endif %}</h5>
+
+        {% if page.modules %}
+        <p><b>Modules:</b></p>
+        <ul>
+          {% for tags in page.modules %}
+            <li>{{ tags }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if page.excerpt %}<b>Excerpt:</b> {{ page.excerpt }}{% endif %}
+
+        {% if page.packageurl %}
+          <p><a href="https://github.com/karttur/{{ page.githuburl }}" rel="alternate" title="{{ site.title }}">
+            <b>Link to GitHub repository {{ page.githuburl }}, with complete package</b></a></p>
+        {% endif %}
+
+      </header>
+      <div class="entry-content">
+        {{ content }}
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    {% include footer.html %}
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+{% include scripts.html %}
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<exportlegend>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+
+<!-- Export legend -->
+
+<!-- NOTE THE ID IS OLNLY USED IN THE SCRIPTING SO IT CAN HAVE (UNIQUE) DUMMY VALUES HERE -->
+<!-- GRACE monthly cmwater-->
+<process processid = 'exportlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='precipln'></parameters>
+<dstpath volume='/Users/thomasgumbricht'></dstpath>
+<comp id = '0' source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f"></comp>
+<comp id = '1' source = "trmm" product = "3b43" folder = "rainfall-A-stats" band = "avg-trmm-3b43v7-precip" prefix = "avg-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+<comp id = '2' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-ic-trmm-3b43v7-precip" prefix = "ols-ic-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+<comp id = '3' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-ic-trmm-3b43v7-precip" prefix = "ts-ic-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+</process>
+
+
+<process processid = 'exportlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='precipdelta'></parameters>
+<dstpath volume='/Users/thomasgumbricht'></dstpath>
+<comp id = 'layer4' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-sl-trmm-3b43v7-precip" prefix = "ols-sl-trmm-3b43v7-precip" suffix = "v7-f-A">
+</comp>
+<comp id = 'layer5' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-mdsl-trmm-3b43v7-precip" prefix = "ts-mdsl-trmm-3b43v7-precip" suffix = "v7-f-A">
+</comp>
+<comp id = 'layer6' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-losl-trmm-3b43v7-precip" prefix = "ts-losl-trmm-3b43v7-precip" suffix = "v7-f-A">
+</comp>
+<comp id = 'layer7' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-hisl-trmm-3b43v7-precip" prefix = "ts-hisl-trmm-3b43v7-precip" suffix = "v7-f-A">
+</comp>
+</process>
+
+
+
+
+</exportlegend>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

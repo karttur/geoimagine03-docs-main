@@ -1,0 +1,69 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<export>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period timestep='static'></period>
+
+<!-- Export graticule to SVG -->
+<processx processid = 'exporttosvgancillary' version = '1.3'>
+<overwrite>True</overwrite>
+<!--
+
+<parameter paramid = 'src_region' paramtyp = 'text' tagorattr = 'Attr' required = 'Y' defaultvalue = '' ></parameter>
+
+<parameter paramid = 'simplify' paramtyp = 'integer' tagorattr = 'Attr' required = 'N' defaultvalue = '0' ></parameter>
+<parameter paramid = 'scale' paramtyp = 'integer' tagorattr = 'Attr' required = 'N' defaultvalue = '0' ></parameter>
+<parameter paramid = 'epsg' paramtyp = 'integer' tagorattr = 'Attr' required = 'N' defaultvalue = '4326' ></parameter>
+
+<parameter paramid = 'stroke' paramtyp = 'text' tagorattr = 'Attr' required = 'N' defaultvalue = 'black' ></parameter>
+<parameter paramid = 'fill' paramtyp = 'text' tagorattr = 'Attr' required = 'N' defaultvalue = 'none' ></parameter>
+
+<parameter paramid = 'symbol' paramtyp = 'text' tagorattr = 'Attr' required = 'N' defaultvalue = 'None' ></parameter>
+
+<parameter paramid = 'strokewidth' paramtyp = 'real' tagorattr = 'Attr' required = 'N' defaultvalue = '1' ></parameter>
+<parameter paramid = 'strokedasharray' paramtyp = 'text' tagorattr = 'Attr' required = 'N' defaultvalue = '' ></parameter>
+
+<parameter paramid = 'padding' paramtyp = 'integer' tagorattr = 'Attr' required = 'N' defaultvalue = '0' ></parameter>
+
+<parameter paramid = 'pngsize' paramtyp = 'text' tagorattr = 'Attr' required = 'N' defaultvalue = '' ></parameter>
+<parameter paramid = 'crop' paramtyp = 'text' tagorattr = 'Attr' required = 'N' defaultvalue = '' ></parameter>
+
+-->
+<parameters src_region='global' scale='0' t_epsg='4326' stroke='brown' fill ='none'
+strokewidth='0.25' strokedasharray='10,10' pngsize='360,180'></parameters>
+<srcpath volume = "africa"></srcpath>
+<dstpath volume = "africa"></dstpath>
+<srccomp>
+
+<graticules-30deg source = "naturalearth" product = "graticules"
+folder = 'graticulse' band = "graticules-30deg" prefix = "graticules-30deg" suffix = "0">
+</graticules-30deg>
+</srccomp>
+</processx>
+
+<process processid = 'exporttosvgancillary' version = '1.3'>
+<overwrite>True</overwrite>
+
+<parameters src_region='global' scale='0' t_epsg='4326' stroke='black' fill ='none'
+strokewidth='0.1' strokedasharray='2,2' pngsize='360,180'></parameters>
+<srcpath volume = "africa"></srcpath>
+<dstpath volume = "africa"></dstpath>
+<srccomp>
+
+<graticules-45deg source = "naturalearth" product = "graticules"
+folder = 'graticulse' band = "graticules-45deg" prefix = "graticules-45deg" suffix = "0">
+</graticules-45deg>
+</srccomp>
+</process>
+</export>
+
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

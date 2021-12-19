@@ -1,0 +1,75 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<organize>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period timestep='staticmonthly'></period>
+
+<process processid ='organizeancillary' version = '3.0'>
+<parameters importdef='ascii'
+epsg = '4326'
+instid = 'FAO'
+dsname  = 'refevap'
+dsversion = ""
+accessdate = "20181104"
+regionid = 'global'
+regioncat = 'global'
+replacestr = 'MM'
+replacetag = 'monthlypet'
+datadir ='FAO/refevap//ref_evap_fao_10min'
+datafile ='etoMM.txt'
+dataurl = "http://www.fao.org/geonetwork/srv/en/metadata.show?id=7416"
+metapath ="GIAR-CSI/PET_he_monthly/CGIAR-CSI Global-PET-AI-Read Me.doc"
+metaurl="http://www.fao.org/geonetwork/srv/en/metadata.show?id=7416"
+title = "Global reference evapotranspiration"
+label = "Global map of monthy reference evapotranspiration 10 arc minutes"
+> </parameters>
+<overwrite>N</overwrite>
+<delete>N</delete>
+
+<srcpath volume = "karttur3tb/ANCILIMPORT" hdrfiletype = "asc" datfiletype = "aai"></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = "tif" datfiletype = "tif"></dstpath>
+
+<srcraw id="fao-refet-dayx10"
+datadir = "FAO/refevap//ref_evap_fao_10min"
+datafile = "etoMM"
+datalayer = "etoMM"
+accessdate = "20181104"
+theme = "climate"
+subtheme = "reference evapotranspiration"
+copyright =""
+title = "reference evapotranspiration"
+label = "Global map of monthy reference evapotranspiration 10 arc minutess"
+></srcraw>
+<dstcomp>
+<fao-refet-dayx10 source = "fao" product = "refet" folder = "refet" band = "fao-refet-dayx10" prefix = "fao-refet-dayx10" suffix = "M" scalefac = "0.1" offsetadd = "0" dataunit = "mm/day" celltype = 'Int16' cellnull = '-32768' measure = 'R' masked='Y'>
+</fao-refet-dayx10>
+</dstcomp>
+
+<monthlypet type = 'datum'>
+<compinattribute>datafile</compinattribute>
+<compinattribute>datalayer</compinattribute>
+<compoutattribute>yyyydoy</compoutattribute>
+<replace key = '01' compinreplace = '01' compoutreplace = '01'></replace>
+<replace key = '02' compinreplace = '02' compoutreplace = '02'></replace>
+<replace key = '03' compinreplace = '03' compoutreplace = '03'></replace>
+<replace key = '04' compinreplace = '04' compoutreplace = '04'></replace>
+<replace key = '05' compinreplace = '05' compoutreplace = '05'></replace>
+<replace key = '06' compinreplace = '06' compoutreplace = '06'></replace>
+<replace key = '07' compinreplace = '07' compoutreplace = '07'></replace>
+<replace key = '08' compinreplace = '08' compoutreplace = '08'></replace>
+<replace key = '09' compinreplace = '09' compoutreplace = '09'></replace>
+<replace key = '10' compinreplace = '10' compoutreplace = '10'></replace>
+<replace key = '11' compinreplace = '11' compoutreplace = '11'></replace>
+<replace key = '12' compinreplace = '12' compoutreplace = '12'></replace>
+</monthlypet>
+</process>
+</organize>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

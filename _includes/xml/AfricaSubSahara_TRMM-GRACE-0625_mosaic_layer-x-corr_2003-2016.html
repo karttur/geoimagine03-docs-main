@@ -1,0 +1,57 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<okadeltaproject>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2003" endyear = "2016" timestep='timespan-M'></period>
+
+<!-- Mosaic TRMM vs GRACE crosscorr -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='1.0' yres='1.0'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<obs-lag id = 'obs-lag' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "obs-lag" prefix = "obs-lag" suffix = "v7-RL05-nadd-a1"></obs-lag>
+<season-lag id = 'season-lag' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "season-lag" prefix = "season-lag" suffix = "v7-RL05-nadd-a1"></season-lag>
+<tendency-lag id = 'tendency-lag' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "tendency-lag" prefix = "tendency-lag" suffix = "v7-RL05-nadd-a1"></tendency-lag>
+<residual-lag id = 'residual-lag' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "residual-lag" prefix = "residual-lag" suffix = "v7-RL05-nadd-a1"></residual-lag>
+<obs-pearson id = 'obs-pearson' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "obs-pearson" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></obs-pearson>
+<season-pearson id = 'season-pearson' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "season-pearson" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></season-pearson>
+<tendency-pearson id = 'tendency-pearson' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "tendency-pearson" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></tendency-pearson>
+<residual-pearson id = 'residual-pearson' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "residual-pearson" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></residual-pearson>
+
+<obs-pearson-lag0 id = '1' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "obs-pearson-lag0" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></obs-pearson-lag0>
+<obs-pearson-lag1 id = '1a' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "obs-pearson-lag1" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></obs-pearson-lag1>
+<obs-pearson-lag2 id = '1b' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "obs-pearson-lag2" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></obs-pearson-lag2>
+
+<season-pearson-lag0 id = '2' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "season-pearson-lag0" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></season-pearson-lag0>
+<season-pearson-lag1 id = '2sb' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "season-pearson-lag1" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></season-pearson-lag1>
+<season-pearson-lag2 id = '2b' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "season-pearson-lag2" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></season-pearson-lag2>
+<season-pearson-lag3 id = '2c' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "season-pearson-lag3" prefix = "season-pearson-lag3" suffix = "v7-RL05-nadd-a1"></season-pearson-lag3>
+
+<tendency-pearson-lag0 id = '3a' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "tendency-pearson-lag0" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></tendency-pearson-lag0>
+<tendency-pearson-lag1 id = '3b' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "tendency-pearson-lag1" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></tendency-pearson-lag1>
+<tendency-pearson-lag2 id = '3c' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "tendency-pearson-lag2" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></tendency-pearson-lag2>
+<tendency-pearson-lag3 id = '3d' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "tendency-pearson-lag3" prefix = "tendency-pearson-lag3" suffix = "v7-RL05-nadd-a1"></tendency-pearson-lag3>
+<tendency-pearson-lag4 id = '3d' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "tendency-pearson-lag4" prefix = "tendency-pearson-lag4" suffix = "v7-RL05-nadd-a1"></tendency-pearson-lag4>
+<tendency-pearson-lag5 id = '3d' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "tendency-pearson-lag5" prefix = "tendency-pearson-lag5" suffix = "v7-RL05-nadd-a1"></tendency-pearson-lag5>
+
+
+<residual-pearson-lag0 id = '4' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "residual-pearson-lag0" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></residual-pearson-lag0>
+<residual-pearson-lag1 id = '4a' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "residual-pearson-lag1" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></residual-pearson-lag1>
+<residual-pearson-lag2 id = '4b' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "residual-pearson-lag2" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></residual-pearson-lag2>
+<residual-pearson-lag3 id = '4b' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "residual-pearson-lag3" prefix = "residual-pearson-lag3" suffix = "v7-RL05-nadd-a1"></residual-pearson-lag3>
+
+</srccomp>
+</process>
+</okadeltaproject>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

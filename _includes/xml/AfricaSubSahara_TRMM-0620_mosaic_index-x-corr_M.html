@@ -1,0 +1,725 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "1998" endyear = "2017" timestep='timespan-M'></period>
+
+<!-- Mosaic modis TRMM monthly tiles to region (karttur-africasubsahara) -->
+<processx processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+
+<obs-lag-soi id ='obs-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-lag-soi" prefix = "obs-lag-soi" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-lag-soi>
+<obs-lag-pdo id ='obs-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-lag-pdo" prefix = "obs-lag-pdo" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-lag-pdo>
+<obs-lag-best id ='obs-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-lag-best" prefix = "obs-lag-best" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-lag-best>
+<obs-lag-nao id ='obs-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-lag-nao" prefix = "obs-lag-nao" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-lag-nao>
+<obs-lag-nina3 id ='obs-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-lag-nina3" prefix = "obs-lag-nina3" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-lag-nina3>
+<obs-lag-pna id ='obs-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-lag-pna" prefix = "obs-lag-pna" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-lag-pna>
+
+<obs-pearson-soi id ='obs-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-pearson-soi" prefix = "obs-pearson-soi" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-pearson-soi>
+<obs-pearson-pdo id ='obs-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-pearson-pdo" prefix = "obs-pearson-pdo" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-pearson-pdo>
+<obs-pearson-best id ='obs-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-pearson-best" prefix = "obs-pearson-best" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-pearson-best>
+<obs-pearson-nao id ='obs-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-pearson-nao" prefix = "obs-pearson-nao" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-pearson-nao>
+<obs-pearson-nina3 id ='obs-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-pearson-nina3" prefix = "obs-pearson-nina3" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-pearson-nina3>
+<obs-pearson-pna id ='obs-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "obs-pearson-pna" prefix = "obs-pearson-pna" suffix = "v7-f-m-30km-st-sn-a1">
+</obs-pearson-pna>
+
+<tendency-lag-soi id ='tendency-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-lag-soi" prefix = "tendency-lag-soi" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-lag-soi>
+<tendency-lag-pdo id ='tendency-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-lag-pdo" prefix = "tendency-lag-pdo" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-lag-pdo>
+<tendency-lag-best id ='tendency-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-lag-best" prefix = "tendency-lag-best" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-lag-best>
+<tendency-lag-nao id ='tendency-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-lag-nao" prefix = "tendency-lag-nao" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-lag-nao>
+<tendency-lag-nina3 id ='tendency-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-lag-nina3" prefix = "tendency-lag-nina3" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-lag-nina3>
+<tendency-lag-pna id ='tendency-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-lag-pna" prefix = "tendency-lag-pna" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-lag-pna>
+
+<tendency-pearson-soi id ='tendency-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-pearson-soi" prefix = "tendency-pearson-soi" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-pearson-soi>
+<tendency-pearson-pdo id ='tendency-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-pearson-pdo" prefix = "tendency-pearson-pdo" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-pearson-pdo>
+<tendency-pearson-best id ='tendency-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-pearson-best" prefix = "tendency-pearson-best" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-pearson-best>
+<tendency-pearson-nao id ='tendency-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-pearson-nao" prefix = "tendency-pearson-nao" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-pearson-nao>
+<tendency-pearson-nina3 id ='tendency-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-pearson-nina3" prefix = "tendency-pearson-nina3" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-pearson-nina3>
+<tendency-pearson-pna id ='tendency-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "tendency-pearson-pna" prefix = "tendency-pearson-pna" suffix = "v7-f-m-30km-st-sn-a1">
+</tendency-pearson-pna>
+
+<season-lag-soi id ='season-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-lag-soi" prefix = "season-lag-soi" suffix = "v7-f-m-30km-st-sn-a1">
+</season-lag-soi>
+<season-lag-pdo id ='season-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-lag-pdo" prefix = "season-lag-pdo" suffix = "v7-f-m-30km-st-sn-a1">
+</season-lag-pdo>
+<season-lag-best id ='season-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-lag-best" prefix = "season-lag-best" suffix = "v7-f-m-30km-st-sn-a1">
+</season-lag-best>
+<season-lag-nao id ='season-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-lag-nao" prefix = "season-lag-nao" suffix = "v7-f-m-30km-st-sn-a1">
+</season-lag-nao>
+<season-lag-nina3 id ='season-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-lag-nina3" prefix = "season-lag-nina3" suffix = "v7-f-m-30km-st-sn-a1">
+</season-lag-nina3>
+<season-lag-pna id ='season-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-lag-pna" prefix = "season-lag-pna" suffix = "v7-f-m-30km-st-sn-a1">
+</season-lag-pna>
+
+<season-pearson-soi id ='season-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-pearson-soi" prefix = "season-pearson-soi" suffix = "v7-f-m-30km-st-sn-a1">
+</season-pearson-soi>
+<season-pearson-pdo id ='season-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-pearson-pdo" prefix = "season-pearson-pdo" suffix = "v7-f-m-30km-st-sn-a1">
+</season-pearson-pdo>
+<season-pearson-best id ='season-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-pearson-best" prefix = "season-pearson-best" suffix = "v7-f-m-30km-st-sn-a1">
+</season-pearson-best>
+<season-pearson-nao id ='season-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-pearson-nao" prefix = "season-pearson-nao" suffix = "v7-f-m-30km-st-sn-a1">
+</season-pearson-nao>
+<season-pearson-nina3 id ='season-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-pearson-nina3" prefix = "season-pearson-nina3" suffix = "v7-f-m-30km-st-sn-a1">
+</season-pearson-nina3>
+<season-pearson-pna id ='season-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "season-pearson-pna" prefix = "season-pearson-pna" suffix = "v7-f-m-30km-st-sn-a1">
+</season-pearson-pna>
+
+<residual-lag-soi id ='residual-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-lag-soi" prefix = "residual-lag-soi" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-lag-soi>
+<residual-lag-pdo id ='residual-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-lag-pdo" prefix = "residual-lag-pdo" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-lag-pdo>
+<residual-lag-best id ='residual-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-lag-best" prefix = "residual-lag-best" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-lag-best>
+<residual-lag-nao id ='residual-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-lag-nao" prefix = "residual-lag-nao" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-lag-nao>
+<residual-lag-nina3 id ='residual-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-lag-nina3" prefix = "residual-lag-nina3" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-lag-nina3>
+<residual-lag-pna id ='residual-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-lag-pna" prefix = "residual-lag-pna" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-lag-pna>
+
+<residual-pearson-soi id ='residual-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-pearson-soi" prefix = "residual-pearson-soi" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-pearson-soi>
+<residual-pearson-pdo id ='residual-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-pearson-pdo" prefix = "residual-pearson-pdo" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-pearson-pdo>
+<residual-pearson-best id ='residual-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-pearson-best" prefix = "residual-pearson-best" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-pearson-best>
+<residual-pearson-nao id ='residual-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-pearson-nao" prefix = "residual-pearson-nao" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-pearson-nao>
+<residual-pearson-nina3 id ='residual-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-pearson-nina3" prefix = "residual-pearson-nina3" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-pearson-nina3>
+<residual-pearson-pna id ='residual-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-st" band = "residual-pearson-pna" prefix = "residual-pearson-pna" suffix = "v7-f-m-30km-st-sn-a1">
+</residual-pearson-pna>
+</srccomp>
+</processx>
+
+<!-- Mosaic modis TRMM monthly tiles to region (karttur-okadelta) -->
+<processx processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+
+<obs-lag-soi id ='obs-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-soi" prefix = "obs-lag-soi" suffix = "v7-f-m-30km-nadd-a1">
+</obs-lag-soi>
+<obs-lag-pdo id ='obs-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-pdo" prefix = "obs-lag-pdo" suffix = "v7-f-m-30km-nadd-a1">
+</obs-lag-pdo>
+<obs-lag-best id ='obs-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-best" prefix = "obs-lag-best" suffix = "v7-f-m-30km-nadd-a1">
+</obs-lag-best>
+<obs-lag-nao id ='obs-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-nao" prefix = "obs-lag-nao" suffix = "v7-f-m-30km-nadd-a1">
+</obs-lag-nao>
+<obs-lag-nina3 id ='obs-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-nina3" prefix = "obs-lag-nina3" suffix = "v7-f-m-30km-nadd-a1">
+</obs-lag-nina3>
+<obs-lag-pna id ='obs-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-pna" prefix = "obs-lag-pna" suffix = "v7-f-m-30km-nadd-a1">
+</obs-lag-pna>
+
+<obs-pearson-soi id ='obs-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-soi" prefix = "obs-pearson-soi" suffix = "v7-f-m-30km-nadd-a1">
+</obs-pearson-soi>
+<obs-pearson-pdo id ='obs-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-pdo" prefix = "obs-pearson-pdo" suffix = "v7-f-m-30km-nadd-a1">
+</obs-pearson-pdo>
+<obs-pearson-best id ='obs-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-best" prefix = "obs-pearson-best" suffix = "v7-f-m-30km-nadd-a1">
+</obs-pearson-best>
+<obs-pearson-nao id ='obs-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-nao" prefix = "obs-pearson-nao" suffix = "v7-f-m-30km-nadd-a1">
+</obs-pearson-nao>
+<obs-pearson-nina3 id ='obs-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-nina3" prefix = "obs-pearson-nina3" suffix = "v7-f-m-30km-nadd-a1">
+</obs-pearson-nina3>
+<obs-pearson-pna id ='obs-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-pna" prefix = "obs-pearson-pna" suffix = "v7-f-m-30km-nadd-a1">
+</obs-pearson-pna>
+
+<tendency-lag-soi id ='tendency-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-soi" prefix = "tendency-lag-soi" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-lag-soi>
+<tendency-lag-pdo id ='tendency-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-pdo" prefix = "tendency-lag-pdo" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-lag-pdo>
+<tendency-lag-best id ='tendency-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-best" prefix = "tendency-lag-best" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-lag-best>
+<tendency-lag-nao id ='tendency-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-nao" prefix = "tendency-lag-nao" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-lag-nao>
+<tendency-lag-nina3 id ='tendency-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-nina3" prefix = "tendency-lag-nina3" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-lag-nina3>
+<tendency-lag-pna id ='tendency-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-pna" prefix = "tendency-lag-pna" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-lag-pna>
+
+<tendency-pearson-soi id ='tendency-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-soi" prefix = "tendency-pearson-soi" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-pearson-soi>
+<tendency-pearson-pdo id ='tendency-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-pdo" prefix = "tendency-pearson-pdo" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-pearson-pdo>
+<tendency-pearson-best id ='tendency-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-best" prefix = "tendency-pearson-best" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-pearson-best>
+<tendency-pearson-nao id ='tendency-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-nao" prefix = "tendency-pearson-nao" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-pearson-nao>
+<tendency-pearson-nina3 id ='tendency-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-nina3" prefix = "tendency-pearson-nina3" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-pearson-nina3>
+<tendency-pearson-pna id ='tendency-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-pna" prefix = "tendency-pearson-pna" suffix = "v7-f-m-30km-nadd-a1">
+</tendency-pearson-pna>
+
+<season-lag-soi id ='season-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-soi" prefix = "season-lag-soi" suffix = "v7-f-m-30km-nadd-a1">
+</season-lag-soi>
+<season-lag-pdo id ='season-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-pdo" prefix = "season-lag-pdo" suffix = "v7-f-m-30km-nadd-a1">
+</season-lag-pdo>
+<season-lag-best id ='season-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-best" prefix = "season-lag-best" suffix = "v7-f-m-30km-nadd-a1">
+</season-lag-best>
+<season-lag-nao id ='season-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-nao" prefix = "season-lag-nao" suffix = "v7-f-m-30km-nadd-a1">
+</season-lag-nao>
+<season-lag-nina3 id ='season-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-nina3" prefix = "season-lag-nina3" suffix = "v7-f-m-30km-nadd-a1">
+</season-lag-nina3>
+<season-lag-pna id ='season-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-pna" prefix = "season-lag-pna" suffix = "v7-f-m-30km-nadd-a1">
+</season-lag-pna>
+
+<season-pearson-soi id ='season-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-soi" prefix = "season-pearson-soi" suffix = "v7-f-m-30km-nadd-a1">
+</season-pearson-soi>
+<season-pearson-pdo id ='season-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-pdo" prefix = "season-pearson-pdo" suffix = "v7-f-m-30km-nadd-a1">
+</season-pearson-pdo>
+<season-pearson-best id ='season-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-best" prefix = "season-pearson-best" suffix = "v7-f-m-30km-nadd-a1">
+</season-pearson-best>
+<season-pearson-nao id ='season-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-nao" prefix = "season-pearson-nao" suffix = "v7-f-m-30km-nadd-a1">
+</season-pearson-nao>
+<season-pearson-nina3 id ='season-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-nina3" prefix = "season-pearson-nina3" suffix = "v7-f-m-30km-nadd-a1">
+</season-pearson-nina3>
+<season-pearson-pna id ='season-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-pna" prefix = "season-pearson-pna" suffix = "v7-f-m-30km-nadd-a1">
+</season-pearson-pna>
+
+<residual-lag-soi id ='residual-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-soi" prefix = "residual-lag-soi" suffix = "v7-f-m-30km-nadd-a1">
+</residual-lag-soi>
+<residual-lag-pdo id ='residual-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-pdo" prefix = "residual-lag-pdo" suffix = "v7-f-m-30km-nadd-a1">
+</residual-lag-pdo>
+<residual-lag-best id ='residual-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-best" prefix = "residual-lag-best" suffix = "v7-f-m-30km-nadd-a1">
+</residual-lag-best>
+<residual-lag-nao id ='residual-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-nao" prefix = "residual-lag-nao" suffix = "v7-f-m-30km-nadd-a1">
+</residual-lag-nao>
+<residual-lag-nina3 id ='residual-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-nina3" prefix = "residual-lag-nina3" suffix = "v7-f-m-30km-nadd-a1">
+</residual-lag-nina3>
+<residual-lag-pna id ='residual-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-pna" prefix = "residual-lag-pna" suffix = "v7-f-m-30km-nadd-a1">
+</residual-lag-pna>
+
+<residual-pearson-soi id ='residual-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-soi" prefix = "residual-pearson-soi" suffix = "v7-f-m-30km-nadd-a1">
+</residual-pearson-soi>
+<residual-pearson-pdo id ='residual-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-pdo" prefix = "residual-pearson-pdo" suffix = "v7-f-m-30km-nadd-a1">
+</residual-pearson-pdo>
+<residual-pearson-best id ='residual-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-best" prefix = "residual-pearson-best" suffix = "v7-f-m-30km-nadd-a1">
+</residual-pearson-best>
+<residual-pearson-nao id ='residual-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-nao" prefix = "residual-pearson-nao" suffix = "v7-f-m-30km-nadd-a1">
+</residual-pearson-nao>
+<residual-pearson-nina3 id ='residual-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-nina3" prefix = "residual-pearson-nina3" suffix = "v7-f-m-30km-nadd-a1">
+</residual-pearson-nina3>
+<residual-pearson-pna id ='residual-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-pna" prefix = "residual-pearson-pna" suffix = "v7-f-m-30km-nadd-a1">
+</residual-pearson-pna>
+
+</srccomp>
+</processx>
+
+<!-- Mosaic modis TRMM monthly tiles to region (karttur-okadelta) -->
+<processx processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+
+<obs-lag-soi id ='obs-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-soi" prefix = "obs-lag-soi" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-lag-soi>
+<obs-lag-pdo id ='obs-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-pdo" prefix = "obs-lag-pdo" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-lag-pdo>
+<obs-lag-best id ='obs-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-best" prefix = "obs-lag-best" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-lag-best>
+<obs-lag-nao id ='obs-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-nao" prefix = "obs-lag-nao" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-lag-nao>
+<obs-lag-nina3 id ='obs-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-nina3" prefix = "obs-lag-nina3" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-lag-nina3>
+<obs-lag-pna id ='obs-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-lag-pna" prefix = "obs-lag-pna" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-lag-pna>
+
+<obs-pearson-soi id ='obs-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-soi" prefix = "obs-pearson-soi" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-pearson-soi>
+<obs-pearson-pdo id ='obs-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-pdo" prefix = "obs-pearson-pdo" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-pearson-pdo>
+<obs-pearson-best id ='obs-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-best" prefix = "obs-pearson-best" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-pearson-best>
+<obs-pearson-nao id ='obs-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-nao" prefix = "obs-pearson-nao" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-pearson-nao>
+<obs-pearson-nina3 id ='obs-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-nina3" prefix = "obs-pearson-nina3" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-pearson-nina3>
+<obs-pearson-pna id ='obs-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "obs-pearson-pna" prefix = "obs-pearson-pna" suffix = "v7-f-m-30km-nadd-abs-a1">
+</obs-pearson-pna>
+
+<tendency-lag-soi id ='tendency-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-soi" prefix = "tendency-lag-soi" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-lag-soi>
+<tendency-lag-pdo id ='tendency-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-pdo" prefix = "tendency-lag-pdo" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-lag-pdo>
+<tendency-lag-best id ='tendency-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-best" prefix = "tendency-lag-best" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-lag-best>
+<tendency-lag-nao id ='tendency-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-nao" prefix = "tendency-lag-nao" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-lag-nao>
+<tendency-lag-nina3 id ='tendency-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-nina3" prefix = "tendency-lag-nina3" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-lag-nina3>
+<tendency-lag-pna id ='tendency-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-lag-pna" prefix = "tendency-lag-pna" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-lag-pna>
+
+<tendency-pearson-soi id ='tendency-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-soi" prefix = "tendency-pearson-soi" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-pearson-soi>
+<tendency-pearson-pdo id ='tendency-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-pdo" prefix = "tendency-pearson-pdo" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-pearson-pdo>
+<tendency-pearson-best id ='tendency-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-best" prefix = "tendency-pearson-best" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-pearson-best>
+<tendency-pearson-nao id ='tendency-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-nao" prefix = "tendency-pearson-nao" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-pearson-nao>
+<tendency-pearson-nina3 id ='tendency-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-nina3" prefix = "tendency-pearson-nina3" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-pearson-nina3>
+<tendency-pearson-pna id ='tendency-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "tendency-pearson-pna" prefix = "tendency-pearson-pna" suffix = "v7-f-m-30km-nadd-abs-a1">
+</tendency-pearson-pna>
+
+<season-lag-soi id ='season-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-soi" prefix = "season-lag-soi" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-lag-soi>
+<season-lag-pdo id ='season-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-pdo" prefix = "season-lag-pdo" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-lag-pdo>
+<season-lag-best id ='season-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-best" prefix = "season-lag-best" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-lag-best>
+<season-lag-nao id ='season-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-nao" prefix = "season-lag-nao" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-lag-nao>
+<season-lag-nina3 id ='season-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-nina3" prefix = "season-lag-nina3" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-lag-nina3>
+<season-lag-pna id ='season-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-lag-pna" prefix = "season-lag-pna" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-lag-pna>
+
+<season-pearson-soi id ='season-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-soi" prefix = "season-pearson-soi" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-pearson-soi>
+<season-pearson-pdo id ='season-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-pdo" prefix = "season-pearson-pdo" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-pearson-pdo>
+<season-pearson-best id ='season-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-best" prefix = "season-pearson-best" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-pearson-best>
+<season-pearson-nao id ='season-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-nao" prefix = "season-pearson-nao" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-pearson-nao>
+<season-pearson-nina3 id ='season-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-nina3" prefix = "season-pearson-nina3" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-pearson-nina3>
+<season-pearson-pna id ='season-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "season-pearson-pna" prefix = "season-pearson-pna" suffix = "v7-f-m-30km-nadd-abs-a1">
+</season-pearson-pna>
+
+<residual-lag-soi id ='residual-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-soi" prefix = "residual-lag-soi" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-lag-soi>
+<residual-lag-pdo id ='residual-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-pdo" prefix = "residual-lag-pdo" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-lag-pdo>
+<residual-lag-best id ='residual-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-best" prefix = "residual-lag-best" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-lag-best>
+<residual-lag-nao id ='residual-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-nao" prefix = "residual-lag-nao" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-lag-nao>
+<residual-lag-nina3 id ='residual-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-nina3" prefix = "residual-lag-nina3" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-lag-nina3>
+<residual-lag-pna id ='residual-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-lag-pna" prefix = "residual-lag-pna" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-lag-pna>
+
+<residual-pearson-soi id ='residual-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-soi" prefix = "residual-pearson-soi" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-pearson-soi>
+<residual-pearson-pdo id ='residual-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-pdo" prefix = "residual-pearson-pdo" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-pearson-pdo>
+<residual-pearson-best id ='residual-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-best" prefix = "residual-pearson-best" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-pearson-best>
+<residual-pearson-nao id ='residual-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-nao" prefix = "residual-pearson-nao" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-pearson-nao>
+<residual-pearson-nina3 id ='residual-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-nina3" prefix = "residual-pearson-nina3" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-pearson-nina3>
+<residual-pearson-pna id ='residual-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-n" band = "residual-pearson-pna" prefix = "residual-pearson-pna" suffix = "v7-f-m-30km-nadd-abs-a1">
+</residual-pearson-pna>
+
+</srccomp>
+</processx>
+
+<!-- Mosaic modis TRMM monthly tiles to region (karttur-okadelta) -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+
+<obs-lag-soi id ='obs-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-soi" prefix = "obs-lag-soi" suffix = "v7-f-m-30km-sfs-a1">
+</obs-lag-soi>
+<obs-lag-pdo id ='obs-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-pdo" prefix = "obs-lag-pdo" suffix = "v7-f-m-30km-sfs-a1">
+</obs-lag-pdo>
+<obs-lag-best id ='obs-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-best" prefix = "obs-lag-best" suffix = "v7-f-m-30km-sfs-a1">
+</obs-lag-best>
+<obs-lag-nao id ='obs-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-nao" prefix = "obs-lag-nao" suffix = "v7-f-m-30km-sfs-a1">
+</obs-lag-nao>
+<obs-lag-nina3 id ='obs-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-nina3" prefix = "obs-lag-nina3" suffix = "v7-f-m-30km-sfs-a1">
+</obs-lag-nina3>
+<obs-lag-pna id ='obs-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-pna" prefix = "obs-lag-pna" suffix = "v7-f-m-30km-sfs-a1">
+</obs-lag-pna>
+
+<obs-pearson-soi id ='obs-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-soi" prefix = "obs-pearson-soi" suffix = "v7-f-m-30km-sfs-a1">
+</obs-pearson-soi>
+<obs-pearson-pdo id ='obs-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-pdo" prefix = "obs-pearson-pdo" suffix = "v7-f-m-30km-sfs-a1">
+</obs-pearson-pdo>
+<obs-pearson-best id ='obs-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-best" prefix = "obs-pearson-best" suffix = "v7-f-m-30km-sfs-a1">
+</obs-pearson-best>
+<obs-pearson-nao id ='obs-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-nao" prefix = "obs-pearson-nao" suffix = "v7-f-m-30km-sfs-a1">
+</obs-pearson-nao>
+<obs-pearson-nina3 id ='obs-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-nina3" prefix = "obs-pearson-nina3" suffix = "v7-f-m-30km-sfs-a1">
+</obs-pearson-nina3>
+<obs-pearson-pna id ='obs-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-pna" prefix = "obs-pearson-pna" suffix = "v7-f-m-30km-sfs-a1">
+</obs-pearson-pna>
+
+<tendency-lag-soi id ='tendency-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-soi" prefix = "tendency-lag-soi" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-lag-soi>
+<tendency-lag-pdo id ='tendency-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-pdo" prefix = "tendency-lag-pdo" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-lag-pdo>
+<tendency-lag-best id ='tendency-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-best" prefix = "tendency-lag-best" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-lag-best>
+<tendency-lag-nao id ='tendency-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-nao" prefix = "tendency-lag-nao" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-lag-nao>
+<tendency-lag-nina3 id ='tendency-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-nina3" prefix = "tendency-lag-nina3" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-lag-nina3>
+<tendency-lag-pna id ='tendency-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-pna" prefix = "tendency-lag-pna" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-lag-pna>
+
+<tendency-pearson-soi id ='tendency-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-soi" prefix = "tendency-pearson-soi" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-pearson-soi>
+<tendency-pearson-pdo id ='tendency-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-pdo" prefix = "tendency-pearson-pdo" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-pearson-pdo>
+<tendency-pearson-best id ='tendency-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-best" prefix = "tendency-pearson-best" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-pearson-best>
+<tendency-pearson-nao id ='tendency-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-nao" prefix = "tendency-pearson-nao" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-pearson-nao>
+<tendency-pearson-nina3 id ='tendency-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-nina3" prefix = "tendency-pearson-nina3" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-pearson-nina3>
+<tendency-pearson-pna id ='tendency-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-pna" prefix = "tendency-pearson-pna" suffix = "v7-f-m-30km-sfs-a1">
+</tendency-pearson-pna>
+
+<season-lag-soi id ='season-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-soi" prefix = "season-lag-soi" suffix = "v7-f-m-30km-sfs-a1">
+</season-lag-soi>
+<season-lag-pdo id ='season-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-pdo" prefix = "season-lag-pdo" suffix = "v7-f-m-30km-sfs-a1">
+</season-lag-pdo>
+<season-lag-best id ='season-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-best" prefix = "season-lag-best" suffix = "v7-f-m-30km-sfs-a1">
+</season-lag-best>
+<season-lag-nao id ='season-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-nao" prefix = "season-lag-nao" suffix = "v7-f-m-30km-sfs-a1">
+</season-lag-nao>
+<season-lag-nina3 id ='season-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-nina3" prefix = "season-lag-nina3" suffix = "v7-f-m-30km-sfs-a1">
+</season-lag-nina3>
+<season-lag-pna id ='season-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-pna" prefix = "season-lag-pna" suffix = "v7-f-m-30km-sfs-a1">
+</season-lag-pna>
+
+<season-pearson-soi id ='season-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-soi" prefix = "season-pearson-soi" suffix = "v7-f-m-30km-sfs-a1">
+</season-pearson-soi>
+<season-pearson-pdo id ='season-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-pdo" prefix = "season-pearson-pdo" suffix = "v7-f-m-30km-sfs-a1">
+</season-pearson-pdo>
+<season-pearson-best id ='season-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-best" prefix = "season-pearson-best" suffix = "v7-f-m-30km-sfs-a1">
+</season-pearson-best>
+<season-pearson-nao id ='season-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-nao" prefix = "season-pearson-nao" suffix = "v7-f-m-30km-sfs-a1">
+</season-pearson-nao>
+<season-pearson-nina3 id ='season-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-nina3" prefix = "season-pearson-nina3" suffix = "v7-f-m-30km-sfs-a1">
+</season-pearson-nina3>
+<season-pearson-pna id ='season-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-pna" prefix = "season-pearson-pna" suffix = "v7-f-m-30km-sfs-a1">
+</season-pearson-pna>
+
+<residual-lag-soi id ='residual-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-soi" prefix = "residual-lag-soi" suffix = "v7-f-m-30km-sfs-a1">
+</residual-lag-soi>
+<residual-lag-pdo id ='residual-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-pdo" prefix = "residual-lag-pdo" suffix = "v7-f-m-30km-sfs-a1">
+</residual-lag-pdo>
+<residual-lag-best id ='residual-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-best" prefix = "residual-lag-best" suffix = "v7-f-m-30km-sfs-a1">
+</residual-lag-best>
+<residual-lag-nao id ='residual-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-nao" prefix = "residual-lag-nao" suffix = "v7-f-m-30km-sfs-a1">
+</residual-lag-nao>
+<residual-lag-nina3 id ='residual-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-nina3" prefix = "residual-lag-nina3" suffix = "v7-f-m-30km-sfs-a1">
+</residual-lag-nina3>
+<residual-lag-pna id ='residual-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-pna" prefix = "residual-lag-pna" suffix = "v7-f-m-30km-sfs-a1">
+</residual-lag-pna>
+
+<residual-pearson-soi id ='residual-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-soi" prefix = "residual-pearson-soi" suffix = "v7-f-m-30km-sfs-a1">
+</residual-pearson-soi>
+<residual-pearson-pdo id ='residual-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-pdo" prefix = "residual-pearson-pdo" suffix = "v7-f-m-30km-sfs-a1">
+</residual-pearson-pdo>
+<residual-pearson-best id ='residual-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-best" prefix = "residual-pearson-best" suffix = "v7-f-m-30km-sfs-a1">
+</residual-pearson-best>
+<residual-pearson-nao id ='residual-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-nao" prefix = "residual-pearson-nao" suffix = "v7-f-m-30km-sfs-a1">
+</residual-pearson-nao>
+<residual-pearson-nina3 id ='residual-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-nina3" prefix = "residual-pearson-nina3" suffix = "v7-f-m-30km-sfs-a1">
+</residual-pearson-nina3>
+<residual-pearson-pna id ='residual-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-pna" prefix = "residual-pearson-pna" suffix = "v7-f-m-30km-sfs-a1">
+</residual-pearson-pna>
+
+</srccomp>
+</process>
+
+<!-- Mosaic modis TRMM monthly tiles to region (karttur-okadelta) -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+
+<obs-lag-soi id ='obs-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-soi" prefix = "obs-lag-soi" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-lag-soi>
+<obs-lag-pdo id ='obs-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-pdo" prefix = "obs-lag-pdo" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-lag-pdo>
+<obs-lag-best id ='obs-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-best" prefix = "obs-lag-best" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-lag-best>
+<obs-lag-nao id ='obs-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-nao" prefix = "obs-lag-nao" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-lag-nao>
+<obs-lag-nina3 id ='obs-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-nina3" prefix = "obs-lag-nina3" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-lag-nina3>
+<obs-lag-pna id ='obs-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-pna" prefix = "obs-lag-pna" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-lag-pna>
+
+<obs-pearson-soi id ='obs-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-soi" prefix = "obs-pearson-soi" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-pearson-soi>
+<obs-pearson-pdo id ='obs-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-pdo" prefix = "obs-pearson-pdo" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-pearson-pdo>
+<obs-pearson-best id ='obs-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-best" prefix = "obs-pearson-best" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-pearson-best>
+<obs-pearson-nao id ='obs-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-nao" prefix = "obs-pearson-nao" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-pearson-nao>
+<obs-pearson-nina3 id ='obs-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-nina3" prefix = "obs-pearson-nina3" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-pearson-nina3>
+<obs-pearson-pna id ='obs-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-pna" prefix = "obs-pearson-pna" suffix = "v7-f-m-30km-sfs-abs-a1">
+</obs-pearson-pna>
+
+<tendency-lag-soi id ='tendency-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-soi" prefix = "tendency-lag-soi" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-lag-soi>
+<tendency-lag-pdo id ='tendency-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-pdo" prefix = "tendency-lag-pdo" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-lag-pdo>
+<tendency-lag-best id ='tendency-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-best" prefix = "tendency-lag-best" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-lag-best>
+<tendency-lag-nao id ='tendency-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-nao" prefix = "tendency-lag-nao" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-lag-nao>
+<tendency-lag-nina3 id ='tendency-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-nina3" prefix = "tendency-lag-nina3" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-lag-nina3>
+<tendency-lag-pna id ='tendency-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-pna" prefix = "tendency-lag-pna" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-lag-pna>
+
+<tendency-pearson-soi id ='tendency-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-soi" prefix = "tendency-pearson-soi" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-pearson-soi>
+<tendency-pearson-pdo id ='tendency-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-pdo" prefix = "tendency-pearson-pdo" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-pearson-pdo>
+<tendency-pearson-best id ='tendency-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-best" prefix = "tendency-pearson-best" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-pearson-best>
+<tendency-pearson-nao id ='tendency-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-nao" prefix = "tendency-pearson-nao" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-pearson-nao>
+<tendency-pearson-nina3 id ='tendency-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-nina3" prefix = "tendency-pearson-nina3" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-pearson-nina3>
+<tendency-pearson-pna id ='tendency-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-pna" prefix = "tendency-pearson-pna" suffix = "v7-f-m-30km-sfs-abs-a1">
+</tendency-pearson-pna>
+
+<season-lag-soi id ='season-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-soi" prefix = "season-lag-soi" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-lag-soi>
+<season-lag-pdo id ='season-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-pdo" prefix = "season-lag-pdo" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-lag-pdo>
+<season-lag-best id ='season-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-best" prefix = "season-lag-best" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-lag-best>
+<season-lag-nao id ='season-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-nao" prefix = "season-lag-nao" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-lag-nao>
+<season-lag-nina3 id ='season-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-nina3" prefix = "season-lag-nina3" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-lag-nina3>
+<season-lag-pna id ='season-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-pna" prefix = "season-lag-pna" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-lag-pna>
+
+<season-pearson-soi id ='season-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-soi" prefix = "season-pearson-soi" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-pearson-soi>
+<season-pearson-pdo id ='season-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-pdo" prefix = "season-pearson-pdo" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-pearson-pdo>
+<season-pearson-best id ='season-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-best" prefix = "season-pearson-best" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-pearson-best>
+<season-pearson-nao id ='season-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-nao" prefix = "season-pearson-nao" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-pearson-nao>
+<season-pearson-nina3 id ='season-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-nina3" prefix = "season-pearson-nina3" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-pearson-nina3>
+<season-pearson-pna id ='season-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-pna" prefix = "season-pearson-pna" suffix = "v7-f-m-30km-sfs-abs-a1">
+</season-pearson-pna>
+
+<residual-lag-soi id ='residual-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-soi" prefix = "residual-lag-soi" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-lag-soi>
+<residual-lag-pdo id ='residual-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-pdo" prefix = "residual-lag-pdo" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-lag-pdo>
+<residual-lag-best id ='residual-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-best" prefix = "residual-lag-best" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-lag-best>
+<residual-lag-nao id ='residual-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-nao" prefix = "residual-lag-nao" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-lag-nao>
+<residual-lag-nina3 id ='residual-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-nina3" prefix = "residual-lag-nina3" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-lag-nina3>
+<residual-lag-pna id ='residual-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-pna" prefix = "residual-lag-pna" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-lag-pna>
+
+<residual-pearson-soi id ='residual-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-soi" prefix = "residual-pearson-soi" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-pearson-soi>
+<residual-pearson-pdo id ='residual-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-pdo" prefix = "residual-pearson-pdo" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-pearson-pdo>
+<residual-pearson-best id ='residual-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-best" prefix = "residual-pearson-best" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-pearson-best>
+<residual-pearson-nao id ='residual-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-nao" prefix = "residual-pearson-nao" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-pearson-nao>
+<residual-pearson-nina3 id ='residual-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-nina3" prefix = "residual-pearson-nina3" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-pearson-nina3>
+<residual-pearson-pna id ='residual-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-pna" prefix = "residual-pearson-pna" suffix = "v7-f-m-30km-sfs-abs-a1">
+</residual-pearson-pna>
+
+</srccomp>
+</process>
+
+<!-- Mosaic modis TRMM monthly tiles to region (karttur-okadelta) -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+
+<obs-lag-soi id ='obs-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-soi" prefix = "obs-lag-soi" suffix = "v7-f-m-30km-sfs-a2">
+</obs-lag-soi>
+<obs-lag-pdo id ='obs-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-pdo" prefix = "obs-lag-pdo" suffix = "v7-f-m-30km-sfs-a2">
+</obs-lag-pdo>
+<obs-lag-best id ='obs-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-best" prefix = "obs-lag-best" suffix = "v7-f-m-30km-sfs-a2">
+</obs-lag-best>
+<obs-lag-nao id ='obs-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-nao" prefix = "obs-lag-nao" suffix = "v7-f-m-30km-sfs-a2">
+</obs-lag-nao>
+<obs-lag-nina3 id ='obs-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-nina3" prefix = "obs-lag-nina3" suffix = "v7-f-m-30km-sfs-a2">
+</obs-lag-nina3>
+<obs-lag-pna id ='obs-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-lag-pna" prefix = "obs-lag-pna" suffix = "v7-f-m-30km-sfs-a2">
+</obs-lag-pna>
+
+<obs-pearson-soi id ='obs-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-soi" prefix = "obs-pearson-soi" suffix = "v7-f-m-30km-sfs-a2">
+</obs-pearson-soi>
+<obs-pearson-pdo id ='obs-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-pdo" prefix = "obs-pearson-pdo" suffix = "v7-f-m-30km-sfs-a2">
+</obs-pearson-pdo>
+<obs-pearson-best id ='obs-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-best" prefix = "obs-pearson-best" suffix = "v7-f-m-30km-sfs-a2">
+</obs-pearson-best>
+<obs-pearson-nao id ='obs-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-nao" prefix = "obs-pearson-nao" suffix = "v7-f-m-30km-sfs-a2">
+</obs-pearson-nao>
+<obs-pearson-nina3 id ='obs-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-nina3" prefix = "obs-pearson-nina3" suffix = "v7-f-m-30km-sfs-a2">
+</obs-pearson-nina3>
+<obs-pearson-pna id ='obs-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "obs-pearson-pna" prefix = "obs-pearson-pna" suffix = "v7-f-m-30km-sfs-a2">
+</obs-pearson-pna>
+
+<tendency-lag-soi id ='tendency-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-soi" prefix = "tendency-lag-soi" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-lag-soi>
+<tendency-lag-pdo id ='tendency-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-pdo" prefix = "tendency-lag-pdo" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-lag-pdo>
+<tendency-lag-best id ='tendency-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-best" prefix = "tendency-lag-best" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-lag-best>
+<tendency-lag-nao id ='tendency-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-nao" prefix = "tendency-lag-nao" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-lag-nao>
+<tendency-lag-nina3 id ='tendency-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-nina3" prefix = "tendency-lag-nina3" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-lag-nina3>
+<tendency-lag-pna id ='tendency-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-lag-pna" prefix = "tendency-lag-pna" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-lag-pna>
+
+<tendency-pearson-soi id ='tendency-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-soi" prefix = "tendency-pearson-soi" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-pearson-soi>
+<tendency-pearson-pdo id ='tendency-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-pdo" prefix = "tendency-pearson-pdo" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-pearson-pdo>
+<tendency-pearson-best id ='tendency-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-best" prefix = "tendency-pearson-best" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-pearson-best>
+<tendency-pearson-nao id ='tendency-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-nao" prefix = "tendency-pearson-nao" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-pearson-nao>
+<tendency-pearson-nina3 id ='tendency-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-nina3" prefix = "tendency-pearson-nina3" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-pearson-nina3>
+<tendency-pearson-pna id ='tendency-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "tendency-pearson-pna" prefix = "tendency-pearson-pna" suffix = "v7-f-m-30km-sfs-a2">
+</tendency-pearson-pna>
+
+<season-lag-soi id ='season-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-soi" prefix = "season-lag-soi" suffix = "v7-f-m-30km-sfs-a2">
+</season-lag-soi>
+<season-lag-pdo id ='season-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-pdo" prefix = "season-lag-pdo" suffix = "v7-f-m-30km-sfs-a2">
+</season-lag-pdo>
+<season-lag-best id ='season-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-best" prefix = "season-lag-best" suffix = "v7-f-m-30km-sfs-a2">
+</season-lag-best>
+<season-lag-nao id ='season-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-nao" prefix = "season-lag-nao" suffix = "v7-f-m-30km-sfs-a2">
+</season-lag-nao>
+<season-lag-nina3 id ='season-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-nina3" prefix = "season-lag-nina3" suffix = "v7-f-m-30km-sfs-a2">
+</season-lag-nina3>
+<season-lag-pna id ='season-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-lag-pna" prefix = "season-lag-pna" suffix = "v7-f-m-30km-sfs-a2">
+</season-lag-pna>
+
+<season-pearson-soi id ='season-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-soi" prefix = "season-pearson-soi" suffix = "v7-f-m-30km-sfs-a2">
+</season-pearson-soi>
+<season-pearson-pdo id ='season-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-pdo" prefix = "season-pearson-pdo" suffix = "v7-f-m-30km-sfs-a2">
+</season-pearson-pdo>
+<season-pearson-best id ='season-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-best" prefix = "season-pearson-best" suffix = "v7-f-m-30km-sfs-a2">
+</season-pearson-best>
+<season-pearson-nao id ='season-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-nao" prefix = "season-pearson-nao" suffix = "v7-f-m-30km-sfs-a2">
+</season-pearson-nao>
+<season-pearson-nina3 id ='season-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-nina3" prefix = "season-pearson-nina3" suffix = "v7-f-m-30km-sfs-a2">
+</season-pearson-nina3>
+<season-pearson-pna id ='season-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "season-pearson-pna" prefix = "season-pearson-pna" suffix = "v7-f-m-30km-sfs-a2">
+</season-pearson-pna>
+
+<residual-lag-soi id ='residual-lag-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-soi" prefix = "residual-lag-soi" suffix = "v7-f-m-30km-sfs-a2">
+</residual-lag-soi>
+<residual-lag-pdo id ='residual-lag-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-pdo" prefix = "residual-lag-pdo" suffix = "v7-f-m-30km-sfs-a2">
+</residual-lag-pdo>
+<residual-lag-best id ='residual-lag-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-best" prefix = "residual-lag-best" suffix = "v7-f-m-30km-sfs-a2">
+</residual-lag-best>
+<residual-lag-nao id ='residual-lag-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-nao" prefix = "residual-lag-nao" suffix = "v7-f-m-30km-sfs-a2">
+</residual-lag-nao>
+<residual-lag-nina3 id ='residual-lag-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-nina3" prefix = "residual-lag-nina3" suffix = "v7-f-m-30km-sfs-a2">
+</residual-lag-nina3>
+<residual-lag-pna id ='residual-lag-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-lag-pna" prefix = "residual-lag-pna" suffix = "v7-f-m-30km-sfs-a2">
+</residual-lag-pna>
+
+<residual-pearson-soi id ='residual-pearson-soi' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-soi" prefix = "residual-pearson-soi" suffix = "v7-f-m-30km-sfs-a2">
+</residual-pearson-soi>
+<residual-pearson-pdo id ='residual-pearson-pdo' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-pdo" prefix = "residual-pearson-pdo" suffix = "v7-f-m-30km-sfs-a2">
+</residual-pearson-pdo>
+<residual-pearson-best id ='residual-pearson-best' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-best" prefix = "residual-pearson-best" suffix = "v7-f-m-30km-sfs-a2">
+</residual-pearson-best>
+<residual-pearson-nao id ='residual-pearson-nao' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-nao" prefix = "residual-pearson-nao" suffix = "v7-f-m-30km-sfs-a2">
+</residual-pearson-nao>
+<residual-pearson-nina3 id ='residual-pearson-nina3' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-nina3" prefix = "residual-pearson-nina3" suffix = "v7-f-m-30km-sfs-a2">
+</residual-pearson-nina3>
+<residual-pearson-pna id ='residual-pearson-pna' source = "trmm" product = "3b43" folder = "rainfall-ixc-s" band = "residual-pearson-pna" prefix = "residual-pearson-pna" suffix = "v7-f-m-30km-sfs-a2">
+</residual-pearson-pna>
+</srccomp>
+</process>
+
+<!-- Mosaic TRMM vs GRACE crosscorr -->
+<processx processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='1.0' yres='1.0'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<obs-lag id = 'obs-lag' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "obs-lag" prefix = "obs-lag" suffix = "v7-RL05-nadd-a1"></obs-lag>
+<season-lag id = 'season-lag' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "season-lag" prefix = "season-lag" suffix = "v7-RL05-nadd-a1"></season-lag>
+<tendency-lag id = 'tendency-lag' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "tendency-lag" prefix = "tendency-lag" suffix = "v7-RL05-nadd-a1"></tendency-lag>
+<residual-lag id = 'residual-lag' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "residual-lag" prefix = "residual-lag" suffix = "v7-RL05-nadd-a1"></residual-lag>
+<obs-pearson id = 'obs-pearson' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "obs-pearson" prefix = "obs-pearson" suffix = "v7-RL05-nadd-a1"></obs-pearson>
+<season-pearson id = 'season-pearson' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "season-pearson" prefix = "season-pearson" suffix = "v7-RL05-nadd-a1"></season-pearson>
+<tendency-pearson id = 'tendency-pearson' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "tendency-pearson" prefix = "tendency-pearson" suffix = "v7-RL05-nadd-a1"></tendency-pearson>
+<residual-pearson id = 'residual-pearson' source = "trmmgrace"  product = "trmm-xc-grace" folder = "xcorr" band = "residual-pearson" prefix = "residual-pearson" suffix = "v7-RL05-nadd-a1"></residual-pearson>
+
+</srccomp>
+</processx>
+</africasubsahara>
+
+
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

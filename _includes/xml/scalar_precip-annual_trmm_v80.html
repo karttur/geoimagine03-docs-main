@@ -1,0 +1,28 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<runprocess>
+<userproject userid = 'karttur' projectid = 'karttur' tractid= 'trmm' siteid = '*' plotid = '*' system = 'ancillary'></userproject>
+<path></path>
+<period startyear = "1998" endyear = "2016" timestep='AS'></period>
+
+
+<process processid = 'scalar' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters operator='ln' scalefac='100'></parameters>
+<srcpath mainpath = "/Volumes/karttur3tb/ANCILLARY" scenes = 'false'  division = 'region' hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<tarpath mainpath = "/Volumes/karttur3tb/ANCILLARY" scenes = 'false' division = 'region' hdrfiletype = 'tif' datfiletype = 'tif'></tarpath>
+<compin source = "TRMM" product = "3B43" folder = "rainfall-annual" band = "TRMM-3B43v7-precip" prefix = "rainfall" suffix = "v7-AS"></compin>
+<compout source = "TRMM" product = "3B43" folder = "rainfall-ln-annual" band = "TRMM-3B43v7-precip-ln" prefix = "rainfall" suffix = "v7-ln-AS" masked = 'Y' cellnull = '-32768' celltype='Int16' scalefac='0.01' offsetadd='0' dataunit = 'ln(mm)' palette='none' measure='R'></compout>
+
+</process>
+
+</runprocess>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

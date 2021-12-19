@@ -1,0 +1,106 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<palette>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+<!-- addrasterpalette VWB-->
+<process processid = 'addrasterpalette'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters compid= 'NA' palette = 'vwb'>
+<setcolor id = '0' red = '103' green ='0' blue='31' alpha ='0' label='strongly neg' hint='strongly significant negative trend' ></setcolor>
+<setcolor id = '25' red = '178' green ='24' blue='43' alpha ='0' label='neg' hint='significant negative' ></setcolor>
+<setcolor id = '50' red = '214' green ='96' blue='77' alpha ='0' label='non significant' hint='non significant negative trend' ></setcolor>
+<setcolor id = '75' red = '244' green ='165' blue='130' alpha ='0' label='no trend' hint='no trend' ></setcolor>
+<setcolor id = '100' red = '253' green ='219' blue='199' alpha ='0' label='non significant' hint='non significant positive trend' ></setcolor>
+<setcolor id = '125' red = '224' green ='224' blue='224' alpha ='0' label='max npv' hint='strongly significant positive trend' ></setcolor>
+<setcolor id = '150' red = '202' green ='219' blue='253' alpha ='0' label='strongly neg' hint='strongly significant negative trend' ></setcolor>
+<setcolor id = '175' red = '146' green ='197' blue='222' alpha ='0' label='neg' hint='significant negative' ></setcolor>
+<setcolor id = '200' red = '67' green ='147' blue='195' alpha ='0' label='non significant' hint='non significant negative trend' ></setcolor>
+<setcolor id = '225' red = '33' green ='102' blue='173' alpha ='0' label='no trend' hint='no trend' ></setcolor>
+<setcolor id = '250' red = '5' green ='48' blue='97' alpha ='0' label='non significant' hint='non significant positive trend' ></setcolor>
+<setcolor id = '253' red = '245' green ='237' blue='182' alpha ='0' label='unused' hint='NA' ></setcolor>
+<setcolor id = '254' red = '32' green ='32' blue='32' alpha ='255' label='frame' hint='frame' ></setcolor>
+<setcolor id = '255' red = '250' green ='250' blue='250' alpha ='255' label='255' hint='no data' ></setcolor>
+</parameters>
+</process>
+
+<process processid = 'addrasterpalette'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters compid= 'NA' palette = 'vwbinvert'>
+<setcolor id = '250' red = '103' green ='0' blue='31' alpha ='0' label='strongly neg' hint='strongly significant negative trend' ></setcolor>
+<setcolor id = '225' red = '178' green ='24' blue='43' alpha ='0' label='neg' hint='significant negative' ></setcolor>
+<setcolor id = '200' red = '214' green ='96' blue='77' alpha ='0' label='non significant' hint='non significant negative trend' ></setcolor>
+<setcolor id = '175' red = '244' green ='165' blue='130' alpha ='0' label='no trend' hint='no trend' ></setcolor>
+<setcolor id = '150' red = '253' green ='219' blue='199' alpha ='0' label='non significant' hint='non significant positive trend' ></setcolor>
+<setcolor id = '125' red = '224' green ='224' blue='224' alpha ='0' label='max npv' hint='strongly significant positive trend' ></setcolor>
+<setcolor id = '100' red = '202' green ='219' blue='253' alpha ='0' label='strongly neg' hint='strongly significant negative trend' ></setcolor>
+<setcolor id = '75' red = '146' green ='197' blue='222' alpha ='0' label='neg' hint='significant negative' ></setcolor>
+<setcolor id = '50' red = '67' green ='147' blue='195' alpha ='0' label='non significant' hint='non significant negative trend' ></setcolor>
+<setcolor id = '25' red = '33' green ='102' blue='173' alpha ='0' label='no trend' hint='no trend' ></setcolor>
+<setcolor id = '0' red = '5' green ='48' blue='97' alpha ='0' label='non significant' hint='non significant positive trend' ></setcolor>
+<setcolor id = '253' red = '245' green ='237' blue='182' alpha ='0' label='unused' hint='NA' ></setcolor>
+<setcolor id = '254' red = '32' green ='32' blue='32' alpha ='255' label='frame' hint='frame' ></setcolor>
+<setcolor id = '255' red = '250' green ='250' blue='250' alpha ='255' label='255' hint='no data' ></setcolor>
+</parameters>
+</process>
+
+<process processid = 'addrasterpalette'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters compid= 'NA' palette = 'VWBdeficit'>
+<setcolor id = '0' red = '224' green ='224' blue='224' alpha ='0' label='max npv' hint='strongly significant positive trend' ></setcolor>
+<setcolor id = '50' red = '253' green ='219' blue='199' alpha ='0' label='non significant' hint='non significant positive trend' ></setcolor>
+<setcolor id = '100' red = '244' green ='165' blue='130' alpha ='0' label='no trend' hint='no trend' ></setcolor>
+<setcolor id = '150' red = '214' green ='96' blue='77' alpha ='0' label='non significant' hint='non significant negative trend' ></setcolor>
+<setcolor id = '200' red = '178' green ='24' blue='43' alpha ='0' label='neg' hint='significant negative' ></setcolor>
+<setcolor id = '250' red = '103' green ='0' blue='31' alpha ='0' label='strongly neg' hint='strongly significant negative trend' ></setcolor>
+<setcolor id = '253' red = '245' green ='237' blue='182' alpha ='0' label='dry (0)' hint='completely dry' ></setcolor>
+<setcolor id = '254' red = '32' green ='32' blue='32' alpha ='255' label='frame' hint='frame' ></setcolor>
+<setcolor id = '255' red = '0' green ='0' blue='0' alpha ='255' label='255' hint='no data' ></setcolor>
+</parameters>
+</process>
+
+<process processid = 'addrasterpalette'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters compid= 'NA' palette = 'VWBsurplus'>
+<setcolor id = '0' red = '224' green ='224' blue='224' alpha ='0' label='max npv' hint='strongly significant positive trend' ></setcolor>
+<setcolor id = '50' red = '202' green ='219' blue='253' alpha ='0' label='strongly neg' hint='strongly significant negative trend' ></setcolor>
+<setcolor id = '100' red = '146' green ='197' blue='222' alpha ='0' label='neg' hint='significant negative' ></setcolor>
+<setcolor id = '150' red = '67' green ='147' blue='195' alpha ='0' label='non significant' hint='non significant negative trend' ></setcolor>
+<setcolor id = '200' red = '33' green ='102' blue='173' alpha ='0' label='no trend' hint='no trend' ></setcolor>
+<setcolor id = '250' red = '5' green ='48' blue='97' alpha ='0' label='non significant' hint='non significant positive trend' ></setcolor>
+<setcolor id = '253' red = '245' green ='237' blue='182' alpha ='0' label='dry (0)' hint='completely dry' ></setcolor>
+<setcolor id = '254' red = '32' green ='32' blue='32' alpha ='255' label='frame' hint='frame' ></setcolor>
+<setcolor id = '255' red = '0' green ='0' blue='0' alpha ='255' label='255' hint='no data' ></setcolor>
+</parameters>
+</process>
+
+<process processid = 'addrasterpalette'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters compid= 'NA' palette = 'VWBstd'>
+<setcolor id = '0' red = '224' green ='224' blue='224' alpha ='0' label='max npv' hint='strongly significant positive trend' ></setcolor>
+<setcolor id = '50' red = '202' green ='219' blue='253' alpha ='0' label='strongly neg' hint='strongly significant negative trend' ></setcolor>
+<setcolor id = '100' red = '146' green ='197' blue='222' alpha ='0' label='neg' hint='significant negative' ></setcolor>
+<setcolor id = '150' red = '67' green ='147' blue='195' alpha ='0' label='non significant' hint='non significant negative trend' ></setcolor>
+<setcolor id = '200' red = '33' green ='102' blue='173' alpha ='0' label='no trend' hint='no trend' ></setcolor>
+<setcolor id = '250' red = '5' green ='48' blue='97' alpha ='0' label='non significant' hint='non significant positive trend' ></setcolor>
+<setcolor id = '253' red = '245' green ='237' blue='182' alpha ='0' label='dry (0)' hint='completely dry' ></setcolor>
+<setcolor id = '254' red = '32' green ='32' blue='32' alpha ='255' label='frame' hint='frame' ></setcolor>
+<setcolor id = '255' red = '0' green ='0' blue='0' alpha ='255' label='255' hint='no data' ></setcolor>
+</parameters>
+</process>
+
+</palette>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

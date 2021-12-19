@@ -1,0 +1,63 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "1998" endyear = "2017" timestep='timespan-A'></period>
+
+<!-- mosaic modis TRMM statistical tiles to region (karttur-africasubsahara)
+The target resolution is 0.25 deg (same as the original TRMM data) -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<avg-trmm-3b43v7-precip id='avg-trmm-3b43v7-precip' source = "trmm" product = "3b43" folder = "rainfall-A-stats" band = "avg-trmm-3b43v7-precip" prefix = "avg-trmm-3b43v7-precip" suffix = "v7-f-m-A-30km">
+</avg-trmm-3b43v7-precip>
+<ols-ic-trmm-3b43v7-precip id='ols-ic-trmm-3b43v7-precip' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-ic-trmm-3b43v7-precip" prefix = "ols-ic-trmm-3b43v7-precip" suffix = "v7-f-m-A-30km">
+</ols-ic-trmm-3b43v7-precip>
+<ts-ic-trmm-3b43v7-precip id='ts-ic-trmm-3b43v7-precip' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-ic-trmm-3b43v7-precip" prefix = "ts-ic-trmm-3b43v7-precip" suffix = "v7-f-m-A-30km">
+</ts-ic-trmm-3b43v7-precip>
+<ols-sl-trmm-3b43v7-precip id='ols-sl-trmm-3b43v7-precip' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-sl-trmm-3b43v7-precip" prefix = "ols-sl-trmm-3b43v7-precip" suffix = "v7-f-m-A-30km">
+</ols-sl-trmm-3b43v7-precip>
+<ts-mdsl-trmm-3b43v7-precip id='ts-mdsl-trmm-3b43v7-precip' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-mdsl-trmm-3b43v7-precip" prefix = "ts-mdsl-trmm-3b43v7-precip" suffix = "v7-f-m-A-30km">
+</ts-mdsl-trmm-3b43v7-precip>
+<ts-losl-trmm-3b43v7-precip id='ts-losl-trmm-3b43v7-precip' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-losl-trmm-3b43v7-precip" prefix = "ts-losl-trmm-3b43v7-precip" suffix = "v7-f-m-A-30km">
+</ts-losl-trmm-3b43v7-precip>
+<ts-hisl-trmm-3b43v7-precip id='ts-hisl-trmm-3b43v7-precip' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-hisl-trmm-3b43v7-precip" prefix = "ts-hisl-trmm-3b43v7-precip" suffix = "v7-f-m-A-30km">
+</ts-hisl-trmm-3b43v7-precip>
+<std-trmm-3b43v7-precip id='std-trmm-3b43v7-precip' source = "trmm" product = "3b43" folder = "rainfall-A-stats" band = "std-trmm-3b43v7-precip" prefix = "std-trmm-3b43v7-precip" suffix = "v7-f-m-A-30km">
+</std-trmm-3b43v7-precip>
+<ols-rmse-trmm-3b43v7-precip id='ols-rmse-trmm-3b43v7-precip' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-rmse-trmm-3b43v7-precip" prefix = "ols-rmse-trmm-3b43v7-precip" suffix = "v7-f-m-A-30km">
+</ols-rmse-trmm-3b43v7-precip>
+<mk-z-trmm-3b43v7-precip id='mk-z-trmm-3b43v7-precip' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "mk-z-trmm-3b43v7-precip" prefix = "mk-z-trmm-3b43v7-precip" suffix = "v7-f-m-A-30km">
+</mk-z-trmm-3b43v7-precip>
+<ols-r2-trmm-3b43v7-precip id='ols-r2-trmm-3b43v7-precip' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-r2-trmm-3b43v7-precip" prefix = "ols-r2-trmm-3b43v7-precip" suffix = "v7-f-m-A-30km">
+</ols-r2-trmm-3b43v7-precip>
+<trmm-3b43v7-precip-change id='trmm-3b43v7-precip-change' source = "trmm" product = "3b43" folder = "rainfall-A-change" band = "trmm-3b43v7-precip-change" prefix = "trmm-3b43v7-precip-change" suffix = "model-v7-f-m-A-30km">
+</trmm-3b43v7-precip-change>
+<trmm-3b43v7-precip-delta id='trmm-3b43v7-precip-delta' source = "trmm" product = "3b43" folder = "rainfall-A-change" band = "trmm-3b43v7-precip-delta" prefix = "trmm-3b43v7-precip-delta" suffix = "slope@p-v7-f-m-A-30km">
+</trmm-3b43v7-precip-delta>
+</srccomp>
+</process>
+
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.25' yres='0.25'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-3b43v7-precip-change id='trmm-3b43v7-precip-change' source = "trmm" product = "3b43" folder = "rainfall-A-change" band = "trmm-3b43v7-precip-change" prefix = "trmm-3b43v7-precip-change" suffix = "model@p-v7-f-m-A-30km">
+</trmm-3b43v7-precip-change>
+</srccomp>
+</process>
+</africasubsahara>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

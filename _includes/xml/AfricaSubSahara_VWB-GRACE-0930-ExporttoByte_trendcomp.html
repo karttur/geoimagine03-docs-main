@@ -1,0 +1,39 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsaharaproject>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2003" endyear = "2016" timestep='timespan-A'></period>
+
+<!-- Export TRMM vs GRACE trendcomp -->
+<process processid = 'exporttobytemodisRegionToRegion' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'trendcomp_trmm_grace'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trendcomp id = 'dst' source = "vwbgrace" product = "vwb-grace" folder = "trendcomp" band = "trendcomp" prefix = "trendcomp" suffix = "model@p-v7-RL05-1deg"></trendcomp>
+</srccomp>
+</process>
+
+<process processid = 'exporttobytemodisRegionToRegion' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'trendcomp_trmm_grace'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trendcomp id = 'dst' source = "vwbgrace" product = "vwbsurplus-grace" folder = "trendcomp" band = "trendcomp" prefix = "trendcomp" suffix = "model@p-v7-RL05-1deg"></trendcomp>
+</srccomp>
+</process>
+
+</africasubsaharaproject>
+
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

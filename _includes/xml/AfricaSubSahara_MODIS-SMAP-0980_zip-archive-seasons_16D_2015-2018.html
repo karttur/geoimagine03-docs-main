@@ -1,0 +1,39 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<extractseason>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = '2015' endyear = '2018' timestep='seasonal-16D'></period>
+
+<process processid ='ArchiveModisRegionTiles' dsversion = '1.3'>
+<parameters ></parameters>
+<acceptmissing>True</acceptmissing>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='zip'></dstpath>
+<srccomp>
+<soil-moisture-avg-16d id = 'master' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d-fill-sesn" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002-modfit-9km">
+</soil-moisture-avg-16d>
+</srccomp>
+</process>
+
+<process processid ='ArchiveModisRegionTiles' dsversion = '1.3'>
+<parameters ></parameters>
+<acceptmissing>True</acceptmissing>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='zip'></dstpath>
+<srccomp>
+<TWIpercent id = 'slave' source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-sesn" band = "TWIpercent" prefix = "TWIpercent" suffix = "v006-tg01-9km">
+</TWIpercent>
+</srccomp>
+</process>
+
+</extractseason>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

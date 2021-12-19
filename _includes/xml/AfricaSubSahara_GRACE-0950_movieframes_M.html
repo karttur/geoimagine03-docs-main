@@ -1,0 +1,28 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsaharaproject>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2002" startmonth='4' startday='23' endyear = "2016" endmonth='12' endday='31' timestep='M'></period>
+
+<!-- Create movie frame -->
+<process processid = 'movieframeModisRegionToRegion' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters name = 'grace' width = '800' crop='800,532,0,0' emboss='KARTTUR' embossdims='720,150' embossptsize='100' asscript='True'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel/movieclock" hdrfiletype = 'png' datfiletype = 'png'></dstpath>
+<srccomp>
+<grace-ave id = 'grace' source = "NASA-GRACE" product = "cmwater" folder = "cmwater" band = "grace-ave" prefix = "grace-ave" suffix = "RL05-f-1deg">
+</grace-ave>
+</srccomp>
+</process>
+</africasubsaharaproject>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

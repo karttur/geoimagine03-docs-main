@@ -1,0 +1,33 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<manageprocess>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "2003" endyear = "2016" timestep='timespan-A'></period>
+
+<process processid = 'signiftrendsancillary' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters basename='grace-ave' threshold = '1.96'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<mk-z-grace-ave id = 'significance' source = "NASA-GRACE" product = "cmwater" folder = 'cmwater-A-trend' band = "mk-z-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-f-A">
+</mk-z-grace-ave>
+
+<ts-mdsl-grace-ave id = 'slope' source = "NASA-GRACE" product = "cmwater" folder = 'cmwater-A-trend' band = "ts-mdsl-grace-ave" prefix = "ts-mdsl-grace-ave" suffix = "RL05-f-A">
+</ts-mdsl-grace-ave>
+
+<ts-ic-grace-ave id = 'intercept' source = "NASA-GRACE" product = "cmwater" folder = 'cmwater-A-trend' band = "ts-ic-grace-ave" prefix = "ts-ic-grace-ave" suffix = "RL05-f-A">
+</ts-ic-grace-ave>
+</srccomp>
+</process>
+
+</manageprocess>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,118 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<palette>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+
+<!-- Create legend -->
+
+<!-- NOTE THE ID IS OLNLY USED IN THE SCRIPTING SO IT CAN HAVE (UNIQUE) DUMMY VALUES HERE -->
+<!-- GRACE monthly cmwater-->
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Water depth (cm)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-stats-A" band = 'avg-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<!-- GRACE annual average cmwater-->
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Water depth (cm)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-stats-A" band = 'avg-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<!-- GRACE annual std cmwater-->
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Water depth (cm)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-stats-A" band = 'std-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='MK test (Z-value)'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'mk-z-grace-ave' suffix = "RL05-filled"></comp>
+
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall trend:(mm/yr)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ts-mdsl-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall trend:(mm/yr)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ts-hisl-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall trend:(mm/yr)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ts-losl-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall (mm)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ts-ic-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall trend:(mm/yr)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ols-sl-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Correlation (r2)' palmax='100'></parameters>
+<comp id = '10' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ols-r2-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall (mm)' precision='0'></parameters>
+<comp id = '11' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ols-rmse-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall (mm)' precision='0'></parameters>
+<comp id = '12' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ols-ic-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall change:(mm)' precision='0'></parameters>
+<comp id = '13' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A-model" band = 'delta-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall change:(mm)' precision='0'></parameters>
+<comp id = '14' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A-model" band = 'mk-ts-mod@p005-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall change:(mm)' precision='0'></parameters>
+<comp id = '15' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A-model" band = 'mod@p005-2003-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall change:(mm)' precision='0'></parameters>
+<comp id = '16' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A-model" band = 'mod@p005-2016-grace-ave	' suffix = "RL05-filled"></comp>
+</process>
+</palette>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

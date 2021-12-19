@@ -1,0 +1,29 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<export>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-trmm' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+	<period timestep='static'></period>
+
+	<!-- Export to SVG -->
+	<process processid = 'exporttosvgancillary' version = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters src_region='global' tolerance='0.1' simplify='0' scale='0' t_epsg='4326' stroke='black' fill ='none'
+				strokewidth='1' strokedasharray='' pngsize='1440,400'></parameters>
+		<srcpath volume = "africa"></srcpath>
+		<dstpath volume = "africa"></dstpath>
+		<srccomp>
+			<ne-110m-land source = "naturalearth" product = "land"
+			     folder = 'land' band = "ne-110m-land" prefix = "ne-110m-land" suffix = "0">
+			</ne-110m-land>
+		</srccomp>
+	</process>
+</export>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,72 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<export>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-trmm' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "1998" stratmonth= '1' startday='1' endyear = "2017" endmonth='12' endday='31' timestep='timespan-M'></period>
+
+<!-- exporttobyte avg A -->
+<process processid = 'exporttobyteancillary' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'pearsonnr'></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trend-pearson-best id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-pearson-best" prefix = "trend-pearson-best" suffix = "v7-f-nt-sn-a1">
+</trend-pearson-best>
+
+<trend-pearson-nao id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-pearson-nao" prefix = "trend-pearson-nao" suffix = "v7-f-nt-sn-a1">
+</trend-pearson-nao>
+
+<trend-pearson-nina3 id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-pearson-nina3" prefix = "trend-pearson-nina3" suffix = "v7-f-nt-sn-a1">
+</trend-pearson-nina3>
+
+<trend-pearson-pdo id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-pearson-pdo" prefix = "trend-pearson-pdo" suffix = "v7-f-nt-sn-a1">
+</trend-pearson-pdo>
+
+<trend-pearson-pna id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-pearson-pna" prefix = "trend-pearson-pna" suffix = "v7-f-nt-sn-a1">
+</trend-pearson-pna>
+
+<trend-pearson-soi id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-pearson-soi" prefix = "trend-pearson-soi" suffix = "v7-f-nt-sn-a1">
+</trend-pearson-soi>
+
+</srccomp>
+</process>
+
+<process processid = 'exporttobyteancillary' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'lag6'></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trend-lag-best id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-lag-best" prefix = "trend-lag-best" suffix = "v7-f-nt-sn-a1">
+</trend-lag-best>
+
+<trend-lag-nao id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-lag-nao" prefix = "trend-lag-nao" suffix = "v7-f-nt-sn-a1">
+</trend-lag-nao>
+
+<trend-lag-nina3 id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-lag-nina3" prefix = "trend-lag-nina3" suffix = "v7-f-nt-sn-a1">
+</trend-lag-nina3>
+
+<trend-lag-pdo id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-lag-pdo" prefix = "trend-lag-pdo" suffix = "v7-f-nt-sn-a1">
+</trend-lag-pdo>
+
+<trend-lag-pna id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-lag-pna" prefix = "trend-lag-pna" suffix = "v7-f-nt-sn-a1">
+</trend-lag-pna>
+
+<trend-lag-soi id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-ixc-nt" band = "trend-lag-soi" prefix = "trend-lag-soi" suffix = "v7-f-nt-sn-a1">
+</trend-lag-soi>
+
+</srccomp>
+</process>
+
+</export>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

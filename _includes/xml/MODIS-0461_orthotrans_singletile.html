@@ -1,0 +1,69 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<transform>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = '2001' endyear = '2017' timestep='16D'></period>
+<process processid ='LinearTransformMODISSingleTile' dsversion = '1.3'>
+<parameters product='MCD43A4' version='006' htile='20' vtile='10'></parameters>
+<srcpath volume = "Karttur3tb"></srcpath>
+<dstpath volume = "Karttur3tb"></dstpath>
+<srccomp>
+<rl id='rl' source = "MCD43A4v006" product = "MCD43A4" folder = "srfi" band = "rl" prefix = "rl-srfi" suffix = "v006">
+</rl>
+<na id='na' source = "MCD43A4v006" product = "MCD43A4" folder = "srfi" band = "na" prefix = "na-srfi" suffix = "v006">
+</na>
+<bl id='bl' source = "MCD43A4v006" product = "MCD43A4" folder = "srfi" band = "bl" prefix = "bl-srfi" suffix = "v006">
+</bl>
+<gl id='gl' source = "MCD43A4v006" product = "MCD43A4" folder = "srfi" band = "gl" prefix = "gl-srfi" suffix = "v006">
+</gl>
+<ma id='ma' source = "MCD43A4v006" product = "MCD43A4" folder = "srfi" band = "ma" prefix = "ma-srfi" suffix = "v006">
+</ma>
+<mb id='mb' source = "MCD43A4v006" product = "MCD43A4" folder = "srfi" band = "mb" prefix = "mb-srfi" suffix = "v006">
+</mb>
+<mc id='mc' source = "MCD43A4v006" product = "MCD43A4" folder = "srfi" band = "mc" prefix = "mc-srfi" suffix = "v006">
+</mc>
+</srccomp>
+<dstcomp>
+<ortho-soil id='tc-soil' source = "MCD43A4v006" product = "MCD43A4" folder = "tasscap" band = "ortho-soil" prefix = "ortho-soil" suffix = "v006-tg01">
+</ortho-soil>
+<ortho-wet id='tc-wet' source = "MCD43A4v006" product = "MCD43A4" folder = "tasscap" band = "ortho-wet" prefix = "ortho-wet" suffix = "v006-tg01">
+</ortho-wet>
+</dstcomp>
+<transformoffset>
+<offset id = 'bl' offset='-147'></offset>
+<offset id = 'gl' offset='-507'></offset>
+<offset id = 'rl' offset='-563'></offset>
+<offset id = 'na' offset='-1008'></offset>
+<offset id = 'ma' offset='-1531'></offset>
+<offset id = 'mb' offset='-1836'></offset>
+<offset id = 'mc' offset='-1699'></offset>
+</transformoffset>
+<transformscale>
+<scalefac id = 'bltc-soil'  compin = 'bl' compout='tc-soil' scalefac='0.3595'></scalefac>
+<scalefac id = 'gltc-soil'  compin = 'gl' compout='tc-soil' scalefac='0.3364'></scalefac>
+<scalefac id = 'rltc-soil'  compin = 'rl' compout='tc-soil' scalefac='0.3148'></scalefac>
+<scalefac id = 'natc-soil'  compin = 'na' compout='tc-soil' scalefac='0.3209'></scalefac>
+<scalefac id = 'matc-soil'  compin = 'ma' compout='tc-soil' scalefac='0.2498'></scalefac>
+<scalefac id = 'mbtc-soil'  compin = 'mb' compout='tc-soil' scalefac='0.6573'></scalefac>
+<scalefac id = 'mctc-soil'  compin = 'mc' compout='tc-soil' scalefac='0.2471'></scalefac>
+<scalefac id = 'bltc-wet'   compin = 'bl' compout='tc-wet' scalefac='0.4940'></scalefac>
+<scalefac id = 'gltc-wet'  compin = 'gl' compout='tc-wet' scalefac='0.3501'></scalefac>
+<scalefac id = 'rltc-wet'  compin = 'rl' compout='tc-wet' scalefac='0.1882'></scalefac>
+<scalefac id = 'natc-wet'  compin = 'na' compout='tc-wet' scalefac='0.0384'></scalefac>
+<scalefac id = 'matc-wet'  compin = 'ma' compout='tc-wet' scalefac='-0.3581'></scalefac>
+<scalefac id = 'mbtc-wet'  compin = 'mb' compout='tc-wet' scalefac='-0.1731'></scalefac>
+<scalefac id = 'mctc-wet'  compin = 'mc' compout='tc-wet' scalefac='-0.6621'></scalefac>
+</transformscale>
+</process>
+
+</transform>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

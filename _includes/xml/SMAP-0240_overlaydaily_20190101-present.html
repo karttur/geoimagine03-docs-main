@@ -1,0 +1,188 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<smapoverlay>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+<period startyear = '2019' startmonth = '01' startday = '01' endyear = '2019' endmonth = '02' endday = '19' timestep='D'></period>
+
+
+<process processid ='conditionalsmapoverlay' dsversion = '1.3'>
+<acceptmissing>True</acceptmissing>
+<parameters method ='avg' template = 'soil-moisture-am'></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+<srccomp>
+<soil-moisture-am id='layer1' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-am" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "005">
+</soil-moisture-am>
+<soil-moisture-pm id='layer2' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-pm" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "005">
+</soil-moisture-pm>
+</srccomp>
+<dstcomp>
+<soil-moisture-avg id='soil-moisture-avg' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005">
+</soil-moisture-avg>
+</dstcomp>
+</process>
+
+<process processid ='conditionalsmapoverlay' dsversion = '1.3'>
+<parameters startstep='1' method ='min' template = 'soil-moisture-am'></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+<srccomp>
+<soil-moisture-am id='layer1' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-am" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "005">
+</soil-moisture-am>
+<soil-moisture-pm id='layer2' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-pm" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "005">
+</soil-moisture-pm>
+</srccomp>
+<dstcomp>
+<soil-moisture-min id='layersum' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-min" band = "soil-moisture-min" prefix = "soil-moisture-min" suffix = "005">
+</soil-moisture-min>
+</dstcomp>
+</process>
+
+<process processid ='conditionalsmapoverlay' dsversion = '1.3'>
+<acceptmissing>True</acceptmissing>
+<parameters method ='max' template = 'soil-moisture-am'></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+<srccomp>
+<soil-moisture-am id='layer1' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-am" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "005">
+</soil-moisture-am>
+<soil-moisture-pm id='layer2' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-pm" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "005">
+</soil-moisture-pm>
+</srccomp>
+<dstcomp>
+<soil-moisture-max id='layersum' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-max" band = "soil-moisture-max" prefix = "soil-moisture-max" suffix = "005">
+</soil-moisture-max>
+</dstcomp>
+</process>
+
+<process processid ='conditionalsmapoverlay' dsversion = '1.3'>
+<acceptmissing>True</acceptmissing>
+<parameters method ='avg' template = 'soil-moisture-am'></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+<srccomp>
+<soil-moisture-am id='layer1' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-am" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "002">
+</soil-moisture-am>
+<soil-moisture-pm id='layer2' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-pm" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "002">
+</soil-moisture-pm>
+</srccomp>
+<dstcomp>
+<soil-moisture-avg id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "002">
+</soil-moisture-avg>
+</dstcomp>
+</process>
+
+<process processid ='conditionalsmapoverlay' dsversion = '1.3'>
+<acceptmissing>True</acceptmissing>
+<parameters method ='min' template = 'soil-moisture-am'></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+<srccomp>
+<soil-moisture-am id='layer1' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-am" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "002">
+</soil-moisture-am>
+<soil-moisture-pm id='layer2' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-pm" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "002">
+</soil-moisture-pm>
+</srccomp>
+<dstcomp>
+<soil-moisture-min id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-min" band = "soil-moisture-min" prefix = "soil-moisture-avg" suffix = "002">
+</soil-moisture-min>
+</dstcomp>
+</process>
+
+<process processid ='conditionalsmapoverlay' dsversion = '1.3'>
+<acceptmissing>True</acceptmissing>
+<parameters method ='max' template = 'soil-moisture-am'></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+<srccomp>
+<soil-moisture-am id='layer1' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-am" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "002">
+</soil-moisture-am>
+<soil-moisture-pm id='layer2' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-pm" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "002">
+</soil-moisture-pm>
+</srccomp>
+<dstcomp>
+<soil-moisture-max id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-max" band = "soil-moisture-max" prefix = "soil-moisture-avg" suffix = "002">
+</soil-moisture-max>
+</dstcomp>
+</process>
+
+<process processid ='conditionalsmapoverlay' dsversion = '1.3'>
+<acceptmissing>True</acceptmissing>
+<parameters method ='avg' template = 'freeze-thaw-am'></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+<srccomp>
+<freeze-thaw-fraction id='layer1' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "freeze-thaw-am" band = "freeze-thaw-fraction" prefix = "freeze-thaw-fraction" suffix = "002">
+</freeze-thaw-fraction>
+<freeze-thaw-fraction-pm id='layer2' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "freeze-thaw-pm" band = "freeze-thaw-fraction-pm" prefix = "freeze-thaw-fraction-pm" suffix = "002">
+</freeze-thaw-fraction-pm>
+</srccomp>
+<dstcomp>
+<freeze-thaw-fraction-avg id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "freeze-thaw-avg" band = "freeze-thaw-fraction-avg" prefix = "freeze-thaw-frac-avg" suffix = "002">
+</freeze-thaw-fraction-avg>
+</dstcomp>
+</process>
+
+<process processid ='conditionalsmapoverlay' dsversion = '1.3'>
+<acceptmissing>True</acceptmissing>
+<parameters method ='avg' template = 'veg-water-am'></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+<srccomp>
+<vegetation-water-content id='layer1' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "veg-water-am" band = "vegetation-water-content" prefix = "vegetation-water-content" suffix = "002">
+</vegetation-water-content>
+<vegetation-water-content-pm id='layer2' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "veg-water-pm" band = "vegetation-water-content-pm" prefix = "vegetation-water-content-pm" suffix = "002">
+</vegetation-water-content-pm>
+</srccomp>
+<dstcomp>
+<veg-water-avg id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "veg-water-avg" band = "veg-water-avg" prefix = "veg-water-avg" suffix = "002">
+</veg-water-avg>
+</dstcomp>
+</process>
+
+<process processid ='conditionalsmapoverlay' dsversion = '1.3'>
+<acceptmissing>True</acceptmissing>
+<parameters method ='avg' template = 'veg-water-am'></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+<srccomp>
+<radar-water-body-fraction id='layer1' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-fraction-am" band = "radar-water-body-fraction" prefix = "radar-water-body-fraction" suffix = "002">
+</radar-water-body-fraction>
+<radar-water-body-fraction-pm id='layer2' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-fraction-pm" band = "radar-water-body-fraction-pm" prefix = "radar-water-body-fraction-pm" suffix = "002">
+</radar-water-body-fraction-pm>
+</srccomp>
+<dstcomp>
+<radar-water-body-fraction-avg id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-fraction-avg" band = "radar-water-body-fraction-avg" prefix = "radar-water-body-fraction-avg" suffix = "002">
+</radar-water-body-fraction-avg>
+</dstcomp>
+</process>
+
+<process processid ='conditionalsmapoverlay' dsversion = '1.3'>
+<acceptmissing>True</acceptmissing>
+<parameters method ='avg' template = 'veg-water-am'></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+<srccomp>
+<static-water-body-fraction id='layer1' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-fraction-am" band = "static-water-body-fraction" prefix = "static-water-body-fraction" suffix = "002">
+</static-water-body-fraction>
+<static-water-body-fraction-pm id='layer2' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-fraction-pm" band = "static-water-body-fraction-pm" prefix = "static-water-body-fraction-pm" suffix = "002">
+</static-water-body-fraction-pm>
+</srccomp>
+<dstcomp>
+<static-water-body-fraction-avg id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-fraction-avg" band = "static-water-body-fraction-avg" prefix = "static-water-body-fraction-avg" suffix = "002">
+</static-water-body-fraction-avg>
+</dstcomp>
+</process>
+
+</smapoverlay>
+
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

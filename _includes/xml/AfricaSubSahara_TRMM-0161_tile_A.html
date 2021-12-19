@@ -1,0 +1,60 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "1998" endyear = "2017"  timestep='A'></period>
+
+<!-- tile the original (annaul) TRMM data to the region (karttur-africasubsahara).
+The TRMM data must be downloaded and organized
+If you set the parameter "asscript" to True (= default),
+you have to execute the shell script file as reported by the process,
+and then rerun the xml with overwrite set to False to add the layers to the database
+-->
+
+<!-- Tile the TRMM data to the MODIS tile standard spatial resolution (463 m) -->
+<processx processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '463.313'  yres = '463.313' resample='near' asscript='False'></parameters>
+<srcpath volume = "africa"></srcpath>
+<dstpath volume = "africa"></dstpath>
+<srccomp>
+<trmm-3b43v7-precip source = "trmm" product = "3b43" folder = "rainfall-A" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-A">
+</trmm-3b43v7-precip>
+</srccomp>
+</processx>
+
+<!-- Tile the same data, but to a spatial resolution of 27798.78 m -->
+<process processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '27798.78'  yres = '27798.78' resample='near' asscript='False' suffix = 'v7-f-A-30km'></parameters>
+<srcpath volume = "africa"></srcpath>
+<dstpath volume = "africa"></dstpath>
+<srccomp>
+<trmm-3b43v7-precip source = "trmm" product = "3b43" folder = "rainfall-A" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-A">
+</trmm-3b43v7-precip>
+</srccomp>
+</process>
+
+<!-- Tile the same data, but to a , but to a spatial resolution of approx 1 deg (111195.12)  -->
+<processx processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '111195.12'  yres = '111195.12' resample='average' asscript='False' suffix = 'v7-f-m-A-1deg'></parameters>
+<srcpath volume = "africa"></srcpath>
+<dstpath volume = "africa"></dstpath>
+<srccomp>
+<trmm-3b43v7-precip source = "trmm" product = "3b43" folder = "rainfall-A" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-m-A">
+</trmm-3b43v7-precip>
+</srccomp>
+</processx>
+
+</africasubsahara>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

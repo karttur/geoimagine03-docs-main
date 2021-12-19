@@ -1,0 +1,26 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<searchdatapool>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = '2001' endyear = '2018' timestep='16D'></period>
+<process processid ='extractseasonModisSingleTile' dsversion = '1.3'>
+<parameters htile='20' vtile='10'></parameters>
+<srcpath volume = "Karttur3tb"></srcpath>
+<dstpath volume = "Karttur3tb"></dstpath>
+<srccomp>
+<TWIpercent source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent" band = "TWIpercent" prefix = "TWIpercent" suffix = "v006-tg01">
+</TWIpercent>
+</srccomp>
+</process>
+</searchdatapool>
+
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

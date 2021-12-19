@@ -1,0 +1,219 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<resamplets>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-trmm' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "1998" startmonth='01' endyear = "2017" endmonth='12' timestep='M'></period>
+
+<processx processid = 'indexcompxcrosstsgraphancillary' version = '1.3'>
+<parameters
+title='Cross correlation'
+legend = '0'
+ylabel = ''
+></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f">
+</trmm-3b43v7-precip>
+</srccomp>
+<xy id ='Okavango' x='35' y='-22' obscolor = 'b' tendencycolor = 'b'  seasoncolor = 'b' residualcolor = 'b'></xy>
+<xy id ='Lake Victoria' x='35' y='0' obscolor = 'g' tendencycolor = 'g'  seasoncolor = 'g' residualcolor = 'g'></xy>
+<index id='soi' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+</processx>
+
+<processx processid = 'indexcompxcrosstsgraphancillary' version = '1.3'>
+<parameters
+title='Cross correlation'
+legend = '0'
+ylabel = ''
+xcrosstendency='True'
+xcrosseason='True'
+xcrossresidual='True'
+></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f">
+</trmm-3b43v7-precip>
+</srccomp>
+<xy id ='Okavango' x='35' y='-22' obscolor = 'b' tendencycolor = 'b'  seasoncolor = 'b' residualcolor = 'b'></xy>
+<index id='pdo' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+</processx>
+
+<processx processid = 'indexcompxcrosstsgraphancillary' version = '1.3'>
+<parameters
+title='Cross correlation'
+legend = '0'
+ylabel = ''
+xcrosstendency='True'
+xcrosseason='True'
+xcrossresidual='True'
+lagplot='True'
+abs='True'
+></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f">
+</trmm-3b43v7-precip>
+</srccomp>
+<xy id ='Okavango' x='35' y='-22' obscolor = 'b' tendencycolor = 'b'  seasoncolor = 'b' residualcolor = 'b'></xy>
+<index id='pdo' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+</processx>
+
+
+
+<process processid = 'indexcompxcrosstsgraphancillary' version = '1.3'>
+<!-- default parameter values
+
+normalize = 'False'
+standardize = 'True'
+naive  = 'False'
+additive = 'True'
+yearfac = '1'
+trend = 'spline'
+prefilterseason  = 'False'
+kernel  = '0'
+forceseason = 'True'
+abs = 'False'
+
+-->
+<parameters
+title='Cross correlation'
+legend = '0'
+ylabel = ''
+lagplot='False'
+xcrossobserved='True'
+xcrossresidual='False'
+></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f">
+</trmm-3b43v7-precip>
+</srccomp>
+<xy id ='Okavango' x='25.1' y='-22.1' obscolor = 'b' tendencycolor = 'b'  seasoncolor = 'b' residualcolor = 'b'></xy>
+<xy id ='Lake Victoria' x='35.1' y='0.1' obscolor = 'g' tendencycolor = 'g'  seasoncolor = 'g' residualcolor = 'g'></xy>
+<index id='pna' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+<index id='pdo' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+<index id='soi' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+<index id='best' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+</process>
+
+<processx processid = 'indexcompxcrosstsgraphancillary' version = '1.3'>
+<!-- default parameter values
+
+normalize = 'False'
+standardize = 'True'
+naive  = 'False'
+additive = 'True'
+yearfac = '1'
+trend = 'spline'
+prefilterseason  = 'False'
+kernel  = '0'
+forceseason = 'True'
+abs = 'False'
+
+-->
+<parameters
+title='Cross correlation'
+legend = '0'
+ylabel = ''
+lagplot='False'
+naive  = 'True'
+yearfac = '2'
+abs='True'
+xcrossobserved='False'
+xcrosstendency='True'
+></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f">
+</trmm-3b43v7-precip>
+</srccomp>
+<xy id ='Okavango' x='35.1' y='-22.1' obscolor = 'b' tendencycolor = 'b'  seasoncolor = 'b' residualcolor = 'b'></xy>
+<xy id ='Lake Victoria' x='35.1' y='0.1' obscolor = 'g' tendencycolor = 'g'  seasoncolor = 'g' residualcolor = 'g'></xy>
+<index id='pna' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+<index id='pdo' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+<index id='soi' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+<index id='best' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+</processx>
+
+<processx processid = 'indexcompxcrosstsgraphancillary' version = '1.3'>
+<parameters
+title='crosscorrelation'
+legend='0'
+xcrosstendency='True'
+xcrosseason='True'
+xcrossresidual='True'
+lagplot='False'
+
+></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f">
+</trmm-3b43v7-precip>
+</srccomp>
+<xy id ='okavango' x='35' y='-22' obscolor = 'b' tendencycolor = 'b'  seasoncolor = 'b' residualcolor = 'b'></xy>
+<xy id ='entebbe' x='35' y='0' obscolor = 'g' tendencycolor = 'g'  seasoncolor = 'g' residualcolor = 'g'></xy>
+
+<index id='soi' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+
+</processx>
+
+<processx processid = 'indexcompxcrosstsgraphancillary' version = '1.3'>
+<parameters
+title='crosscorrelation'
+legend='0'
+lagplot='False'
+xcrossobserved='False'
+xcrosseason='True'
+abs='True'
+></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f">
+</trmm-3b43v7-precip>
+</srccomp>
+<xy id ='okavango' x='35' y='-22' obscolor = 'b' tendencycolor = 'b'  seasoncolor = 'b' residualcolor = 'b'></xy>
+<xy id ='entebbe' x='35' y='0' obscolor = 'g' tendencycolor = 'g'  seasoncolor = 'g' residualcolor = 'g'></xy>
+
+<index id='soi' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+<index id='pdo' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+</processx>
+
+<processx processid = 'indexcompxcrosstsgraphancillary' version = '1.3'>
+<parameters
+title='crosscorrelation'
+legend='0'
+lagplot='True'
+xcrossobserved='False'
+xcrosseason='True'
+abs='True'
+></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f">
+</trmm-3b43v7-precip>
+</srccomp>
+<xy id ='okavango' x='35' y='-22' obscolor = 'b' tendencycolor = 'b'  seasoncolor = 'b' residualcolor = 'b'></xy>
+<xy id ='entebbe' x='35' y='0' obscolor = 'g' tendencycolor = 'g'  seasoncolor = 'g' residualcolor = 'g'></xy>
+
+<index id='soi' obscolor = 'r' tendencycolor = 'r' seasoncolor = 'r' residualcolor = 'r'></index>
+
+</processx>
+
+</resamplets>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

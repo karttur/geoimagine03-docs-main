@@ -1,0 +1,40 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<manageprocess>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "2002" startmonth='04' endyear = "2017" endmonth='01' timestep='MS'></period>
+
+<!-- mendanciltimeseries (TimeSeries) -->
+<process processid ='average3ancillarytimeseries'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters copycomp ='grace-gfz' acceptmissing ='False'></parameters>
+
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<grace-jpl source = "NASA-GRACE" product = "jpl-cmwater" folder = "cmwater" band = "grace-jpl" prefix = "grace-jpl" suffix = "RL05-filled">
+</grace-jpl>
+<grace-csr source = "NASA-GRACE" product = "csr-cmwater" folder = "cmwater" band = "grace-csr" prefix = "grace-csr" suffix = "RL05-filled">
+</grace-csr>
+<grace-gfz source = "NASA-GRACE" product = "gfz-cmwater" folder = "cmwater" band = "grace-gfz" prefix = "grace-gfz" suffix = "RL05-filled">
+</grace-gfz>
+</srccomp>
+
+<dstcomp>
+<grace-ave product = "ave-cmwater" band = "grace-ave" prefix = "grace-ave" suffix = "RL05-filled">
+</grace-ave>
+</dstcomp>
+</process>
+
+
+</manageprocess>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

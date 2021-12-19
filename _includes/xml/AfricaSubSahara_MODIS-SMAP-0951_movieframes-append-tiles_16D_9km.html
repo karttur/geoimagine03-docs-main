@@ -1,0 +1,90 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsaharaproject>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = '2015' startmonth='4' startday='23' endyear = '2018' timestep='16D'></period>
+
+<!-- The processes below first combine 2 horisontal animations and then combine these 2 vertically.
+The result is a movie with 4 frames showing SMAP, TWI, and 2 version of TWI assimialted to SMAP -->
+
+<!-- Combine SMAP and TWI originals-->
+<processx processid = 'movieframeModisAppendRegiontiles' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters asscript='False'></parameters>
+<srcpath volume = "africa/movieclock" hdrfiletype = 'png' datfiletype = 'png'></srcpath>
+<dstpath volume = "africa/movieclockappend" hdrfiletype = 'png' datfiletype = 'png'></dstpath>
+<srccomp>
+<soil-moisture-avg-16d id= 'left' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d-fill" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002-modfit-9km">
+</soil-moisture-avg-16d>
+<TWIpercent id ='right' source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill" band = "TWIpercent" prefix = "TWIpercent" suffix = "v006-tg01-9km">
+</TWIpercent>
+</srccomp>
+</processx>
+
+
+<!-- This part is not used, it combined SMAP and the assimialted TWI (2 versions)
+<processx processid = 'movieframeModisAppendRegiontiles' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters asscript='False'></parameters>
+<srcpath volume = "africa/movieclock" hdrfiletype = 'png' datfiletype = 'png'></srcpath>
+<dstpath volume = "africa/movieclocktwiassimtest" hdrfiletype = 'png' datfiletype = 'png'></dstpath>
+<srccomp>
+<soil-moisture-avg-16d id= 'left' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d-fill" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002-modfit-9km">
+</soil-moisture-avg-16d>
+<TWIpercent id ='right' source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-assim" band = "TWIpercent" prefix = "TWIpercent" suffix = "test">
+</TWIpercent>
+</srccomp>
+</processx>
+
+<processx processid = 'movieframeModisAppendRegiontiles' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters asscript='False'></parameters>
+<srcpath volume = "africa/movieclock" hdrfiletype = 'png' datfiletype = 'png'></srcpath>
+<dstpath volume = "africa/movieclocktwiassimf05" hdrfiletype = 'png' datfiletype = 'png'></dstpath>
+<srccomp>
+<soil-moisture-avg-16d id= 'left' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d-fill" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002-modfit-9km">
+</soil-moisture-avg-16d>
+<TWIpercent id ='right' source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-assim" band = "TWIpercent" prefix = "TWIpercent" suffix = "test-f05">
+</TWIpercent>
+</srccomp>
+</processx>
+-->
+
+<!-- Combine 2 versions of TWI assimilation to SMAP -->
+<processx processid = 'movieframeModisAppendRegiontiles' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters asscript='False'></parameters>
+<srcpath volume = "africa/movieclock" hdrfiletype = 'png' datfiletype = 'png'></srcpath>
+<dstpath volume = "africa/movieclocktwiassim2x" hdrfiletype = 'png' datfiletype = 'png'></dstpath>
+<srccomp>
+<TWIpercent--0 id ='left' source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-assim" band = "TWIpercent" prefix = "TWIpercent" suffix = "test">
+</TWIpercent--0>
+<TWIpercent--1 id ='right' source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-assim" band = "TWIpercent" prefix = "TWIpercent" suffix = "test-f05">
+</TWIpercent--1>
+</srccomp>
+</processx>
+
+<!-- Combine the 2 horisontally combined frames (from above), vertically -->
+<process processid = 'movieframeModisAppendRegiontiles' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters asscript='False'></parameters>
+<srcpath volume = "africa/movieclocktwiassim2x" hdrfiletype = 'png' datfiletype = 'png'></srcpath>
+<dstpath volume = "africa/movieclocktwiassim4x" hdrfiletype = 'png' datfiletype = 'png'></dstpath>
+<srccomp>
+<soil-moisture-avg-16d id= 'top' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d-fill" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002-modfit-9km">
+</soil-moisture-avg-16d>
+<TWIpercent id ='bottom' source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-assim" band = "TWIpercent" prefix = "TWIpercent" suffix = "test">
+</TWIpercent>
+</srccomp>
+</process>
+
+</africasubsaharaproject>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

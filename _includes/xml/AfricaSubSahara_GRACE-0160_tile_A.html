@@ -1,0 +1,28 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsaharaproject>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2003" endyear = "2016"  timestep='A'></period>
+
+<!-- tile the original (monthly) data to a spatial resolution of approx 1 deg (111195.12) -->
+<process processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'global' epsg = '6842'  xres = '111195.12'  yres = '111195.12' resample='near' asscript='False' suffix = 'RL05-f-1deg'></parameters>
+<srcpath volume = "africa"></srcpath>
+<dstpath volume = "africa"></dstpath>
+<srccomp>
+<grace-ave source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A" band = "grace-ave" prefix = "grace-ave" suffix = "RL05-f-A">
+</grace-ave>
+</srccomp>
+</process>
+
+</africasubsaharaproject>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,30 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<fgbgmodisSingleTile>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = '2001' endyear = '2018' timestep='16D'></period>
+<process processid ='fgbgmodisSingleTile' dsversion = '1.3'>
+<parameters slope='1.6' intercept='-2080' rescalefac='5942' calibfac='7000' htile='20' vtile='10'></parameters>
+<srcpath volume = "Karttur3tb"></srcpath>
+<dstpath volume = "Karttur3tb"></dstpath>
+<srccomp>
+<ortho-soil id='xband' source = "MCD43A4v006" product = "MCD43A4" folder = "tasscap" band = "ortho-soil" prefix = "ortho-soil" suffix = "v006-tg01">
+</ortho-soil>
+<ortho-wet id='yband' source = "MCD43A4v006" product = "MCD43A4" folder = "tasscap" band = "ortho-wet" prefix = "ortho-wet" suffix = "v006-tg01">
+</ortho-wet>
+</srccomp>
+<dstcomp>
+<TWI id='fg' source = "MCD43A4v006" product = "MCD43A4" folder = "TWI" band = "TWI" prefix = "TWI" suffix = "v006-tg01">
+</TWI>
+</dstcomp>
+</process>
+</fgbgmodisSingleTile>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

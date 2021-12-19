@@ -1,0 +1,91 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<manageprocess>
+
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2003" endyear = "2016" timestep='timespan-A'></period>
+
+<process processid = 'dualtrendscompmodistiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-fao-vwb-change id = 'ptrend1'  source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-change" prefix = "trmm-fao-vwb-change" suffix = "model@p-v7-f-m-A-1deg">
+</trmm-fao-vwb-change>
+
+<grace-ave-change id = 'ptrend2' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-change" band = "grace-ave-change" prefix = "grace-ave-change" suffix = "model@p-RL05-f-A-1deg">
+</grace-ave-change>
+</srccomp>
+<dstcomp>
+<trendcomp id = 'dst' source = "vwbgrace" product = "vwb-grace" folder = "trendcomp" band = "trendcomp" prefix = "trendcomp" suffix = "model@p-v7-RL05-1deg">
+</trendcomp>
+</dstcomp>
+</process>
+
+<process processid = 'dualtrendscompmodistiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-fao-vwb-change id = 'ptrend1'  source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-change" prefix = "trmm-fao-vwb-change" suffix = "model-v7-f-m-A-1deg">
+</trmm-fao-vwb-change>
+
+<grace-ave-change id = 'ptrend2' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-change" band = "grace-ave-change" prefix = "grace-ave-change" suffix = "model-RL05-f-A-1deg">
+</grace-ave-change>
+</srccomp>
+<dstcomp>
+<trendcomp id = 'dst' source = "vwbrace" product = "vwb-grace" folder = "trendcomp" band = "trendcomp" prefix = "trendcomp" suffix = "model-v7-RL05-1deg">
+</trendcomp>
+</dstcomp>
+</process>
+
+<process processid = 'dualtrendscompmodistiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-fao-vwb-surplus-change id = 'ptrend1' source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-surplus-change" prefix = "trmm-fao-vwb-surplus-change" suffix = "model@p-v7-f-m-A-1deg">
+</trmm-fao-vwb-surplus-change>
+
+<grace-ave-change id = 'ptrend2' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-change" band = "grace-ave-change" prefix = "grace-ave-change" suffix = "model@p-RL05-f-A-1deg">
+</grace-ave-change>
+</srccomp>
+<dstcomp>
+<trendcomp id = 'dst' source = "vwbgrace" product = "vwbsurplus-grace" folder = "trendcomp" band = "trendcomp" prefix = "trendcomp" suffix = "model@p-v7-RL05-1deg">
+</trendcomp>
+</dstcomp>
+</process>
+
+<process processid = 'dualtrendscompmodistiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-fao-vwb-surplus-change id = 'ptrend1' source = "trmm-vwb" product = "3b43" folder = "vwb-A-change" band = "trmm-fao-vwb-surplus-change" prefix = "trmm-fao-vwb-surplus-change" suffix = "model-v7-f-m-A-1deg">
+</trmm-fao-vwb-surplus-change>
+
+<grace-ave-change id = 'ptrend2' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-change" band = "grace-ave-change" prefix = "grace-ave-change" suffix = "model-RL05-f-A-1deg">
+</grace-ave-change>
+</srccomp>
+<dstcomp>
+<trendcomp id = 'dst' source = "vwbrace" product = "vwbsurplus-grace" folder = "trendcomp" band = "trendcomp" prefix = "trendcomp" suffix = "model-v7-RL05-1deg">
+</trendcomp>
+</dstcomp>
+</process>
+
+</manageprocess>
+
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

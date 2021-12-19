@@ -1,0 +1,65 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsaharaproject>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2003" endyear = "2016" timestep='timespan-A'></period>
+
+<!-- mosaic GRACE statistical tiles to region (karttur-africasubsahara).
+The target resolution is 1 deg (same as the original GRACE data) -->
+
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='1.0' yres='1.0'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<avg-grace-ave id='avg-grace-ave' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-stats" band = "avg-grace-ave" prefix = "avg-grace-ave" suffix = "RL05-f-A-1deg">
+</avg-grace-ave>
+<ols-ic-grace-ave id='ols-ic-grace-ave' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ols-ic-grace-ave" prefix = "ols-ic-grace-ave" suffix = "RL05-f-A-1deg">
+</ols-ic-grace-ave>
+<ts-ic-grace-ave id='ts-ic-grace-ave' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ts-ic-grace-ave" prefix = "ts-ic-grace-ave" suffix = "RL05-f-A-1deg">
+</ts-ic-grace-ave>
+<ols-sl-grace-ave id='ols-sl-grace-ave' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ols-sl-grace-ave" prefix = "ols-sl-grace-ave" suffix = "RL05-f-A-1deg">
+</ols-sl-grace-ave>
+<ts-mdsl-grace-ave id='ts-mdsl-grace-ave' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ts-mdsl-grace-ave" prefix = "ts-mdsl-grace-ave" suffix = "RL05-f-A-1deg">
+</ts-mdsl-grace-ave>
+<ts-losl-grace-ave id='ts-losl-grace-ave' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ts-losl-grace-ave" prefix = "ts-losl-grace-ave" suffix = "RL05-f-A-1deg">
+</ts-losl-grace-ave>
+<ts-hisl-grace-ave id='ts-hisl-grace-ave' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ts-hisl-grace-ave" prefix = "ts-hisl-grace-ave" suffix = "RL05-f-A-1deg">
+</ts-hisl-grace-ave>
+<std-grace-ave id='std-grace-ave' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-stats" band = "std-grace-ave" prefix = "std-grace-ave" suffix = "RL05-f-A-1deg">
+</std-grace-ave>
+<ols-rmse-grace-ave id='ols-rmse-grace-ave' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ols-rmse-grace-ave" prefix = "ols-rmse-grace-ave" suffix = "RL05-f-A-1deg">
+</ols-rmse-grace-ave>
+<mk-z-grace-ave  id='mk-z-grace-ave' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "mk-z-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-f-A-1deg">
+</mk-z-grace-ave>
+<ols-r2-grace-ave id='ols-r2-grace-ave' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ols-r2-grace-ave" prefix = "ols-r2-grace-ave" suffix = "RL05-f-A-1deg">
+</ols-r2-grace-ave>
+<grace-ave-change id='grace-ave-change' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-change" band = "grace-ave-change" prefix = "grace-ave-change" suffix = "model-RL05-f-A-1deg">
+</grace-ave-change>
+<grace-ave-delta id='grace-ave-delta' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-change" band = "grace-ave-delta" prefix = "grace-ave-delta" suffix = "slope@p-RL05-f-A-1deg">
+</grace-ave-delta>
+</srccomp>
+</process>
+
+<!--  Second process required due to duplicate compid -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='1.0' yres='1.0'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<grace-ave-change id='grace-ave-change' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-change" band = "grace-ave-change" prefix = "grace-ave-change" suffix = "model@p-RL05-f-A-1deg">
+</grace-ave-change>
+</srccomp>
+</process>
+</africasubsaharaproject>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

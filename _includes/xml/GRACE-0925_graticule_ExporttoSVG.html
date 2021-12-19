@@ -1,0 +1,34 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<export>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period timestep='static'></period>
+
+<!-- Export graticule to SVG -->
+
+<process processid = 'exporttosvgancillary' version = '1.3'>
+<overwrite>True</overwrite>
+
+<parameters src_region='global' scale='0' t_epsg='4326' stroke='black' fill ='none'
+strokewidth='0.05' strokedasharray='1,3' pngsize='360,180' suffix ='GRACE2'></parameters>
+<srcpath volume = "africa"></srcpath>
+<dstpath volume = "africa"></dstpath>
+<srccomp>
+
+<graticules-45deg source = "naturalearth" product = "graticules"
+folder = 'graticulse' band = "graticules-45deg" prefix = "graticules-45deg" suffix = "0">
+</graticules-45deg>
+</srccomp>
+</process>
+</export>
+
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

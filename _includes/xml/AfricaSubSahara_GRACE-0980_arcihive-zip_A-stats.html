@@ -1,0 +1,172 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsaharaproject>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2003" endyear = "2016" timestep='timespan-A'></period>
+
+<!-- archive monhtly GRACE -->
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<avg-grace-ave id = 'layer1' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-stats" band = "avg-grace-ave" prefix = "avg-grace-ave" suffix = "RL05-f-1deg">
+</avg-grace-ave>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<std-grace-ave id = 'layer' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-stats" band = "std-grace-ave" prefix = "std-grace-ave" suffix = "RL05-f-1deg">
+</std-grace-ave>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<ols-ic-grace-ave id = 'layer2' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ols-ic-grace-ave" prefix = "ols-ic-grace-ave" suffix = "RL05-f-1deg">
+</ols-ic-grace-ave>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<ts-ic-grace-ave id = 'layer3' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ts-ic-grace-ave" prefix = "ts-ic-grace-ave" suffix = "RL05-f-1deg">
+</ts-ic-grace-ave>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<ols-sl-grace-ave id = 'layer4' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ols-sl-grace-ave" prefix = "ols-sl-grace-ave" suffix = "RL05-f-1deg">
+</ols-sl-grace-ave>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<ts-mdsl-grace-ave id = 'layer5' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ts-mdsl-grace-ave" prefix = "ts-mdsl-grace-ave" suffix = "RL05-f-1deg">
+</ts-mdsl-grace-ave>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<ts-losl-grace-ave id = 'layer5' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ts-losl-grace-ave" prefix = "ts-losl-grace-ave" suffix = "RL05-f-1deg">
+</ts-losl-grace-ave>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<ts-hisl-grace-ave id = 'layer5' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ts-hisl-grace-ave" prefix = "ts-hisl-grace-ave" suffix = "RL05-f-1deg">
+</ts-hisl-grace-ave>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<ols-rmse-grace-ave id = 'layer2' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ols-rmse-grace-ave" prefix = "ols-rmse-grace-ave" suffix = "RL05-f-1deg">
+</ols-rmse-grace-ave>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<mk-z-grace-ave id='layer' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "mk-z-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-f-1deg">
+</mk-z-grace-ave>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<ols-r2-grace-ave id='layer2' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-trend" band = "ols-r2-grace-ave" prefix = "ols-r2-grace-ave" suffix = "RL05-f-1deg">
+</ols-r2-grace-ave>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<grace-ave-change id = 'layer1' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-change" band = "grace-ave-change" prefix = "grace-ave-change" suffix = "model-RL05-f-1deg">
+</grace-ave-change>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<grace-ave-delta id = 'layer3' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-change" band = "grace-ave-delta" prefix = "grace-ave-delta" suffix = "slope@p-RL05-f-1deg">
+</grace-ave-delta>
+</srccomp>
+</process>
+
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'zip' datfiletype = 'zip'></dstpath>
+<srccomp>
+<grace-ave-change id = 'layer2' source = "NASA-GRACE" product = "cmwater" folder = "cmwater-A-change" band = "grace-ave-change" prefix = "grace-ave-change" suffix = "model@p-RL05-f-1deg">
+</grace-ave-change>
+</srccomp>
+</process>
+
+</africasubsaharaproject>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

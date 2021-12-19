@@ -1,0 +1,69 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<palette>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+<path></path>
+
+
+<!-- addrasterpalette smap-->
+<process processid = 'addrasterpalette'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters palette = 'smap' compid='test'>
+<setcolor id = '0' red = '255' green ='132' blue='94' alpha ='0' label='0' hint='0' ></setcolor>
+<setcolor id = '25' red = '240' green ='224' blue='148' alpha ='0' label='10' hint='NA' ></setcolor>
+<setcolor id = '50' red = '162' green ='162' blue='122' alpha ='0' label='50' hint='no correlation' ></setcolor>
+<setcolor id = '100' red = '70' green ='89' blue='112' alpha ='0' label='100' hint='positive correclation' ></setcolor>
+<setcolor id = '150' red = '20' green ='60' blue='210' alpha ='0' label='150' hint='positive correclation' ></setcolor>
+<setcolor id = '200' red = '2' green ='1' blue='190' alpha ='0' label='200' hint='strong positive correlation' ></setcolor>
+<setcolor id = '250' red = '2' green ='1' blue='190' alpha ='0' label='250' hint='strong positive correlation' ></setcolor>
+<setcolor id = '253' red = '245' green ='237' blue='182' alpha ='0' label='dry (0)' hint='completely dry' ></setcolor>
+<setcolor id = '254' red = '32' green ='32' blue='32' alpha ='255' label='frame' hint='frame' ></setcolor>
+<setcolor id = '255' red = '250' green ='250' blue='250' alpha ='255' label='255' hint='no data' ></setcolor>
+</parameters>
+</process>
+
+<!-- addrasterpalette smapdelta-->
+<process processid = 'addrasterpalette'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters palette = 'smapdelta' compid='test'>
+<setcolor id = '0' red = '200' green ='50' blue='0' alpha ='0' label='0' hint='strongly negative correlation' ></setcolor>
+<setcolor id = '62' red = '255' green ='225' blue='30' alpha ='0' label='63' hint='negative correlation' ></setcolor>
+<setcolor id = '125' red = '190' green ='190' blue='190' alpha ='0' label='125' hint='positive correclation' ></setcolor>
+<setcolor id = '187' red = '20' green ='110' blue='200' alpha ='0' label='188' hint='strong positive correlation' ></setcolor>
+<setcolor id = '250' red = '2' green ='1' blue='143' alpha ='0' label='250' hint='strong positive correlation' ></setcolor>
+<setcolor id = '253' red = '245' green ='237' blue='182' alpha ='0' label='dry (0)' hint='completely dry' ></setcolor>
+<setcolor id = '254' red = '32' green ='32' blue='32' alpha ='255' label='frame' hint='frame' ></setcolor>
+<setcolor id = '255' red = '250' green ='250' blue='250' alpha ='255' label='255' hint='no data' ></setcolor>
+</parameters>
+</process>
+
+<!-- addrasterpalette smapstd-->
+<process processid = 'addrasterpalette'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters palette = 'smapstd' compid='test'>
+<setcolor id = '0' red = '200' green ='200' blue='200' alpha ='0' label='125' hint='positive correclation' ></setcolor>
+<setcolor id = '50' red = '240' green ='224' blue='148' alpha ='0' label='188' hint='strong positive correlation' ></setcolor>
+<setcolor id = '100' red = '162' green ='162' blue='122' alpha ='0' label='188' hint='strong positive correlation' ></setcolor>
+<setcolor id = '150' red = '70' green ='89' blue='112' alpha ='0' label='250' hint='strong positive correlation' ></setcolor>
+<setcolor id = '200' red = '20' green ='60' blue='210' alpha ='0' label='250' hint='strong positive correlation' ></setcolor>
+<setcolor id = '250' red = '2' green ='1' blue='190' alpha ='0' label='250' hint='strong positive correlation' ></setcolor>
+<setcolor id = '253' red = '245' green ='237' blue='182' alpha ='0' label='dry (0)' hint='completely dry' ></setcolor>
+<setcolor id = '254' red = '32' green ='32' blue='32' alpha ='255' label='frame' hint='frame' ></setcolor>
+<setcolor id = '255' red = '250' green ='250' blue='250' alpha ='255' label='255' hint='no data' ></setcolor>
+</parameters>
+</process>
+
+
+</palette>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

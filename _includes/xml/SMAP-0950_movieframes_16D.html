@@ -1,0 +1,28 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<runprocess>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+<period startyear = "2015" startmonth='4' startday='23' endyear = "2018" endmonth='12' endday='31' timestep='16D'></period>
+
+<!-- exporttobyte avg A -->
+<process processid = 'movieframesmap' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters name = 'smap' width = '800' crop='800,336,0,0' emboss='KARTTUR' embossdims='720,150' embossptsize='100'></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "/Users/thomasgumbricht/movieclock" hdrfiletype = 'png' datfiletype = 'png'></dstpath>
+<srccomp>
+<soil-moisture-avg id = 'layer3' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-16D" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005">
+</soil-moisture-avg>
+</srccomp>
+
+</process>
+</runprocess>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

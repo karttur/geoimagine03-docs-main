@@ -1,0 +1,32 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<manageprocess>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+<!-- Manage user project -->
+<process processid ='ManageDefRegProj'>
+<overwrite>N</overwrite>
+<delete>N</delete>
+<parameters defaultregion = 'africasubsahara'
+tractid = 'karttur-africasubsahara'
+tractname = 'karttur africasubsahara'
+projid = 'karttur-africasubsahara'
+projname = 'karttur africasubsahara'>
+<tracttitle>Karttur africasubsahara</tracttitle>
+<tractlabel>Karttur africasubsahara</tractlabel>
+<projtitle>Karttur africasubsahara</projtitle>
+<projlabel>Karttur africasubsahara</projlabel>
+</parameters>
+</process>
+
+</manageprocess>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

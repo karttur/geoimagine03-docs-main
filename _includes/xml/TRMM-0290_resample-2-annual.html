@@ -1,0 +1,45 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<resamplets>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-trmm' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "1998" startmonth='01' endyear = "2017" endmonth='12' timestep='M'></period>
+
+<process processid = 'resampletsancillary' version = '1.3'>
+<update>True</update>
+<parameters method = 'sum' targettimestep = 'A' ></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f" timestep='M'>
+</trmm-3b43v7-precip>
+</srccomp>
+<dstcomp>
+<trmm-3b43v7-precip band = "trmm-3b43v7-precip" suffix = "auto" dataunit = 'mm/yr' timestep='A'>
+</trmm-3b43v7-precip>
+</dstcomp>
+</process>
+
+<process processid = 'resampletsancillary' version = '1.3'>
+<update>True</update>
+<parameters method = 'sum' targettimestep = 'A' ></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-m" timestep='M'>
+</trmm-3b43v7-precip>
+</srccomp>
+<dstcomp>
+<trmm-3b43v7-precip band = "trmm-3b43v7-precip" suffix = "auto" dataunit = 'mm/yr' timestep='A'>
+</trmm-3b43v7-precip>
+</dstcomp>
+</process>
+</resamplets>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

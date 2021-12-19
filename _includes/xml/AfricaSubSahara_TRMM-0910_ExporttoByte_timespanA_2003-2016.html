@@ -1,0 +1,106 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsaharaproject>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2003" endyear = "2016" timestep='timespan-A'></period>
+
+<!-- Export statistical TRMM precipitaiton to paletted byte images
+Palettes, scalings and legends must be defined -->
+
+<!-- Export annual average -->
+<process processid = 'exporttobytemodisRegionToRegion' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'precipln'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<avg-trmm-3b43v7-precip id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-A-stats" band = "avg-trmm-3b43v7-precip" prefix = "avg-trmm-3b43v7-precip" suffix = "v7-f-m-A-1deg">
+</avg-trmm-3b43v7-precip>
+<ols-ic-trmm-3b43v7-precip id = 'layer2' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-ic-trmm-3b43v7-precip" prefix = "ols-ic-trmm-3b43v7-precip" suffix = "v7-f-m-A-1deg">
+</ols-ic-trmm-3b43v7-precip>
+<ts-ic-trmm-3b43v7-precip id = 'layer3' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-ic-trmm-3b43v7-precip" prefix = "ts-ic-trmm-3b43v7-precip" suffix = "v7-f-m-A-1deg">
+</ts-ic-trmm-3b43v7-precip>
+</srccomp>
+</process>
+
+<!-- Export model slopes -->
+<process processid = 'exporttobytemodisRegionToRegion' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'precipdelta'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<ols-sl-trmm-3b43v7-precip id = 'layer4' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-sl-trmm-3b43v7-precip" prefix = "ols-sl-trmm-3b43v7-precip" suffix = "v7-f-m-A-1deg">
+</ols-sl-trmm-3b43v7-precip>
+<ts-mdsl-trmm-3b43v7-precip id = 'layer5' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-mdsl-trmm-3b43v7-precip" prefix = "ts-mdsl-trmm-3b43v7-precip" suffix = "v7-f-m-A-1deg">
+</ts-mdsl-trmm-3b43v7-precip>
+<ts-losl-trmm-3b43v7-precip id = 'layer5' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-losl-trmm-3b43v7-precip" prefix = "ts-losl-trmm-3b43v7-precip" suffix = "v7-f-m-A-1deg">
+</ts-losl-trmm-3b43v7-precip>
+<ts-hisl-trmm-3b43v7-precip id = 'layer5' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-hisl-trmm-3b43v7-precip" prefix = "ts-hisl-trmm-3b43v7-precip" suffix = "v7-f-m-A-1deg">
+</ts-hisl-trmm-3b43v7-precip>
+</srccomp>
+</process>
+
+<!-- Export std + rmse A -->
+<process processid = 'exporttobytemodisRegionToRegion' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'preciplnstd'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<std-trmm-3b43v7-precip id = 'layer' source = "trmm" product = "3b43" folder = "rainfall-A-stats" band = "std-trmm-3b43v7-precip" prefix = "std-trmm-3b43v7-precip" suffix = "v7-f-m-A-1deg">
+</std-trmm-3b43v7-precip>
+<ols-rmse-trmm-3b43v7-precip id = 'layer2' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-rmse-trmm-3b43v7-precip" prefix = "ols-rmse-trmm-3b43v7-precip" suffix = "v7-f-m-A-1deg">
+</ols-rmse-trmm-3b43v7-precip>
+</srccomp>
+</process>
+
+<!-- Export TRMM mannkendall Z and r2-->
+<process processid = 'exporttobytemodisRegionToRegion' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'zhydro'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<mk-z-trmm-3b43v7-precip id='layer' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "mk-z-trmm-3b43v7-precip" prefix = "mk-z-trmm-3b43v7-precip" suffix = "v7-f-m-A-1deg">
+</mk-z-trmm-3b43v7-precip>
+<ols-r2-trmm-3b43v7-precip id='layer2' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-r2-trmm-3b43v7-precip" prefix = "ols-r2-trmm-3b43v7-precip" suffix = "v7-f-m-A-1deg">
+</ols-r2-trmm-3b43v7-precip>
+</srccomp>
+</process>
+
+<!-- Export TRMM change-->
+<process processid = 'exporttobytemodisRegionToRegion' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'precipdelta'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip-change id = 'layer1' source = "trmm" product = "3b43" folder = "rainfall-A-change" band = "trmm-3b43v7-precip-change" prefix = "trmm-3b43v7-precip-change" suffix = "model-v7-f-m-A-1deg">
+</trmm-3b43v7-precip-change>
+<trmm-3b43v7-precip-delta id = 'layer3' source = "trmm" product = "3b43" folder = "rainfall-A-change" band = "trmm-3b43v7-precip-delta" prefix = "trmm-3b43v7-precip-delta" suffix = "slope@p-v7-f-m-A-1deg">
+</trmm-3b43v7-precip-delta>
+</srccomp>
+</process>
+
+<process processid = 'exporttobytemodisRegionToRegion' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'precipdelta'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip-change id = 'layer2' source = "trmm" product = "3b43" folder = "rainfall-A-change" band = "trmm-3b43v7-precip-change" prefix = "trmm-3b43v7-precip-change" suffix = "model@p-v7-f-m-A-1deg">
+</trmm-3b43v7-precip-change>
+</srccomp>
+</process>
+
+</africasubsaharaproject>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

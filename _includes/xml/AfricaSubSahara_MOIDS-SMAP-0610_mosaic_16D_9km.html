@@ -1,0 +1,40 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = '2015' startmonth='4' startday='23' endyear = '2018' timestep='16D'></period>
+
+<!-- Mosaic modis TRMM monthly tiles to region (karttur-africasubsahara) -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.07' yres='0.07'></parameters>
+<srcpath volume = "africa"></srcpath>
+<dstpath volume = "africa"></dstpath>
+
+<srccomp>
+<soil-moisture-avg-16d source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d-fill" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002-modfit-9km">
+</soil-moisture-avg-16d>
+</srccomp>
+</process>
+
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters t_epsg ='4326' xres='0.07' yres='0.07'></parameters>
+<srcpath volume = "TILES"></srcpath>
+<dstpath volume = "africa"></dstpath>
+<srccomp>
+<TWIpercent id ='TWIpercent' source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill" band = "TWIpercent" prefix = "TWIpercent" suffix = "v006-tg01-9km">
+</TWIpercent>
+</srccomp>
+</process>
+
+</africasubsahara>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,34 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<manageprocess>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "2002" startmonth='4' startday='23' endyear = "2016" endmonth='12' endday='31' timestep='monthlyday'></period>
+<process processid ='MonthlyDayToMonthlyAncillary'>
+<overwrite>Y</overwrite>
+<parameters></parameters>
+<srcpath volume = "travel" hdrfiletype = "tif" datfiletype = "tif"></srcpath>
+<dstpath volume = "travel" hdrfiletype = "tif" datfiletype = "tif"></dstpath>
+<srccomp>
+<grace-ave source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater" band = "grace-ave" prefix = "grace-ave" suffix = "RL05-filled"
+>
+</grace-ave>
+
+</srccomp>
+<dstcomp>
+<grace-ave source = "NASA-GRACE" product = "cmwater" folder = "cmwater" band = "grace-ave" prefix = "grace-ave" suffix = "RL05-f"
+>
+</grace-ave>
+
+</dstcomp>
+</process>
+</manageprocess>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

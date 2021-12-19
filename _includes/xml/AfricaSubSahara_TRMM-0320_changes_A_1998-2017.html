@@ -1,0 +1,32 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "1998" endyear = "2017" timestep='timespan-A'></period>
+
+<!-- Extract cells with significant trends -->
+<process processid = 'signiftrendsmodis' version = '1.3'>
+<update>True</update>
+<parameters basename='trmm-3b43v7-precip' threshold = '1.96'></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<mk-z-trmm-3b43v7-precip id = 'significance' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "mk-z-trmm-3b43v7-precip" prefix = "mk-z-trmm-3b43v7-precip" suffix = "v7-f-A-30km">
+</mk-z-trmm-3b43v7-precip>
+<ts-mdsl-trmm-3b43v7-precip id = 'slope' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-mdsl-trmm-3b43v7-precip" prefix = "ts-mdsl-trmm-3b43v7-precip" suffix = "v7-f-A-30km">
+</ts-mdsl-trmm-3b43v7-precip>
+<ts-ic-trmm-3b43v7-precip id = 'intercept' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-ic-trmm-3b43v7-precip" prefix = "ts-ic-trmm-3b43v7-precip" suffix = "v7-f-A-30km">
+</ts-ic-trmm-3b43v7-precip>
+</srccomp>
+</process>
+
+</africasubsahara>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,34 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period timestep='static'></period>
+
+<!-- Archive -->
+<process processid = 'ArchiveModisRegionTiles' version = '1.3'>
+<parameters></parameters>
+<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype='zip'></dstpath>
+<srccomp>
+<mstavg-TWIpercent source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-assim" band = "mstavg-TWIpercent" prefix = "mstavg-TWIpercent" suffix = "test">
+</mstavg-TWIpercent>
+<slvavg-TWIpercent source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-assim" band = "slvavg-TWIpercent" prefix = "slvavg-TWIpercent" suffix = "test">
+</slvavg-TWIpercent>
+<stdrat-TWIpercent source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-assim" band = "stdrat-TWIpercent" prefix = "stdrat-TWIpercent" suffix = "test">
+</stdrat-TWIpercent>
+</srccomp>
+</process>
+
+
+</africasubsahara>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,33 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+
+<africasubsahara>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2001" endyear = "2018" timestep='A'></period>
+
+<!-- Trend calculation -->
+<process processid = 'updatedbAncillary' version = '1.3'>
+<parameters method = 'avg' ></parameters>
+<dstpath volume = "TILES" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<dstcomp>
+<TWIpercent source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-assim-a" band = "TWIpercent" prefix = "TWIpercent" suffix = "v006-tg01-asf05-a"
+cellnull='255' celltype='Byte' measure='R' dataunit='percent*2' scalfac='1' offsetadd='0'>
+</TWIpercent>
+</dstcomp>
+
+</process>
+
+</africasubsahara>
+
+
+
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

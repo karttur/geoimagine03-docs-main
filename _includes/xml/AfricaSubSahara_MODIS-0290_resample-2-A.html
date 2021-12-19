@@ -1,0 +1,33 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<searchdatapool>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = '2001' endyear = '2018' timestep='16D'></period>
+
+<process processid ='resampletsModisRegion' dsversion = '1.3'>
+<overwrite>False</overwrite>
+<acceptmissing>True</acceptmissing>
+<parameters targettimestep = 'A'></parameters>
+<srcpath volume = "africa"></srcpath>
+<dstpath volume = "africa"></dstpath>
+<srccomp>
+<TWIpercent source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-assim" band = "TWIpercent" prefix = "TWIpercent" suffix = "v006-tg01-asf05">
+</TWIpercent>
+</srccomp>
+<dstcomp>
+<TWIpercent source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill-assim-a" band = "TWIpercent" prefix = "TWIpercent" suffix = "v006-tg01-asf05-a">
+</TWIpercent>
+</dstcomp>
+</process>
+
+</searchdatapool>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

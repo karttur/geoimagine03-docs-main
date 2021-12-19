@@ -1,0 +1,36 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<SmapSearchToDB>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+<period startyear = '2018' startmonth = '10' startday = '10' endyear = '2020' endmonth = '01' endday = '01' timestep='D'></period>
+
+<process processid ='SmapSearchToDB' dsversion = '1.3'>
+<parameters product="SPL3FTP" version="002" serverurl="https://n5eil01u.ecs.nsidc.org/" remoteuser='Gumbricht' ></parameters>
+<srcpath volume = "africa"  hdrfiletype = "" datfiletype = ""></srcpath>
+</process>
+
+<process processid ='SmapSearchToDB' dsversion = '1.3'>
+<parameters product="SPL3FTP-E" version="002" serverurl="https://n5eil01u.ecs.nsidc.org/" remoteuser='Gumbricht' ></parameters>
+<srcpath volume = "africa" hdrfiletype = "" datfiletype = ""></srcpath>
+</process>
+
+<process processid ='SmapSearchToDB' dsversion = '1.3'>
+<parameters product="SPL3SMP" version="005" serverurl="https://n5eil01u.ecs.nsidc.org/" remoteuser='Gumbricht' ></parameters>
+<srcpath volume = "africa" hdrfiletype = "" datfiletype = ""></srcpath>
+</process>
+
+<process processid ='SmapSearchToDB' dsversion = '1.3'>
+<parameters product="SPL3SMP-E" version="002" serverurl="https://n5eil01u.ecs.nsidc.org/" remoteuser='Gumbricht' ></parameters>
+<srcpath volume = "africa" hdrfiletype = "" datfiletype = ""></srcpath>
+</process>
+
+</SmapSearchToDB>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

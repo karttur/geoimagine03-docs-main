@@ -1,0 +1,62 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2003" endyear = "2016" timestep='timespan-A'></period>
+
+<!-- Extract cells with significant trends -->
+<process processid = 'signiftrendsmodis' version = '1.3'>
+<update>True</update>
+<parameters basename='trmm-fao-vwb' threshold = '1.96'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<mk-z-trmm-fao-vwb id='significance' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "mk-z-trmm-fao-vwb" prefix = "mk-z-trmm-fao-vwb" suffix = "v7-f-m-A-1deg">
+</mk-z-trmm-fao-vwb>
+<ts-mdsl-trmm-fao-vwb id='slope' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-mdsl-trmm-fao-vwb" prefix = "ts-mdsl-trmm-fao-vwb" suffix = "v7-f-m-A-1deg">
+</ts-mdsl-trmm-fao-vwb>
+<ts-ic-trmm-fao-vwb id='intercept' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-ic-trmm-fao-vwb" prefix = "ts-ic-trmm-fao-vwb" suffix = "v7-f-m-A-1deg">
+</ts-ic-trmm-fao-vwb>
+</srccomp>
+</process>
+
+<process processid = 'signiftrendsmodis' version = '1.3'>
+<update>True</update>
+<parameters basename='trmm-fao-vwb-surplus' threshold = '1.96'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<mk-z-trmm-fao-vwb-surplus id='significance' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "mk-z-trmm-fao-vwb-surplus" prefix = "mk-z-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-1deg">
+</mk-z-trmm-fao-vwb-surplus>
+<ts-mdsl-trmm-fao-vwb-surplus id='slope' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-mdsl-trmm-fao-vwb-surplus" prefix = "ts-mdsl-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-1deg">
+</ts-mdsl-trmm-fao-vwb-surplus>
+<ts-ic-trmm-fao-vwb-surplus id='intercept' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-ic-trmm-fao-vwb-surplus" prefix = "ts-ic-trmm-fao-vwb-surplus" suffix = "v7-f-m-A-1deg">
+</ts-ic-trmm-fao-vwb-surplus>
+</srccomp>
+</process>
+
+<process processid = 'signiftrendsmodis' version = '1.3'>
+<update>True</update>
+<parameters basename='trmm-fao-vwb-deficit' threshold = '1.96'></parameters>
+<srcpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "travel" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<mk-z-trmm-fao-vwb-deficit id='significance' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "mk-z-trmm-fao-vwb-deficit" prefix = "mk-z-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-1deg">
+</mk-z-trmm-fao-vwb-deficit>
+<ts-mdsl-trmm-fao-vwb-deficit id='slope' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-mdsl-trmm-fao-vwb-deficit" prefix = "ts-mdsl-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-1deg">
+</ts-mdsl-trmm-fao-vwb-deficit>
+<ts-ic-trmm-fao-vwb-deficit id='intercept' source = "trmm-vwb" product = "3b43" folder = "vwb-A-trend" band = "ts-ic-trmm-fao-vwb-deficit" prefix = "ts-ic-trmm-fao-vwb-deficit" suffix = "v7-f-m-A-1deg">
+</ts-ic-trmm-fao-vwb-deficit>
+</srccomp>
+</process>
+
+</africasubsahara>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

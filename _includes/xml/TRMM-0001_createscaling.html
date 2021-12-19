@@ -1,0 +1,156 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<scaling>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+<!-- Create scaling -->
+
+<!-- TRMM 3B43 mm/month-->
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters power = '0.65' scalefac='3'></parameters>
+<comp id = '1' source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f"></comp>
+</process>
+
+<!-- TRMM 3B43 mm/year-->
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters power = '0.65' scalefac='0.63'></parameters>
+<comp id = '1' source = "trmm" product = "3b43" folder = "rainfall-A-stats" band = "avg-trmm-3b43v7-precip" prefix = "avg-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+<comp id = '2' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-ic-trmm-3b43v7-precip" prefix = "ols-ic-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+<comp id = '3' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-ic-trmm-3b43v7-precip" prefix = "ts-ic-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+</process>
+
+<!-- TRMM 3B43 std mm/year-->
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters power = '0.65' scalefac='2.52'></parameters>
+<comp id = '1' source = "trmm" product = "3b43" folder = "rainfall-A-stats" band = "std-trmm-3b43v7-precip" prefix = "std-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+<comp id = '2' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-rmse-trmm-3b43v7-precip" prefix = "ols-rmse-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+</process>
+
+<!-- TRMM mannkendall Z-->
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='40' offsetadd='125' ></parameters>
+<comp id = '1' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "mk-z-trmm-3b43v7-precip" prefix = "mk-z-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+</process>
+
+<!-- TRMM 3B43 r2-->
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='100'></parameters>
+<comp id = '1' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-r2-trmm-3b43v7-precip" prefix = "ols-r2-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+</process>
+
+<!-- TRMM 3B43 slope mm/year-->
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters mirror0='True' power='0.76' scalefac='1.88'></parameters>
+<comp id = '1' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-mdsl-trmm-3b43v7-precip" prefix = "ts-mdsl-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+<comp id = '2' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-losl-trmm-3b43v7-precip" prefix = "ts-losl-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+<comp id = '3' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ts-hisl-trmm-3b43v7-precip" prefix = "ts-hisl-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+<comp id = '4' source = "trmm" product = "3b43" folder = "rainfall-A-trend" band = "ols-sl-trmm-3b43v7-precip" prefix = "ols-sl-trmm-3b43v7-precip" suffix = "v7-f-A"></comp>
+</process>
+
+
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters power = '0.75' scalefac='0.5' mirror0='True'></parameters>
+<comp id = '1' source = "trmm" product = "3b43" folder = "rainfall-A-change" band = "trmm-3b43v7-precip-change" prefix = "trmm-3b43v7-precip-change" suffix = "model-v7-f-A"></comp>
+</process>
+
+<process processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='1' mirror0='True'></parameters>
+<comp id = '1' source = "trmm" product = "3b43" folder = "rainfall-A-change" band = "trmm-3b43v7-precip-delta" prefix = "trmm-3b43v7-precip-delta" suffix = "slope@p-v7-f-A"></comp>
+</process>
+
+
+
+<!-- TRMM precip log version
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='0.25'></parameters>
+<comp id = 'avg-trmm-3b43v7-precip-ln' source = "TRMM" product = "3B43" folder = "rainfall-ln-annual-stats" suffix = "_A"></comp>
+</processx>
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='1.5'></parameters>
+<comp id = 'std-trmm-3b43v7-precip-ln' source = "TRMM" product = "3B43" folder = "rainfall-ln-annual-stats" suffix = "_A"></comp>
+</processx>
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='40' offsetadd='125'></parameters>
+<comp id = 'mk-z-trmm-3b43v7-precip-ln' source = "TRMM" product = "3B43" folder = "rainfall-ln-annual-trend" suffix = "_A"></comp>
+</processx>
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters offsetadd='125' scalefac='5'></parameters>
+<comp id = 'ts-mdsl-trmm-3b43v7-precip-ln' source = "TRMM" product = "3B43" folder = "rainfall-ln-annual-trend" suffix = "_A"></comp>
+</processx>
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters offsetadd='125' scalefac='5'></parameters>
+<comp id = 'ts-losl-trmm-3b43v7-precip-ln' source = "TRMM" product = "3B43" folder = "rainfall-ln-annual-trend" suffix = "_A"></comp>
+</processx>
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters offsetadd='125' scalefac='5'></parameters>
+<comp id = 'ts-upsl-trmm-3b43v7-precip-ln' source = "TRMM" product = "3B43" folder = "rainfall-ln-annual-trend" suffix = "_A"></comp>
+</processx>
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='0.25'></parameters>
+<comp id = 'ts-ic-trmm-3b43v7-precip-ln' source = "TRMM" product = "3B43" folder = "rainfall-ln-annual-trend" suffix = "_A"></comp>
+</processx>
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters offsetadd='125' scalefac='5'></parameters>
+<comp id = 'ols-sl-trmm-3b43v7-precip-ln' source = "TRMM" product = "3B43" folder = "rainfall-ln-annual-trend" suffix = "_A"></comp>
+</processx>
+
+
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='1.5'></parameters>
+<comp id = 'ols-rmse-trmm-3b43v7-precip-ln' source = "TRMM" product = "3B43" folder = "rainfall-ln-annual-trend" suffix = "_A"></comp>
+</processx>
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='0.25'></parameters>
+<comp id = 'ols-ic-trmm-3b43v7-precip-ln' source = "TRMM" product = "3B43" folder = "rainfall-ln-annual-trend" suffix = "_A"></comp>
+</processx>
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters scalefac='0.22'></parameters>
+<comp id = 'TRMM-3B43v7-precip-ln' source = "TRMM" product = "3B43" folder = "rainfall-ln-change" suffix = "_A"></comp>
+</processx>
+
+<processx processid = 'createscaling' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters offsetadd='125' scalefac='0.5'></parameters>
+<comp id = 'TRMM-3B43v7-precip-ln-delta' source = "TRMM" product = "3B43" folder = "rainfall-ln-change" suffix = "_A"></comp>
+</processx>
+-->
+</scaling>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

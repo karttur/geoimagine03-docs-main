@@ -1,0 +1,81 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<palette>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+<!-- Create legend -->
+
+<!-- NOTE THE ID IS ONLY USED IN THE SCRIPTING SO IT CAN HAVE (UNIQUE) DUMMY VALUES HERE -->
+<!-- VWB monthly cmwater-->
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Precipitation (mm/month)' precision='0'></parameters>
+
+<comp id = '1' source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-m" timestep='M'></comp>
+</process>
+
+<!-- trmm-3b43v7-precip mm/month monthly data-->
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='precip' columnhead='Rainfall (mm)' precision='0'></parameters>
+<comp id = '1' source = "TRMM" product = "3B43" folder = "rainfall" band='trmm-3b43v7-precip' suffix = "_v7"></comp>
+</process>
+
+<!-- TRMM annual precip-->
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='precipln' columnhead='Rainfall (mm)' precision='0'></parameters>
+<comp id = '1' source = "TRMM" product = "3B43" band = 'avg-trmm-3b43v7-precip' folder = "rainfall-annual-stats" suffix = "_A"></comp>
+<comp id = '2' source = "TRMM" product = "3B43" folder = "rainfall-annual-trend" band = 'ts-ic-trmm-3b43v7-precip' suffix = "_A"></comp>
+<comp id = '3' source = "TRMM" product = "3B43" folder = "rainfall-annual-trend" band = 'ols-ic-trmm-3b43v7-precip' suffix = "_A"></comp>
+</process>
+
+<!-- TRMM annual std-->
+<process processid = '' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='precipln' columnhead='Rainfall variation (mm)' precision='0'></parameters>
+<comp id = '1' source = "TRMM" product = "3B43" folder = "rainfall-annual-stats" band = 'std-trmm-3b43v7-precip' suffix = "_A"></comp>
+<comp id = '2' source = "TRMM" product = "3B43" folder = "rainfall-annual-trend" band = 'ols-rmse-trmm-3b43v7-precip' suffix = "_A"></comp>
+</process>
+
+<!-- Mann Kendall-->
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='zhydro' columnhead='MK test (Z-value)'></parameters>
+<comp id = '1' source = "TRMM" product = "3B43" folder = "rainfall-annual-trend" band = 'mk-z-trmm-3b43v7-precip' suffix = "_A"></comp>
+</process>
+
+<!-- slope of change-->
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='precipdelta' columnhead='Rainfall trend:(mm/yr)' precision='0'></parameters>
+<comp id = '1' source = "TRMM" product = "3B43" folder = "rainfall-annual-trend" band = 'ts-mdsl-trmm-3b43v7-precip' suffix = "_A"></comp>
+<comp id = '2' source = "TRMM" product = "3B43" folder = "rainfall-annual-trend" band = 'ts-losl-trmm-3b43v7-precip' suffix = "_A"></comp>
+<comp id = '3' source = "TRMM" product = "3B43" folder = "rainfall-annual-trend" band = 'ts-upsl-trmm-3b43v7-precip' suffix = "_A"></comp>
+<comp id = '4' source = "TRMM" product = "3B43" folder = "rainfall-annual-trend" band = 'ols-sl-trmm-3b43v7-precip' suffix = "_A"></comp>
+</process>
+
+<!-- r2-->
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='hydror2' columnhead='Correlation (r2)' palmax='100'></parameters>
+<comp id = '1' source = "TRMM" product = "3B43" folder = "rainfall-annual-trend" band = 'ols-r2-trmm-3b43v7-precip' suffix = "_A"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='precipdelta' columnhead='Rainfall change:(mm)' precision='0'></parameters>
+<comp id = '1' source = "TRMM" product = "3B43" folder = "rainfall-change" band = 'TRMM-3B43v7-precip-delta' suffix = "_A"></comp>
+</process>
+</palette>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

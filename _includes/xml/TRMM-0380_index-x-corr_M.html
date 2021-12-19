@@ -1,0 +1,53 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<resamplets>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-trmm' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "1998" startmonth='01' endyear = "2017" endmonth='12' timestep='M'></period>
+
+<process processid = 'indexcrosstrendtsancillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters
+trend='spline'
+periodfactor='1'
+decompose='naivetrend'
+
+splineseason='False'
+indexcomp='True'
+kernel='0'
+forceseason='False'
+
+xcrosseason='False'
+xcrosstrend='True'
+xcrossresidual='False'
+xcrossdetrended='False'
+
+xcrosspearson='True'
+xcrossmax='True'
+xcrosslag='True'
+
+></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f">
+</trmm-3b43v7-precip>
+</srccomp>
+
+<index id='soi' band ='soi'></index>
+<index id='pdo' band ='pdo'></index>
+<index id='nao' band ='nao'></index>
+<index id='best' band ='best'></index>
+<index id='pna' band ='pna'></index>
+<index id='nina3' band ='nina3'></index>
+</process>
+
+</resamplets>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

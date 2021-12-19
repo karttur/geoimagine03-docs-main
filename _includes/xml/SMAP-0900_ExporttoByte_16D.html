@@ -1,0 +1,46 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<runprocess>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+<period startyear = "2015" startmonth='4' startday='23' endyear = "2017" endmonth='12' endday='31' timestep='16D'></period>
+
+<!-- exporttobyte avg A -->
+<process processid = 'exporttobytesmap' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'smap'></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<soil-moisture-avg id = 'layer3' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-16D" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005">
+</soil-moisture-avg>
+</srccomp>
+</process>
+
+<processx processid = 'exporttobytesmap' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette= 'smap'></parameters>
+<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<soil-moisture-am id = 'layer1' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-am-16D" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "005">
+</soil-moisture-am>
+<soil-moisture-pm id = 'layer2' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-pm-16D" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "005">
+</soil-moisture-pm>
+<soil-moisture-avg id = 'layer3' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-16D" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005">
+</soil-moisture-avg>
+<soil-moisture-min id = 'layer4' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-min-16D" band = "soil-moisture-min" prefix = "soil-moisture-min" suffix = "005">
+</soil-moisture-min>
+<soil-moisture-max id = 'layer5' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-max-16D" band = "soil-moisture-max" prefix = "soil-moisture-max" suffix = "005">
+</soil-moisture-max>
+</srccomp>
+</processx>
+</runprocess>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,39 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<resamplets>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-trmm' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period startyear = "1998" startmonth='01' endyear = "2017" endmonth='12' timestep='M'></period>
+
+<process processid = 'tsgraphancillary' version = '1.3'>
+<overwrite>False</overwrite>
+<!-- yloabel and title could be defaulted from the composition-->
+<parameters
+x='35'
+y='-22'
+linestyle='solid'
+linewidth='1.0'
+color = 'red'
+
+ylabel='mm/month'
+title='TRMM monthly rainfall'
+
+></parameters>
+<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+<srccomp>
+<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f">
+</trmm-3b43v7-precip>
+</srccomp>
+
+</process>
+
+</resamplets>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

@@ -1,0 +1,49 @@
+# Site navigation links
+
+- title: About
+  url: /about/
+  include: 'N'
+
+- title: Fount
+  url: /
+  include: 'N'
+
+- title: Setup
+  url: /setup/
+  include: 'N'
+
+- title: Concept
+  url: /concept/
+  include: 'N'
+
+- title: Prepare
+  url: /prep/
+  include: 'N'
+
+- title: Import
+  url: /putinplace/
+  include: 'N'
+
+- title: Develop
+  url: /develop/
+  include: 'N'
+
+- title: Blog (examples)
+  url: /blog/
+  include: 'N'
+
+- title: Packages
+  url: /packages/
+  include: 'N'
+
+- title: Root processes
+  url: /rootprocesses/
+  include: 'N'
+
+- title: Sub processes
+  url: /subprocesses/
+  include: 'N'
+
+- title: Search
+  url: /search/
+  include: 'N'

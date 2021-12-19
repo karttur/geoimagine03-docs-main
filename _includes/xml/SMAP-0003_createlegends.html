@@ -1,0 +1,208 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<palette>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+
+<!-- Create legend -->
+
+<!-- NOTE THE ID IS ONLY USED IN THE SCRIPTING SO IT CAN HAVE (UNIQUE) DUMMY VALUES HERE -->
+<!-- GRACE monthly cmwater-->
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Soil moisture (%)' palmax='200' precision='0'></parameters>
+<comp id = '1' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-am" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "005"></comp>
+<comp id = '2' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-pm" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "005"></comp>
+<comp id = '3' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005"></comp>
+<comp id = '4' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-min" band = "soil-moisture-min" prefix = "soil-moisture-min" suffix = "005"></comp>
+<comp id = '5' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-max" band = "soil-moisture-max" prefix = "soil-moisture-max" suffix = "005"></comp>
+
+<comp id = '11' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-am-16D" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "005"></comp>
+<comp id = '12' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-pm-16D" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "005"></comp>
+<comp id = '13' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-16D" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005"></comp>
+<comp id = '14' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-min-16D" band = "soil-moisture-min" prefix = "soil-moisture-min" suffix = "005"></comp>
+<comp id = '15' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-max-16D" band = "soil-moisture-max" prefix = "soil-moisture-max" suffix = "005"></comp>
+
+<comp id = '21' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-am-16D-sesn" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "005"></comp>
+<comp id = '22' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-pm-16D-sesn" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "005"></comp>
+<comp id = '23' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-16D-sesn" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005"></comp>
+<comp id = '24' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-min-16D-sesn" band = "soil-moisture-min" prefix = "soil-moisture-min" suffix = "005"></comp>
+<comp id = '25' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-max-16D-sesn" band = "soil-moisture-max" prefix = "soil-moisture-max" suffix = "005"></comp>
+
+</process>
+
+<!-- GRACE annual std cmwater
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Water depth (cm)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-stats-A" band = 'std-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='MK test (Z-value)'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'mk-z-grace-ave' suffix = "RL05-filled"></comp>
+
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall trend:(mm/yr)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ts-mdsl-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall trend:(mm/yr)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ts-hisl-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall trend:(mm/yr)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ts-losl-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall (mm)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ts-ic-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall trend:(mm/yr)' precision='0'></parameters>
+<comp id = '1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ols-sl-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Correlation (r2)' palmax='100'></parameters>
+<comp id = '10' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ols-r2-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall (mm)' precision='0'></parameters>
+<comp id = '11' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ols-rmse-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall (mm)' precision='0'></parameters>
+<comp id = '12' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A" band = 'ols-ic-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall change:(mm)' precision='0'></parameters>
+<comp id = '13' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A-model" band = 'delta-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall change:(mm)' precision='0'></parameters>
+<comp id = '14' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A-model" band = 'mk-ts-mod@p005-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall change:(mm)' precision='0'></parameters>
+<comp id = '15' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A-model" band = 'mod@p005-2003-grace-ave' suffix = "RL05-filled"></comp>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters columnhead='Rainfall change:(mm)' precision='0'></parameters>
+<comp id = '16' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-annual-trend-A-model" band = 'mod@p005-2016-grace-ave	' suffix = "RL05-filled"></comp>
+</process>
+-->
+
+<!-- TWI
+
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='twistd'  columnhead='Soil moisture (%)' precision='0'>twi</parameters>
+<band id = 'std-twi-percent' source = "MCD43A4v005" product = "MCD43A4" folder = "twi-annual-stats" suffix = "_A"></band>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='zhydro' columnhead='MK test (Z-value)'></parameters>
+<band id = 'mk-z-twi-percent' source = "MCD43A4v005" product = "MCD43A4" folder = "twi-annual-trend" suffix = "_A"></band>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='twidelta' columnhead='Soil moisture trend:(%-units/yr)'  precision ='2'></parameters>
+<band id = 'ts-mdsl-twi-percent' source = "MCD43A4v005" product = "MCD43A4" folder = "twi-annual-trend" suffix = "_A"></band>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='twidelta'  columnhead='Soil moisture trend:(%-units/yr)'  precision ='2'></parameters>
+<band id = 'ts-losl-twi-percent' source = "MCD43A4v005" product = "MCD43A4" folder = "twi-annual-trend" suffix = "_A"></band>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='twidelta'  columnhead='Soil moisture trend:(%-units/yr)' precision ='2'></parameters>
+<band id = 'ts-upsl-twi-percent' source = "MCD43A4v005" product = "MCD43A4" folder = "twi-annual-trend" suffix = "_A"></band>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='twi'  columnhead='Soil moisture (%)' palmax='200' precision ='0'></parameters>
+<band id = 'ts-ic-twi-percent' source = "MCD43A4v005" product = "MCD43A4" folder = "twi-annual-trend" suffix = "_A"></band>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='twidelta'  columnhead='Soil moisture trend:(%-units/yr)' precision ='2'></parameters>
+<band id = 'ols-sl-twi-percent' source = "MCD43A4v005" product = "MCD43A4" folder = "twi-annual-trend" suffix = "_A"></band>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='hydror2'  columnhead='Correlation (r2)' palmax='100'></parameters>
+<band id = 'ols-r2-twi-percent' source = "MCD43A4v005" product = "MCD43A4" folder = "twi-annual-trend" suffix = "_A"></band>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='twistd' columnhead='Soil moisture:(%-units)' precision ='0'></parameters>
+<band id = 'ols-rmse-twi-percent' source = "MCD43A4v005" product = "MCD43A4" folder = "twi-annual-trend" suffix = "_A"></band>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='twi' columnhead='Soil moisture (%)' palmax='200' precision ='0'></parameters>
+<band id = 'ols-ic-twi-percent' source = "MCD43A4v005" product = "MCD43A4" folder = "twi-annual-trend" suffix = "_A"></band>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='twi' columnhead='Soil moisture:(%-units)' precision ='0'></parameters>
+<band id = 'twi-percent' source = "MCD43A4v005" product = "3B43" folder = "twi-change" suffix = "_A"></band>
+</process>
+
+<process processid = 'createlegend' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters palette='twidelta'  columnhead='Soil moisture change:(%-units)' precision ='0'></parameters>
+<band id = 'twi-percent-delta' source = "MCD43A4v005" product = "3B43" folder = "twi-change" suffix = "_A"></band>
+</process>
+-->
+</palette>
+
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

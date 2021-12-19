@@ -1,0 +1,20 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<searchsmap>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+<period startyear = '2015' startmonth = '03' startday = '31' endyear = '2015' endmonth = '08' endday = '08' timestep='1D'></period>
+<process processid ='SearchSmapProducts' dsversion = '1.3'>
+<parameters remoteuser='Gumbricht' product="SPL3SMP_E" version="002" serverurl="https://n5eil01u.ecs.nsidc.org/" ></parameters>
+<dstpath volume = "Karttur2tb" mainpath = "/Volumes/Karttur2tb/Downloads/SMAP" hdrfiletype = "shp" datfiletype = "shp"></dstpath>
+</process>
+</searchsmap>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

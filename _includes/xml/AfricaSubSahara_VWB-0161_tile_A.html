@@ -1,0 +1,126 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<subsahara>
+
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "1998" endyear = "2018" endmonth ='7' endday = '31' timestep='A'></period>
+
+<!-- tile the original (annaul) VWB data to the region (karttur-africasubsahara).
+The VWB data must be calculated.
+If you set the parameter "asscript" to True (= default),
+you have to execute the shell script file as reported by the process,
+and then rerun the xml with overwrite set to False to add the layers to the database
+-->
+
+<!-- Tile the VWB data to the MODIS tile standard spatial resolution (463 m) -->
+<processx processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '463.313'  yres = '463.313' resample='near' asscript='False'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb id = 'layer1' source = "trmm-vwb" product = "3b43" folder = "vwb-A" band = "trmm-fao-vwb" prefix = "trmm-fao-vwb" suffix = "v7-f-m-A">
+</trmm-fao-vwb>
+</srccomp>
+</processx>
+
+<processx processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '463.313'  yres = '463.313' resample='near' asscript='False'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb-surplus id = 'layer2' source = "trmm-vwb" product = "3b43" folder = "vwb-A" band = "trmm-fao-vwb-surplus" prefix = "trmm-fao-vwb-surplus" suffix = "v7-f-m-A">
+</trmm-fao-vwb-surplus>
+</srccomp>
+</processx>
+
+<processx processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '463.313'  yres = '463.313' resample='near' asscript='False'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb-deficit id = 'layer3' source = "trmm-vwb" product = "3b43" folder = "vwb-A" band = "trmm-fao-vwb-deficit" prefix = "trmm-fao-vwb-deficit" suffix = "v7-f-m-A">
+</trmm-fao-vwb-deficit>
+</srccomp>
+</processx>
+
+<!-- Tile the same data, but to a spatial resolution of 27798.78 m -->
+<process processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '27798.78'  yres = '27798.78' resample='near' asscript='False' suffix = 'v7-f-m-A-30km'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb id = 'layer1' source = "trmm-vwb" product = "3b43" folder = "vwb-A" band = "trmm-fao-vwb" prefix = "trmm-fao-vwb" suffix = "v7-f-m-A">
+</trmm-fao-vwb>
+</srccomp>
+</process>
+
+<process processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '27798.78'  yres = '27798.78' resample='near' asscript='False' suffix = 'v7-f-m-A-30km'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb-surplus id = 'layer2' source = "trmm-vwb" product = "3b43" folder = "vwb-A" band = "trmm-fao-vwb-surplus" prefix = "trmm-fao-vwb-surplus" suffix = "v7-f-m-A">
+</trmm-fao-vwb-surplus>
+</srccomp>
+</process>
+
+<process processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '27798.78'  yres = '27798.78' resample='near' asscript='False' suffix = 'v7-f-m-A-30km'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb-deficit id = 'layer3' source = "trmm-vwb" product = "3b43" folder = "vwb-A" band = "trmm-fao-vwb-deficit" prefix = "trmm-fao-vwb-deficit" suffix = "v7-f-m-A">
+</trmm-fao-vwb-deficit>
+</srccomp>
+</process>
+
+<!-- Tile the same data, but to a , but to a spatial resolution of approx 1 deg (111195.12)  -->
+<process processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '111195.12'  yres = '111195.12' resample='average' asscript='False' suffix = 'v7-f-m-A-1deg'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb id = 'layer1' source = "trmm-vwb" product = "3b43" folder = "vwb-A" band = "trmm-fao-vwb" prefix = "trmm-fao-vwb" suffix = "v7-f-m-A">
+</trmm-fao-vwb>
+</srccomp>
+</process>
+
+<process processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '111195.12'  yres = '111195.12' resample='average' asscript='False' suffix = 'v7-f-m-A-1deg'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb-surplus id = 'layer2' source = "trmm-vwb" product = "3b43" folder = "vwb-A" band = "trmm-fao-vwb-surplus" prefix = "trmm-fao-vwb-surplus" suffix = "v7-f-m-A">
+</trmm-fao-vwb-surplus>
+</srccomp>
+</process>
+
+<process processid = 'tileRegionToModisAncillary' version = '1.3'>
+<overwrite>False</overwrite>
+<parameters src_defregid = 'trmm' epsg = '6842'  xres = '111195.12'  yres = '111195.12' resample='average' asscript='False' suffix = 'v7-f-m-A-1deg'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trmm-fao-vwb-deficit id = 'layer3' source = "trmm-vwb" product = "3b43" folder = "vwb-A" band = "trmm-fao-vwb-deficit" prefix = "trmm-fao-vwb-deficit" suffix = "v7-f-m-A">
+</trmm-fao-vwb-deficit>
+</srccomp>
+</process>
+
+</subsahara>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

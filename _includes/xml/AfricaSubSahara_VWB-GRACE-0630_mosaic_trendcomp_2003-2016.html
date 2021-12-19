@@ -1,0 +1,41 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsaharaproject>
+<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+<period startyear = "2003" endyear = "2016" timestep='timespan-A'></period>
+
+<!-- Mosaic TRMM vs GRACE trendcomp -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters t_epsg ='4326' xres='1.0' yres='1.0'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trendcomp id = 'dst' source = "vwbgrace" product = "vwb-grace" folder = "trendcomp" band = "trendcomp" prefix = "trendcomp" suffix = "model@p-v7-RL05-1deg"></trendcomp>
+</srccomp>
+</process>
+
+<!-- Mosaic TRMM vs GRACE trendcomp -->
+<process processid = 'MosaicModis' version = '1.3'>
+<overwrite>True</overwrite>
+<parameters t_epsg ='4326' xres='1.0' yres='1.0'></parameters>
+<srcpath volume = "travel"></srcpath>
+<dstpath volume = "travel"></dstpath>
+<srccomp>
+<trendcomp id = 'dst' source = "vwbgrace" product = "vwbsurplus-grace" folder = "trendcomp" band = "trendcomp" prefix = "trendcomp" suffix = "model@p-v7-RL05-1deg"></trendcomp>
+</srccomp>
+</process>
+
+</africasubsaharaproject>
+
+
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

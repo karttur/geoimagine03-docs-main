@@ -1,0 +1,24 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<palette>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+<path></path>
+
+<!-- createmovieclock -->
+<process processid = 'createmovieclock'>
+<overwrite>Y</overwrite>
+<delete>N</delete>
+<parameters name = 'trmm'
+>
+</parameters>
+</process>
+</palette>
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>

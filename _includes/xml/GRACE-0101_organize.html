@@ -1,0 +1,98 @@
+<button id= "toggle_{{foo}}" onclick="hiddencode('{{ foo }}')">Hide/Show {{ site.data.xml[foo].file }}</button>
+<div id="{{ foo }}" style="display:none">
+{% capture text-capture %}
+{% raw %}
+```
+<?xml version='1.0' encoding='utf-8'?>
+<organize>
+<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+<period timestep='allscenes'></period>
+<!--
+gdal_translate -of VRT -a_srs epsg:4326 -sds GRCTellus.JPL.200204_201701.LND.RL05_1.DSTvSCS1411.nc output.vrt
+gdal_translate -of VRT -a_srs epsg:4326 -sds GRCTellus.GFZ.200204_201701.LND.RL05.DSTvSCS1409.nc gfz.vrt
+GRCTellus.GFZ.200204_201701.LND.RL05.DSTvSCS1409.nc
+-->
+<process processid ='OrganizeGrace' dsversion = '3.0'>
+<parameters
+solutionset = 'JPL'
+dsversion = "RL05"
+accessdate = "20181018"
+dataurl = "https://grace.jpl.nasa.gov/data/get-data/"
+metaurl="https://grace.jpl.nasa.gov/data/get-data/"
+title = "GRACE global data"
+label = "GRACE (Gravity Recovery and Climate Experiment) global data"
+
+> </parameters>
+<srcpath volume = "Karttur3tb/ANCILIMPORT" hdrfiletype = "gz" datfiletype = "txt"></srcpath>
+<dstpath volume = "Karttur3tb" hdrfiletype = "tif" datfiletype = "tif"></dstpath>
+<srcraw id="grace-jpl"
+datadir ='GRACE/ascii'
+theme = "hydrology"
+subtheme = "gravitywater"
+title = "GRACE global data"
+label = "GRACE (Gravity Recovery and Climate Experiment) global data"
+></srcraw>
+<dstcomp>
+<grace-jpl source = "NASA-GRACE" product = "jpl-cmwater" folder = "cmwater" band = "grace-jpl" prefix = "grace-jpl" suffix = "RL05" scalefac = "1" offsetadd = "0" dataunit = "cm" celltype = 'Float32' cellnull = '32767' measure ='R' masked='Y'>
+</grace-jpl>
+</dstcomp>
+</process>
+
+<process processid ='OrganizeGrace' dsversion = '3.0'>
+<parameters
+solutionset = 'GFZ'
+dsversion = "RL05"
+accessdate = "20181018"
+dataurl = "https://grace.jpl.nasa.gov/data/get-data/"
+metaurl="https://grace.jpl.nasa.gov/data/get-data/"
+title = "GRACE global data"
+label = "GRACE (Gravity Recovery and Climate Experiment) global data"
+
+> </parameters>
+<srcpath volume = "Karttur3tb/ANCILIMPORT" hdrfiletype = "gz" datfiletype = "txt"></srcpath>
+<dstpath volume = "Karttur3tb" hdrfiletype = "tif" datfiletype = "tif"></dstpath>
+<srcraw id="grace-gfz"
+datadir ='GRACE/ascii'
+theme = "hydrology"
+subtheme = "gravitywater"
+title = "GRACE global data"
+label = "GRACE (Gravity Recovery and Climate Experiment) global data"
+></srcraw>
+<dstcomp>
+<grace-gfz source = "NASA-GRACE" product = "gfz-cmwater" folder = "cmwater" band = "grace-gfz" prefix = "grace-gfz" suffix = "RL05" scalefac = "1" offsetadd = "0" dataunit = "cm" celltype = 'Float32' cellnull = '32767' measure ='R' masked='Y'>
+</grace-gfz>
+</dstcomp>
+</process>
+
+<process processid ='OrganizeGrace' dsversion = '3.0'>
+<parameters
+solutionset = 'CSR'
+dsversion = "RL05"
+accessdate = "20181018"
+dataurl = "https://grace.jpl.nasa.gov/data/get-data/"
+metaurl="https://grace.jpl.nasa.gov/data/get-data/"
+title = "GRACE global data"
+label = "GRACE (Gravity Recovery and Climate Experiment) global data"
+
+> </parameters>
+<srcpath volume = "Karttur3tb/ANCILIMPORT" hdrfiletype = "gz" datfiletype = "txt"></srcpath>
+<dstpath volume = "Karttur3tb" hdrfiletype = "tif" datfiletype = "tif"></dstpath>
+<srcraw id="grace-csr"
+datadir ='GRACE/ascii'
+theme = "hydrology"
+subtheme = "gravitywater"
+title = "GRACE global data"
+label = "GRACE (Gravity Recovery and Climate Experiment) global data"
+></srcraw>
+<dstcomp>
+<grace-csr source = "NASA-GRACE" product = "csr-cmwater" folder = "cmwater" band = "grace-csr" prefix = "grace-csr" suffix = "RL05" scalefac = "1" offsetadd = "0" dataunit = "cm" celltype = 'Float32' cellnull = '32767' measure ='R' masked='Y'>
+</grace-csr>
+</dstcomp>
+</process>
+</organize>
+
+```
+{% endraw %}
+{% endcapture %}
+{% include widgets/toggle-code.html  toggle-text=text-capture  %}
+</div>
