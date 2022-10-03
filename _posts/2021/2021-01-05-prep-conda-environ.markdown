@@ -340,7 +340,7 @@ There are two main methods for installing additional Python packages to your env
 
 You can install new packages into your environment in the usual way that <span class='terminalapp'>conda</span> packages are installed. Just make sure that the terminal prompt points at your environment:
 
-<span class='terminal'>(geoimagine002) ... $ conda install -c omnia svgwrite</span>
+<span class='terminal'>(geoimagine???) ... $ conda install -c omnia svgwrite</span>
 
 or tell <span class='terminalapp'>conda</span> under which environment to install the packages:
 
@@ -389,12 +389,13 @@ The package _sentinelsat_, used for searching and downloading satellte data from
 
 Again you can check that the package was installed in the correct place by exploring the <span class='file'>site-packages</span> path.
 
-#### Additional installations
+### Additional installations
 
 The complete GeoImagine Framework requires a handful of additional installations:
 
 - landsatexplore
 - plotnine
+- pypng
 - seasonal
 - sentinelsat
 - svgis
@@ -456,17 +457,17 @@ svgwrite is also available as [<span class='terminalapp'>pip install</span>](htt
 
 #### ggtools
 
-[GRACE & GLDAS Tools (ggtools)](https://pypi.org/project/ggtools/) is a library for GRACE(Gravity Recovery and Climate Experiment) and GRACE-FO(Follow-on) GSM data(RL06 Level-2 monthly solutions) and GLDAS grid data. The package itself is installed using []<span class='terminalapp'>pip</span>](https://pypi.org/project/ggtools/). It is dependent on _cartopy_, _netcdf4_ and _h5py_; all included as default packages (listed in <span class='file'>.condarc</span>).
+[GRACE & GLDAS Tools (ggtools)](https://pypi.org/project/ggtools/) is a library for GRACE(Gravity Recovery and Climate Experiment) and GRACE-FO(Follow-on) GSM data(RL06 Level-2 monthly solutions) and GLDAS grid data. The package itself is installed using [<span class='terminalapp'>pip</span>](https://pypi.org/project/ggtools/). It is dependent on _cartopy_, _netcdf4_ and _h5py_; all included as default packages (listed in <span class='file'>.condarc</span>).
 
 <span class='terminal'>$ pip install ggtools</span>
 
-#### wget
+#### tdqm
 
-Wget is a command-line tool for retrieving files using HTTP, HTTPS, FTP and FTPS (the most widely-used Internet protocols). In Karttur´s GeoImagine Framework, wget is used for accessing online available data from e.g.[https://earthdata.nasa.gov](https://earthdata.nasa.gov), including MODIS and SMAP. To install Wget on Mac osx you can use <span class='app'>Homebrew</span>.
+tdqm is preferably installed via [conda-forge](https://anaconda.org/conda-forge/tqdm):
 
-<span class='terminal'>$ brew install wget</span>
 
-The installation of <span class='app'>Homebrew</span> itself is covered in the blog post on [ImageMagick](https://karttur.github.io/setup-theme-blog/blog/install-imagemagick/).
+<span class='terminal'>$ conda activate geoimagine202110</span>
+<span class='terminal'>$ conda install -c conda-forge tqdm</span>
 
 ### Export and import environments
 
@@ -671,6 +672,51 @@ prefix: /Applications/anaconda3/envs/geoimagine_202003_py37a
 - collections
 - sys
 - math
+
+### Other installations
+
+The full suit of opportunities that come with the Framework requires some additional resources, not directly linked ty python:
+
+- wget,
+- AWSCLIV2, and
+- aria2
+- inkscape
+
+#### wget
+
+Wget is a command-line tool for retrieving files using HTTP, HTTPS, FTP and FTPS (the most widely-used Internet protocols). In Karttur´s GeoImagine Framework, wget is used for accessing online available data from e.g.[https://earthdata.nasa.gov](https://earthdata.nasa.gov), including MODIS and SMAP. To install Wget on Mac osx you can use <span class='app'>Homebrew</span>.
+
+<span class='terminal'>$ brew install wget</span>
+
+The installation of <span class='app'>Homebrew</span> itself is covered in the blog post on [ImageMagick](https://karttur.github.io/setup-theme-blog/blog/install-imagemagick/).
+
+#### Amazon Web Services Command Line Interface 2 (AWSCLIV2)
+
+Some DEMs are available as Amazon Web Services (AWS) Open Data. To access registries on AWS Open Data I use the free [Amazon Web Services Command Line Interface 2 (AWSCLIV2)](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html). To install AWSCLIV2 on your machine you can check out [Installing, updating, and uninstalling the AWS CLI version 2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html). Here is a summary of the steps needed for installation on MacOS:
+
+1. start a <span class='app'>Terminal</span> session.
+
+2. <span class='terminal'>$ curl \"https://awscli.amazonaws.com/AWSCLIV2.pkg\" -o \"AWSCLIV2.pkg\"</span>
+
+3. <span class='terminal'>$ sudo installer -pkg AWSCLIV2.pkg -target /</span>
+
+Give your machine password and the AWSCLIV2.pkg package should install and report back:
+
+```
+installer: Package name is AWS Command Line Interface
+installer: Installing at base path /
+installer: The install was successful.
+```
+
+#### aria2
+
+[aria2](https://aria2.github.io) is a lightweight multi-protocol & multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. You can use [<span class='terminalapp'>brew</span>](https://formulae.brew.sh/formula/aria2) for installation:
+
+<span class='terminal'>$ brew install aria2</span>
+
+### Inkscape
+
+[Inkscape](https://inkscape.org) is a drawing app that can also be accessed using the [command line](https://wiki.inkscape.org/wiki/Using_the_Command_Line). You can install it as an ordinary binary app, and then access the command line features. it is used for transforming between vector and raster formats, for example for legends and maps.
 
 # Resources
 
